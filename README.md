@@ -1,4 +1,4 @@
-# FS-App-Template
+# TREK
 
 ## Setup
 
@@ -75,3 +75,4 @@ Database Setup
 
 
 Now, you should be deployed!
+# TREK
