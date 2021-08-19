@@ -1,0 +1,4872 @@
+{
+  "total": "465",
+  "limit": "50",
+  "start": "450",
+  "data": [
+    {
+      "id": "37C48EE0-2881-4D22-8F91-A249AE3B0CD0",
+      "url": "https://www.nps.gov/wica/index.htm",
+      "fullName": "Wind Cave National Park",
+      "parkCode": "wica",
+      "description": "Bison, elk, and other wildlife roam the rolling prairie grasslands and forested hillsides of one of America's oldest national parks. Below the remnant island of intact prairie sits Wind Cave, one of the longest and most complex caves in the world. Named for barometric winds at its entrance, this maze of passages is home to boxwork, a unique formation rarely found elsewhere.",
+      "latitude": "43.58012365",
+      "longitude": "-103.4394709",
+      "latLong": "lat:43.58012365, long:-103.4394709",
+      "activities": [
+        {
+          "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+          "name": "Auto and ATV"
+        },
+        {
+          "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+          "name": "Scenic Driving"
+        },
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
+          "name": "Road Biking"
+        },
+        {
+          "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+          "name": "Camping"
+        },
+        {
+          "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+          "name": "Backcountry Camping"
+        },
+        {
+          "id": "9159DF0F-951D-4AAE-9987-CEB3CE2A9ADA",
+          "name": "Car or Front Country Camping"
+        },
+        {
+          "id": "7CFF5F03-5ECC-4F5A-8572-75D1F0976C0C",
+          "name": "Group Camping"
+        },
+        {
+          "id": "C5C5971C-E325-4CEB-8C81-EE49A881DF17",
+          "name": "RV Camping"
+        },
+        {
+          "id": "BA316D0F-92AE-4E00-8C80-DBD605DC58C3",
+          "name": "Caving"
+        },
+        {
+          "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+          "name": "Food"
+        },
+        {
+          "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+          "name": "Picnicking"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "C7D5A145-F8EB-4C37-9E92-2F6C6206B196",
+          "name": "Self-Guided Tours - Auto"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+          "name": "Horse Trekking"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        }
+      ],
+      "topics": [
+        {
+          "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+          "name": "Architecture and Building"
+        },
+        {
+          "id": "1F833C99-A75D-4F9E-9256-B96523485466",
+          "name": "Farming and  Agriculture"
+        },
+        {
+          "id": "E4E84C87-6737-4C37-9157-5962648A35F2",
+          "name": "Ranches"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+          "name": "Transportation"
+        },
+        {
+          "id": "1015393C-D7B0-47F3-86FB-786F30368CA2",
+          "name": "Bridges"
+        },
+        {
+          "id": "C9C749E3-39C3-45F7-BCC5-9A609E30AA05",
+          "name": "Westward Expansion"
+        },
+        {
+          "id": "D1722DD1-E314-4B6D-8116-DED86305C4A4",
+          "name": "Homesteading"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "921D1471-5F6B-47D5-918D-389E7106083A",
+          "name": "Alligators or Crocodiles"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "324C31EC-7D75-41C7-AA28-EF8ACB5B6BF5",
+          "name": "Bison"
+        },
+        {
+          "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+          "name": "Cats (wild)"
+        },
+        {
+          "id": "344CE561-4E98-49BF-ACD2-438E3684DA5D",
+          "name": "Elk"
+        },
+        {
+          "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+          "name": "Fish"
+        },
+        {
+          "id": "9576386A-C84F-4436-9094-C5CD67A672CC",
+          "name": "Wolves"
+        },
+        {
+          "id": "E25F3456-43ED-45DD-93BC-057F9B944F7A",
+          "name": "Caves, Caverns and Karst"
+        },
+        {
+          "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+          "name": "Fire"
+        },
+        {
+          "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
+          "name": "Forests and Woodlands"
+        },
+        {
+          "id": "762170E5-0747-4836-B837-7F2547D3F733",
+          "name": "Coniferous Forests"
+        },
+        {
+          "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
+          "name": "Fossils and Paleontology"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "4BE01DC5-52E6-4F18-8C9A-B22D65965F6D",
+          "name": "Groundwater"
+        },
+        {
+          "id": "5BA15815-F78C-4E10-B9C1-FF5723881F7C",
+          "name": "Aquifers"
+        },
+        {
+          "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
+          "name": "Grasslands"
+        },
+        {
+          "id": "1AEDC86F-5792-487F-8CDF-9E92CAB97ACE",
+          "name": "Prairies"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "E06F3C94-AC8A-4B1C-A247-8EBA8910D5EE",
+          "name": "Astronomy"
+        },
+        {
+          "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+          "name": "Scenic Views"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        },
+        {
+          "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
+          "name": "Unique Species"
+        },
+        {
+          "id": "489D6333-FD72-44DF-83B0-3D4412DD0A75",
+          "name": "Endangered"
+        }
+      ],
+      "states": "SD",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "6057454600",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          },
+          {
+            "phoneNumber": "6057454207",
+            "description": "",
+            "extension": "",
+            "type": "Fax"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "WICA_interpretation@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "There are no fees to drive through or hike in the park. Enjoy!",
+          "title": "Entrance Fee"
+        },
+        {
+          "cost": "10.00",
+          "description": "Half price for children 6-16 and for Senior (Golden Age)/Access pass holders. Children 5 and under are free.",
+          "title": "Garden of Eden Cave Tour Fee"
+        },
+        {
+          "cost": "12.00",
+          "description": "Half price for children 6-16 and for Senior (Golden Age)/Access pass holders. Children 5 and under are free.",
+          "title": "Natural Entrance Cave Tour Fee"
+        },
+        {
+          "cost": "12.00",
+          "description": "Half price for children 6-16 and for Senior (Golden Age)/Access pass holders. Children 5 and under are free.",
+          "title": "Fairgrounds Cave Tour Fee"
+        },
+        {
+          "cost": "12.00",
+          "description": "Half price for children 8*-16 and for Senior (Golden Age)/Access pass holders. Reservations strongly recommended.\n\n*Minimum age for Candlelight Tour is 8 years old.",
+          "title": "Candlelight Cave Tour Fee"
+        },
+        {
+          "cost": "30.00",
+          "description": "Half price Senior (Golden Age)/Access pass holders. Minimum age is 17. Reservations are required.",
+          "title": "Wild Cave Tour Fee"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "Wind Cave National Park is located in South Dakota about 11 miles north of Hot Springs, or about 22 miles south of Custer, on US Highway 385. The park Visitor Center, where all cave tours begin, is approximately 1/2 mile west of the highway.",
+      "directionsUrl": "http://www.nps.gov/wica/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "The park is open all day, every day. Snow or severe weather can limit access to some areas of the park, especially in winter. Visitor Center hours and cave tour schedules vary throughout the year. \n\nVisit the park website or call 605.745.4600 for current conditions.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Wind Cave National Park"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "57747",
+          "city": "Hot Springs",
+          "stateCode": "SD",
+          "line1": "26611 US Highway 385",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "57747",
+          "city": "Hot Springs",
+          "stateCode": "SD",
+          "line1": "26611 US Highway 385",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo / Dan Roddy",
+          "title": "Bison cow and calf",
+          "altText": "a bison cow and calf on the prairie",
+          "caption": "Several hundred bison roam the rolling prairie of Wind Cave National Park.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7ACD12-1DD8-B71B-0BEF13804E4498FF.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Rankin Ridge view",
+          "altText": "rolling hills of forest and prairie landscape",
+          "caption": "Wind Cave National Park from Rankin Ridge, the park's highest point.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7ACE71-1DD8-B71B-0BBD14BFE8C0C468.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Boxwork",
+          "altText": "criss-cross-patterned calcite fins of the cave feature boxwork",
+          "caption": "Delicate fins of boxwork, a rare cave feature, in Elk's Room, Wind Cave.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7ACFE9-1DD8-B71B-0BA11E8BB9A0EE0D.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Wind Cave explorer",
+          "altText": "a caver with pads and helmet crawling in the cave",
+          "caption": "Each summer, the Wild Cave Tour offers the chance to get up close and personal with Wind Cave.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AD1AD-1DD8-B71B-0B7C9E1C79DA6F5C.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Prairie Dogs",
+          "altText": "two prairie dogs watch from their burrow",
+          "caption": "Prairie dog sightings are common throughout the park's prairies.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AD3B1-1DD8-B71B-0BC2F74D3D134758.jpg"
+        }
+      ],
+      "weatherInfo": "Spring: Highs range from 50-70°F with highly variable weather. Spring is the park's wettest season. Summer: Hot and generally dry with daytime temperatures regularly exceeding 80°F (27°C). Strong thunderstorms are common and can produce large hail and lightning. Fall: Generally dry with warm days and cool nights. Highs 50-60°F. Lows below freezing are common. Winter: Highs are in the high 30s with lows around 10°F. Snowfall averages 30 inches annually, periodically closing park roads.",
+      "name": "Wind Cave",
+      "designation": "National Park"
+    },
+    {
+      "id": "CEC8BD62-9229-4455-ABE8-F4310F4AB623",
+      "url": "https://www.nps.gov/wing/index.htm",
+      "fullName": "Wing Luke Museum Affiliated Area",
+      "parkCode": "wing",
+      "description": "More than a museum, the Wing is an experience. A chance to truly understand what it was - and is - to be Asian American in the Pacific Northwest. Take a guided tour of a historic hotel and learn the inside story about what makes the local Chinatown-International District unique. Visitors explore thought-provoking exhibitions of real stories, including actor and martial arts master Bruce Lee.",
+      "latitude": "47.59820859",
+      "longitude": "-122.3228912",
+      "latLong": "lat:47.59820859, long:-122.3228912",
+      "activities": [
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        },
+        {
+          "id": "43800AD1-D439-40F3-AAB3-9FB651FE45BB",
+          "name": "Gift Shop and Souvenirs"
+        }
+      ],
+      "topics": [
+        {
+          "id": "227D2677-28CA-4CBF-997F-61108975A497",
+          "name": "Asian American Heritage"
+        },
+        {
+          "id": "351EE154-87AA-46B0-BBA1-ED604368ACE9",
+          "name": "Incarceration"
+        },
+        {
+          "id": "367BC636-6F02-4F1B-BEAA-5A20E46C7207",
+          "name": "Japanese-American Internment"
+        }
+      ],
+      "states": "WA",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "206.623.5124",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "visit@wingluke.org"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "14.95",
+          "description": "Includes a guided historic hotel tour and gallery admission.",
+          "title": "Museum Experience General Admission - Adults"
+        },
+        {
+          "cost": "11.95",
+          "description": "Includes a guided historic hotel tour and gallery admission.",
+          "title": "Museum Experience General Admission - Seniors"
+        },
+        {
+          "cost": "10.95",
+          "description": "For students 13-18 or with student ID.\n\nIncludes a guided historic hotel tour and gallery admission.",
+          "title": "Museum Experience General Admission - Students"
+        },
+        {
+          "cost": "9.95",
+          "description": "For Children 5-12.\n\nIncludes a guided historic hotel tour and gallery admission.",
+          "title": "Museum Experience General Admission - Children"
+        },
+        {
+          "cost": "0.00",
+          "description": "Includes a guided historic hotel tour and gallery admission.",
+          "title": "Museum Experience General Admission - Under 5"
+        },
+        {
+          "cost": "19.95",
+          "description": "Includes a guided neighborhood tour and gallery admission.\n\nTours are available Tuesday - Saturday at 2pm.",
+          "title": "Touch of Chinatown Tour - Adults"
+        },
+        {
+          "cost": "17.95",
+          "description": "Includes a guided neighborhood tour and gallery admission.\n\nTours are available Tuesday - Saturday at 2pm.",
+          "title": "Touch of Chinatown Tour - Seniors"
+        },
+        {
+          "cost": "14.95",
+          "description": "For students 13-18 or with student ID.\n\nIncludes a guided neighborhood tour and gallery admission.\n\nTours are available Tuesday - Saturday at 2pm.",
+          "title": "Touch of Chinatown Tour - Students"
+        },
+        {
+          "cost": "12.95",
+          "description": "For children 5-12.\n\nIncludes a guided neighborhood tour and gallery admission.\n\nTours are available Tuesday - Saturday at 2pm.",
+          "title": "Touch of Chinatown Tour - Children"
+        },
+        {
+          "cost": "0.00",
+          "description": "Includes a guided neighborhood tour and gallery admission.\n\nTours are available Tuesday - Saturday at 2pm.",
+          "title": "Touch of Chinatown Tour - Under 5"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "Coming from North of I-5: Take exit 165A toward James St. Once you get off the highway, merge right onto 6th Ave and follow the road. You will enter the heart of the district after passing Jackson Street. Coming from South of I-5: Take exit 164A toward James St./Madison St./Dearborn St. Follow signs for Dearborn St. and then turn left at S.Dearborn St. Turn right at 6th Ave S. and you will enter the heart of the district.",
+      "directionsUrl": "http://www.nps.gov/wing/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "On the first Thursday of every month, the Museum is open 10am - 8pm.",
+          "standardHours": {
+            "wednesday": "10:00AM - 5:00PM",
+            "monday": "Closed",
+            "thursday": "10:00AM - 5:00PM",
+            "sunday": "10:00AM - 5:00PM",
+            "tuesday": "10:00AM - 5:00PM",
+            "friday": "10:00AM - 5:00PM",
+            "saturday": "10:00AM - 5:00PM"
+          },
+          "name": "Hours"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "98104",
+          "city": "Seattle",
+          "stateCode": "WA",
+          "line1": "719 South King Street",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "98104",
+          "city": "Seattle",
+          "stateCode": "WA",
+          "line1": "719 South King Street",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "Lindsay Kennedy",
+          "title": "Nippon Kan Theatre curtain",
+          "altText": "theatre curtain painted with Japanese characters advertising local businesses",
+          "caption": "Nippon Kan Theatre curtain, painted with logos and ads for local Japanese-American businesses",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C81D25A-1DD8-B71B-0B9DAC16CFECEC36.jpg"
+        },
+        {
+          "credit": "Lindsay Kennedy",
+          "title": "Nippon Kan Theatre curtain detail",
+          "altText": "Japanese characters from advertisements are painted on a theatre curtain",
+          "caption": "Detail of advertisements from the Nippon Kan Theatre curtain that hangs in the museum",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C81CE2A-1DD8-B71B-0B1714B6C4C5AF73.jpg"
+        },
+        {
+          "credit": "Dean Wong",
+          "title": "\"Letter Cloud\"",
+          "altText": "a mobile of letters written on white paper hangs in the museum lobby",
+          "caption": "“Letter Cloud,” by Erin Shie Palmer, is made up of letters written by immigrants to family and friends",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C81CB2F-1DD8-B71B-0B90378FD5C9894B.jpg"
+        },
+        {
+          "credit": "Lindsay Kennedy",
+          "title": "\"Letter Cloud\"",
+          "altText": "a mobile of letters written on white paper hangs in the museum lobby",
+          "caption": "“Letter Cloud,” by Erin Shie Palmer, is made up of letters written by immigrants to family and friends",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C81CC78-1DD8-B71B-0B5AD50A668E5314.jpg"
+        }
+      ],
+      "weatherInfo": "The Wing Luke may close in the case of inclement weather. If you are unsure, please call the museum at 206.623.5124 after 10am to confirm that it is open.",
+      "name": "Wing Luke Museum",
+      "designation": "Affiliated Area"
+    },
+    {
+      "id": "72F41D84-A8ED-47FC-935A-2FD28C3C582E",
+      "url": "https://www.nps.gov/wotr/index.htm",
+      "fullName": "Wolf Trap National Park for the Performing Arts",
+      "parkCode": "wotr",
+      "description": "No matter what your age or taste in shows, you'll find something you like onstage at Wolf Trap National Park for the Performing Arts. From May through September, multiple amphitheaters in the park present performances such as musicals, dance, opera, jazz, and popular and country music. A good time to explore the beauty and history of the park without the crowds is October - April.",
+      "latitude": "38.93854526",
+      "longitude": "-77.265089",
+      "latLong": "lat:38.93854526, long:-77.265089",
+      "activities": [
+        {
+          "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+          "name": "Arts and Culture"
+        },
+        {
+          "id": "C0FFC3D5-0E74-4B6F-B69D-6F95B78906CE",
+          "name": "Live Music"
+        },
+        {
+          "id": "CE84DEFA-D692-4165-96DF-D5FF56002E2F",
+          "name": "Theater"
+        },
+        {
+          "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+          "name": "Food"
+        },
+        {
+          "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+          "name": "Picnicking"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        }
+      ],
+      "topics": [
+        {
+          "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+          "name": "Arts"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        }
+      ],
+      "states": "VA",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "7032551800",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          },
+          {
+            "phoneNumber": "7032551971",
+            "description": "",
+            "extension": "",
+            "type": "Fax"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "wotr_interp@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "There is no entrance fee at Wolf Trap National Park for the Performing Arts.",
+          "title": "No Entrance Fee"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "Wolf Trap National Park for the Performing Arts is located in Vienna, Virginia. The park can be accessed by traveling from Route 7, the Dulles Toll Road (Route 267), Beulah Road or Old Courthouse Road. For more detailed information visit the park's directions page.",
+      "directionsUrl": "http://www.nps.gov/wotr/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "Wolf Trap National Park for the Performing Arts is open to the public from sunrise to dusk every day. During the performance season, the park is closed to public visitation which is not performance related during park festivals and Filene Center performances to avoid conflict among visitor use activities. This public use restriction begins two hours prior to Filene Center show times and ends one hour after Filene Center performances have completed. The park is closed from dusk to sunrise except to patrons a",
+          "standardHours": {
+            "wednesday": "Sunrise to Sunset",
+            "monday": "Sunrise to Sunset",
+            "thursday": "Sunrise to Sunset",
+            "sunday": "Sunrise to Sunset",
+            "tuesday": "Sunrise to Sunset",
+            "friday": "Sunrise to Sunset",
+            "saturday": "Sunrise to Sunset"
+          },
+          "name": "Park Operating Hours"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "22182-1643",
+          "city": "Vienna",
+          "stateCode": "VA",
+          "line1": "1551 Trap Road",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "22182-1643",
+          "city": "Vienna",
+          "stateCode": "VA",
+          "line1": "1551 Trap Road",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo / N. Adams",
+          "title": "Filene Center Blast Off",
+          "altText": "The Filene Center House full of patrons",
+          "caption": "Everyone is ready to kickoff the Filene Center season.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C8068F8-1DD8-B71B-0B3D0F4B88C2CD62.jpg"
+        },
+        {
+          "credit": "NPS Photo / N. Adams",
+          "title": "Catherine Filene Shouse Bust",
+          "altText": "Bust of Catherine Filene Shouse with building in back",
+          "caption": "Catherine Filene Shouse donated her land to the National Park Service, which Wolf Trap National Park for the Performing Arts was established.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C806A78-1DD8-B71B-0B214F246D9BC413.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Junior Ranger Day",
+          "altText": "A ranger swears in two new Jr. Rangers during Jr. Ranger Day activities at the park.",
+          "caption": "Junior Ranger Days occur throughout the summer.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/B408B77F-E63D-5DF1-377E3DBD36120ECB.jpg"
+        },
+        {
+          "credit": "NPS Photo / N. Adams",
+          "title": "Dimple Meadow",
+          "altText": "Native garden with the Filene Center in the background",
+          "caption": "In 2012, park staff and volunteers planted 42 species of native grasses and wildflowers here to create a habitat that now supports over 40 kinds of bees and 25 types of butterflies.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C806D30-1DD8-B71B-0B1348005ED7DA7D.jpg"
+        },
+        {
+          "credit": "NPS Photo / N. Adams",
+          "title": "Natural Side of a Park for the Performing Arts",
+          "altText": "Filene Center in the background with autumn leaves",
+          "caption": "There are opportunities year-round to hike and enjoy the outdoors, picnic and participate in ranger programs or walks.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C806EB0-1DD8-B71B-0B61464724F6810A.jpg"
+        },
+        {
+          "credit": "NPS Photo / N. Adams",
+          "title": "Children's Theatre-in-the-Woods Performances",
+          "altText": "Sold out show at Theatre-in-the-Woods",
+          "caption": "Most of the activities in the park during the summer are centered around performances at the Filene Center and Theatre-in-the-Woods.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C80727B-1DD8-B71B-0B7F94588A9BB608.jpg"
+        }
+      ],
+      "weatherInfo": "The weather at Wolf Trap National Park for the Performing Arts is typical for the mid-Atlantic area. There are four seasons. The majority of visitation is during the summers, which can be hot and humid during the day and cooler at night.",
+      "name": "Wolf Trap National Park for the Performing Arts",
+      "designation": ""
+    },
+    {
+      "id": "09689FA5-2147-4BF2-935C-AE92AB85A2E5",
+      "url": "https://www.nps.gov/wori/index.htm",
+      "fullName": "Women's Rights National Historical Park",
+      "parkCode": "wori",
+      "description": "Women’s Rights National Historical Park tells the story of the first Women’s Rights Convention held in Seneca Falls, NY on July 19-20,1848. It is a story of struggles for civil rights, human rights, and equality, global struggles that continue today. The efforts of women’s rights leaders, abolitionists, and other 19th century reformers remind us that all people must be accepted as equals.",
+      "latitude": "42.90817073",
+      "longitude": "-76.81655558",
+      "latLong": "lat:42.90817073, long:-76.81655558",
+      "activities": [
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        }
+      ],
+      "topics": [
+        {
+          "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+          "name": "Architecture and Building"
+        },
+        {
+          "id": "28AEAE85-9DDA-45B6-981B-1CFCDCC61E14",
+          "name": "African American Heritage"
+        },
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "D9FC6D14-F8C7-4EBA-86EA-DFD99B6BB4F5",
+          "name": "Enslavement"
+        },
+        {
+          "id": "518B32FB-339D-4C52-B2C2-04BF406AA4B0",
+          "name": "Religion and Spirituality"
+        },
+        {
+          "id": "98F41FDF-B73F-4B68-8010-53CCB2891E3B",
+          "name": "Churches"
+        },
+        {
+          "id": "40C0866A-3890-41A4-84CA-5935DEE181AE",
+          "name": "Social Movements"
+        },
+        {
+          "id": "DA1E6678-D60D-4E66-96A5-78183342673B",
+          "name": "Voting Rights and Suffrage"
+        },
+        {
+          "id": "7DA81DAB-5045-4953-9C20-36590AD9FA95",
+          "name": "Women's History"
+        }
+      ],
+      "states": "NY",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "3155680024",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "wori_information_desk@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "Entrance and all events are free.",
+          "title": "Women's Rights Entrance Fee"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "From the New York State Thruway (I-90) take exit 41 (Route 414). Turn right onto Route 414 South after exiting the tollbooth. Follow Route 414 South for approximately four miles. At the intersections of Route 414 and Routes 5 & 20, turn left onto Route 5 & 20 East. Follow for approximately one and a half miles into the Village of Seneca Falls. The Visitor Center is on the left at 136 Fall Street, Seneca Falls, NY 13148.",
+      "directionsUrl": "http://www.nps.gov/wori/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2022-01-01",
+              "name": "New Year's Day",
+              "endDate": "2022-01-01"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "10:00AM - 4:00PM",
+                "sunday": "Closed",
+                "tuesday": "10:00AM - 4:00PM",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-01-02",
+              "name": "COVID-19 Reopening Phase",
+              "endDate": "2021-12-31"
+            },
+            {
+              "exceptionHours": {
+                "thursday": "Closed"
+              },
+              "startDate": "2021-11-25",
+              "name": "Thanksgiving Day",
+              "endDate": "2021-11-25"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-12-24",
+              "name": "Christmas Eve Day",
+              "endDate": "2021-12-24"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-12-25",
+              "name": "Christmas Day",
+              "endDate": "2021-12-25"
+            }
+          ],
+          "description": "Hours can vary in winter season. For most current schedule, see hours below.",
+          "standardHours": {
+            "wednesday": "9:00AM - 5:00PM",
+            "monday": "9:00AM - 5:00PM",
+            "thursday": "9:00AM - 5:00PM",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "9:00AM - 5:00PM",
+            "friday": "9:00AM - 5:00PM",
+            "saturday": "9:00AM - 5:00PM"
+          },
+          "name": "Women's Rights NHP"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "13148",
+          "city": "Seneca Falls",
+          "stateCode": "NY",
+          "line1": "136 Fall Street",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "13148",
+          "city": "Seneca Falls",
+          "stateCode": "NY",
+          "line1": "136 Fall Street",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo",
+          "title": "Wesleyan Chapel",
+          "altText": "The Wesleyan Chapel in summer",
+          "caption": "The Wesleyan Chapel, site of the first Women's Rights Convention",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C700A-1DD8-B71B-0B5C2C42B93C9B76.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Visitor Center",
+          "altText": "Front of Women's Rights National Historical Park Visitor Center",
+          "caption": "Visitors can come to learn about the largest social movement in history, the women's rights movement.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C716D-1DD8-B71B-0BDF8B5514339E3F.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Elizabeth Cady Stanton House",
+          "altText": "The Elizabeth Cady Stanton House with a tree and National Park Service sign in the front yard",
+          "caption": "Take a ranger led tour in the home where Elizabeth Cady Stanton led the women's rights movement and raised 7 children",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C72AF-1DD8-B71B-0B8311EEBE9A89F9.jpg"
+        }
+      ],
+      "weatherInfo": "In the winter, temperatures range from 0-40 degrees with an average of 10 inches of snow per month. Summer temperatures range from 60-85 degrees with high humidity.",
+      "name": "Women's Rights",
+      "designation": "National Historical Park"
+    },
+    {
+      "id": "3B4879C9-E8D3-4B0C-9F6D-8345FAA298A6",
+      "url": "https://www.nps.gov/wwim/index.htm",
+      "fullName": "World War I Memorial",
+      "parkCode": "wwim",
+      "description": "A grateful nation honors the service, valor, courage and sacrifice of the 4.7 million American sons and daughters who served in the Great War.",
+      "latitude": "38.8959",
+      "longitude": "-77.0329",
+      "latLong": "lat:38.8959, long:-77.0329",
+      "activities": [
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        }
+      ],
+      "topics": [
+        {
+          "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+          "name": "Military"
+        },
+        {
+          "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+          "name": "Monuments and Memorials"
+        },
+        {
+          "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+          "name": "Wars and Conflicts"
+        },
+        {
+          "id": "4EC51024-F0D9-479D-AF3F-344CC0153D2E",
+          "name": "World War I"
+        }
+      ],
+      "states": "DC",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "(202) 426-6841",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "The email address for all National Mall and Memorial Park Sites.",
+            "emailAddress": "National_Mall@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "There are no fees associated with visiting this site.",
+          "title": "WWI Memorial Entrance Fee"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "0.00",
+          "description": "As there is no fee associated with a visit, No Passes are required.",
+          "title": "WWI Memorial Passes"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "1493 Pennsylvania Avenue NW, Nearest Intersection: 15th St NW and Pennsylvania Ave NW",
+      "directionsUrl": "http://www.nps.gov/wwim/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "The WWI Memorial is open 24 hours a day.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Memorial Open"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "20004",
+          "city": "Washington",
+          "stateCode": "DC",
+          "line1": "1493 Pennsylvania Avenue NW,",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo",
+          "title": "General Pershing Statue",
+          "altText": "General Pershing Statue",
+          "caption": "Image of the General Pershing Statue within the Memorial",
+          "url": "https://www.nps.gov/common/uploads/structured_data/CB4DB522-0F64-662E-7F41883E1BEC3066.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "The Belvedere",
+          "altText": "An elevated platform overlooks the World War I Memorial",
+          "caption": "The Belvedere is the conceptual center of the World War I Memorial, providing a commanding view of its major features.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/F758D02B-D733-5F8B-301195968EB96177.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "WWI Memorial Construction Picture Number 2",
+          "altText": "Image of the WWI Memorial under Renovation",
+          "caption": "Image of the WWI Memorial under Renovation",
+          "url": "https://www.nps.gov/common/uploads/structured_data/E608FED3-B51C-F16A-858553C29420D2AD.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Peace Fountain",
+          "altText": "Peace Fountain",
+          "caption": "Image of the Peace Fountain within the Memorial",
+          "url": "https://www.nps.gov/common/uploads/structured_data/CB5C1604-CFC3-BFF1-37E31101F2FF1083.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Soldiers Journey",
+          "altText": "Soldiers Journey",
+          "caption": "Image of the mock up of the soon to be installed Bronze.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/CB657174-0B80-E8EC-EBBFE75CE9C9EBB3.jpg"
+        }
+      ],
+      "weatherInfo": "Washington DC gets to see all four seasons. Humidity will make the temps feel hotter in summer and colder in winter. Spring (March - May) Temp: Average high is 65.5 degrees with a low of 46.5 degrees Summer (June - August) Temp: Average high is 86 degrees with a low of 68.5 degrees Fall (September - November) Temp: Average high is 68 degrees with a low of 51.5 degrees Winter (December - February) Temp: Average high is 45 degrees with a low of 30 degrees (Source: www.usclimatedata.com)",
+      "name": "World War I Memorial",
+      "designation": ""
+    },
+    {
+      "id": "F85AF8D0-1B85-4B2C-9356-840A4AF6A354",
+      "url": "https://www.nps.gov/wwii/index.htm",
+      "fullName": "World War II Memorial",
+      "parkCode": "wwii",
+      "description": "Through stone architecture and bronze sculptures, the World War II Memorial recognizes the ways Americans served, honors those who fell, and recognizes the victory they achieved to restore freedom and end tyranny around the globe.",
+      "latitude": "38.88923917",
+      "longitude": "-77.0403759",
+      "latLong": "lat:38.88923917, long:-77.0403759",
+      "activities": [
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        }
+      ],
+      "topics": [
+        {
+          "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+          "name": "Architecture and Building"
+        },
+        {
+          "id": "351EE154-87AA-46B0-BBA1-ED604368ACE9",
+          "name": "Incarceration"
+        },
+        {
+          "id": "367BC636-6F02-4F1B-BEAA-5A20E46C7207",
+          "name": "Japanese-American Internment"
+        },
+        {
+          "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+          "name": "Monuments and Memorials"
+        },
+        {
+          "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+          "name": "Wars and Conflicts"
+        },
+        {
+          "id": "74869FAE-8DFD-4454-847F-11FDDB679F94",
+          "name": "World War II"
+        }
+      ],
+      "states": "DC",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "2024266841",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "national_mall@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "No Entrance Fee",
+          "title": "No Entrance Fee"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "GPS Coordinates: 38.889413, -77.040553 Address: 1750 Independence Ave. SW, Washington, D.C. Nearest Intersection: 17th St. & Independence Ave. SW",
+      "directionsUrl": "http://www.nps.gov/wwii/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "The sites of National Mall and Memorial Parks (other than the Washington Monument) are always open to the public. Restrooms, museums and elevators close in the evenings (check individual sites for hours)",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Always Open"
+        },
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {},
+              "startDate": "2021-12-25",
+              "name": "Rangers not on duty Christmas Day",
+              "endDate": "2021-12-25"
+            }
+          ],
+          "description": "Rangers are on Duty to assist the Visiting Public from 9:30 am to 10:00 pm daily (except christmas). The United States Park Police are on Duty 24 hours a day.",
+          "standardHours": {
+            "wednesday": "9:30AM - 10:00PM",
+            "monday": "9:30AM - 10:00PM",
+            "thursday": "9:30AM - 10:00PM",
+            "sunday": "9:30AM - 10:00PM",
+            "tuesday": "9:30AM - 10:00PM",
+            "friday": "9:30AM - 10:00PM",
+            "saturday": "9:30AM - 10:00PM"
+          },
+          "name": "Rangers on Duty"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "20024",
+          "city": "Washington",
+          "stateCode": "DC",
+          "line1": "1750 Independence Ave. SW",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "20024",
+          "city": "Washington",
+          "stateCode": "DC",
+          "line1": "900 Ohio Drive SW",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo/Brian Hall",
+          "title": "A Field of Stars",
+          "altText": "Close up of Gold Stars in the Memorial",
+          "caption": "Paying honor to those that paid the ultimate price.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C8177E8-1DD8-B71B-0BE98D23BE5E7C32.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Lady Freedom Walking",
+          "altText": "A close up of one of the Lady Freedom markers",
+          "caption": "One of the two plaques showing a nation answering the call to defend freedom",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C81795B-1DD8-B71B-0B32A08A7858D89B.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "The World War II Memorial at night",
+          "altText": "The World War II Memorial at night",
+          "caption": "The World War II Memorial at night",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C817BA1-1DD8-B71B-0B24DF1A9121EB94.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "WWII Memorial",
+          "altText": "WWII Memorial panoramic shot",
+          "caption": "A nation pays honor in the center of the capital city to the greatest generatioin",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C817CF7-1DD8-B71B-0B3E8FC6569F7547.jpg"
+        }
+      ],
+      "weatherInfo": "Washington DC gets to see all four seasons. Humidity will make the temps feel hotter in summer and colder in winter. Spring (March - May) Temp: Average high is 65.5 degrees with a low of 46.5 degrees Summer (June - August) Temp: Average high is 86 degrees with a low of 68.5 degrees Fall (September - November) Temp: Average high is 68 degrees with a low of 51.5 degrees Winter (December - February) Temp: Average high is 45 degrees with a low of 30 degrees (Source: www.usclimatedata.com)",
+      "name": "World War II Memorial",
+      "designation": ""
+    },
+    {
+      "id": "B7944940-3FE5-4F9B-80AB-2FD78A4CDD48",
+      "url": "https://www.nps.gov/wrst/index.htm",
+      "fullName": "Wrangell - St Elias National Park & Preserve",
+      "parkCode": "wrst",
+      "description": "Wrangell-St. Elias is a vast national park that rises from the ocean all the way up to 18,008 ft. At 13.2 million acres, the park is the same size as Yellowstone National Park, Yosemite National Park, and Switzerland combined! Within this wild landscape, people continue to live off the land as they have done for centuries. This rugged, beautiful land is filled with opportunities for adventure.",
+      "latitude": "61.4182147",
+      "longitude": "-142.6028439",
+      "latLong": "lat:61.4182147, long:-142.6028439",
+      "activities": [
+        {
+          "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+          "name": "Arts and Culture"
+        },
+        {
+          "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+          "name": "Auto and ATV"
+        },
+        {
+          "id": "BBC79C28-EBA7-4CE9-8614-02D00AA21558",
+          "name": "ATV Off-Roading"
+        },
+        {
+          "id": "DC668D29-297C-4D16-B6F8-89A67D9E19E3",
+          "name": "Auto Off-Roading"
+        },
+        {
+          "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+          "name": "Scenic Driving"
+        },
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "299CB934-88DC-474F-A33D-E43E29A149C2",
+          "name": "Mountain Biking"
+        },
+        {
+          "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+          "name": "Boating"
+        },
+        {
+          "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+          "name": "Camping"
+        },
+        {
+          "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+          "name": "Backcountry Camping"
+        },
+        {
+          "id": "907E8125-15E4-483C-8EAD-B9FA1E85C6F8",
+          "name": "Canoe or Kayak Camping"
+        },
+        {
+          "id": "9159DF0F-951D-4AAE-9987-CEB3CE2A9ADA",
+          "name": "Car or Front Country Camping"
+        },
+        {
+          "id": "7CFF5F03-5ECC-4F5A-8572-75D1F0976C0C",
+          "name": "Group Camping"
+        },
+        {
+          "id": "C5C5971C-E325-4CEB-8C81-EE49A881DF17",
+          "name": "RV Camping"
+        },
+        {
+          "id": "07CBCA6A-46B8-413F-8B6C-ABEDEBF9853E",
+          "name": "Canyoneering"
+        },
+        {
+          "id": "B12FAAB9-713F-4B38-83E4-A273F5A43C77",
+          "name": "Climbing"
+        },
+        {
+          "id": "977B3209-68A2-4BCE-97A9-EA0CAC320664",
+          "name": "Mountain Climbing"
+        },
+        {
+          "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+          "name": "Fishing"
+        },
+        {
+          "id": "25FB188F-5AAD-459A-9092-28A9801709FF",
+          "name": "Freshwater Fishing"
+        },
+        {
+          "id": "9BC03FAF-28F1-4609-BF6F-643F58071AED",
+          "name": "Fly Fishing"
+        },
+        {
+          "id": "17411C8D-5769-4D0F-ABD1-52ED03840C18",
+          "name": "Saltwater Fishing"
+        },
+        {
+          "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+          "name": "Food"
+        },
+        {
+          "id": "E53E1320-9B17-41DC-86A5-37EB7D622572",
+          "name": "Dining"
+        },
+        {
+          "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+          "name": "Picnicking"
+        },
+        {
+          "id": "D72206E4-6CD1-4441-A355-F8F1827466B1",
+          "name": "Flying"
+        },
+        {
+          "id": "C06FE528-9671-4EC1-909F-B7D3720A1D89",
+          "name": "Fixed Wing Flying"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "C7D5A145-F8EB-4C37-9E92-2F6C6206B196",
+          "name": "Self-Guided Tours - Auto"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+          "name": "Backcountry Hiking"
+        },
+        {
+          "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
+          "name": "Front-Country Hiking"
+        },
+        {
+          "id": "8386EEAF-985F-4DE8-9037-CCF91975AC94",
+          "name": "Hunting and Gathering"
+        },
+        {
+          "id": "8286295F-0932-4491-9350-280C9848E6AB",
+          "name": "Gathering and Foraging"
+        },
+        {
+          "id": "25559F45-F162-4B8B-BEC2-B341034A2AF4",
+          "name": "Hunting"
+        },
+        {
+          "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+          "name": "Paddling"
+        },
+        {
+          "id": "75B92BEB-A36D-4064-88B7-92EEC6D17611",
+          "name": "Whitewater Rafting"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "7C912B83-1B1B-4807-9B66-97C12211E48E",
+          "name": "Snowmobiling"
+        },
+        {
+          "id": "01D717BC-18BB-4FE4-95BA-6B13AD702038",
+          "name": "Snowshoeing"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        }
+      ],
+      "topics": [
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+          "name": "Arts"
+        },
+        {
+          "id": "9BD60DC0-C82B-42BA-A170-456B7423429D",
+          "name": "Photography"
+        },
+        {
+          "id": "B912363F-771C-4098-BA3A-938DF38A9D7E",
+          "name": "Aviation"
+        },
+        {
+          "id": "12EA2B56-17EC-410A-A10D-BFBA87A0669B",
+          "name": "Explorers and Expeditions"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "324C31EC-7D75-41C7-AA28-EF8ACB5B6BF5",
+          "name": "Bison"
+        },
+        {
+          "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+          "name": "Cats (wild)"
+        },
+        {
+          "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+          "name": "Fish"
+        },
+        {
+          "id": "9576386A-C84F-4436-9094-C5CD67A672CC",
+          "name": "Wolves"
+        },
+        {
+          "id": "77B7EFDF-1A74-409C-8BA2-324EC919DB0E",
+          "name": "Arctic"
+        },
+        {
+          "id": "C8F16A24-90B7-47D9-B2E0-5F2A9237D0F4",
+          "name": "Tundra"
+        },
+        {
+          "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
+          "name": "Climate Change"
+        },
+        {
+          "id": "46FC5CBD-9AD5-48F1-B4DA-1357031B1D2E",
+          "name": "Coasts, Islands and Atolls"
+        },
+        {
+          "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+          "name": "Fire"
+        },
+        {
+          "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
+          "name": "Forests and Woodlands"
+        },
+        {
+          "id": "762170E5-0747-4836-B837-7F2547D3F733",
+          "name": "Coniferous Forests"
+        },
+        {
+          "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
+          "name": "Fossils and Paleontology"
+        },
+        {
+          "id": "66FB98FF-DAFC-4AD0-89C3-E181870E03A5",
+          "name": "Dinosaur"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "087E5290-E130-49C1-ADFB-DAFB0644DBE4",
+          "name": "Mineral Deposits"
+        },
+        {
+          "id": "FBB14C45-1663-4714-9D28-B2B99874644D",
+          "name": "Glaciers"
+        },
+        {
+          "id": "1CF1F6BB-A037-445B-8CF2-81428E50CE52",
+          "name": "Lakes"
+        },
+        {
+          "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
+          "name": "Mountains"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "B5E62BF4-5AE6-4100-8DE1-66652943FAEC",
+          "name": "Aurora Borealis"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        },
+        {
+          "id": "90F8744F-CD10-4925-955C-064CB1A17EB0",
+          "name": "Volcanoes"
+        },
+        {
+          "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+          "name": "Watersheds"
+        },
+        {
+          "id": "B85866E2-0897-4000-9040-605CA335804F",
+          "name": "Wilderness"
+        }
+      ],
+      "states": "AK",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "9078225234",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          },
+          {
+            "phoneNumber": "9078223281",
+            "description": "",
+            "extension": "",
+            "type": "Fax"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "wrst_info@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "Fee free park",
+          "title": "Entrance Fee"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "The administrative building and main park visitor center are located along the Richardson Highway (Hwy 4), which is a paved state highway that runs through Copper Center, AK. The buildings are 8 miles south of the Glenn Highway and Richardson Highway intersection near Glennallen, Alaska. This is approximately 200 miles east of Anchorage, AK and 250 miles south of Fairbanks, AK.",
+      "directionsUrl": "http://www.nps.gov/wrst/planyourvisit/wrangell-st-elias-visitor-center.htm",
+      "operatingHours": [
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-10-01",
+              "name": "Fall/Winter/Spring CLOSED - October through April",
+              "endDate": "2022-04-30"
+            }
+          ],
+          "description": "The park and public lands are always open but visitor facilities have limited seasons: Open in Summer with limited operations including window services at Slana, Copper Center and Chitina. Dial-a-Ranger at Slana (907) 822-7401, Copper Center (907) 822-7250, Chitina (907) 823-2205 and Kennecott (907) 205-7106. CLOSED Fall/Winter/Spring - October through April.",
+          "standardHours": {
+            "wednesday": "9:00AM - 5:00PM",
+            "monday": "9:00AM - 5:00PM",
+            "thursday": "9:00AM - 5:00PM",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "9:00AM - 5:00PM",
+            "friday": "9:00AM - 5:00PM",
+            "saturday": "9:00AM - 5:00PM"
+          },
+          "name": "Wrangell-St. Elias National Park and Preserve"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "99573",
+          "city": "Copper Center",
+          "stateCode": "AK",
+          "line1": "Wrangell-St. Elias National Park & Preserve",
+          "type": "Physical",
+          "line3": "",
+          "line2": "Mile 106.8 Richardson Highway"
+        },
+        {
+          "postalCode": "99573",
+          "city": "Copper Center",
+          "stateCode": "AK",
+          "line1": "Wrangell-St. Elias National Park & Preserve",
+          "type": "Mailing",
+          "line3": "Mile 106.8 Richardson Highway",
+          "line2": "PO Box 439"
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo/ Neal Herbert",
+          "title": "Icy Bay with Mt. St. Elias",
+          "altText": "Glaciers loom over the ocean with large snowy mountains rising into blue skies",
+          "caption": "Wrangell-St. Elias National Park contains a diversity of natural features.  Landscapes unique to the North American continent are common here.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AAD63-1DD8-B71B-0BCE10FFD741A687.jpg"
+        },
+        {
+          "credit": "NPS Photo/ Bryan Petrtyl",
+          "title": "Backpackers in Mentasta Mountains",
+          "altText": "Two backpackers sitting in an alpine meadow with snowy mountains in the background",
+          "caption": "Wrangell-St. Elias National Park is a backpacker's paradise.  A variety of routes take you into beautiful country, including the Mentasta Mountains.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AAC04-1DD8-B71B-0B6534785C41D6B5.jpg"
+        },
+        {
+          "credit": "NPS Photo/ Matthew Yarbrough",
+          "title": "Kennecott Mill Town",
+          "altText": "Historic, large, red buildings with mountains in the background",
+          "caption": "Kennecott Mines National Historic Landmark is found within Wrangell-St. Elias National Park.  This early 1900's copper mining operation overcame numerous challenges and found success in the heart of the Alaskan wilderness.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AB124-1DD8-B71B-0B224A3B96A7304E.jpg"
+        },
+        {
+          "credit": "NPS Photo/ Bryan Petrtyl",
+          "title": "Logan Glacier",
+          "altText": "A large glacier with stripes of different colored rock nestled in between barren mountain slopes.",
+          "caption": "Wrangell-St. Elias National Park contains the greatest concentration of glaciers in North America.  More than 3000 glaciers covering over three million acres of land are found in the park.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AB2FD-1DD8-B71B-0BC380F8D220B0BA.jpg"
+        },
+        {
+          "credit": "NPS Photo/ Bryan Petrtyl",
+          "title": "Wrangell Mountains",
+          "altText": "Four large snow covered mountains rise above dense forest into blue skies.",
+          "caption": "The Wrangell Mountains dominate the view of the northern half of the park.   This range lies entirely within the park and reaches 16,390 ft (4,996 m) in height.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7AB5F0-1DD8-B71B-0B0A0B409DEAB3ED.jpg"
+        },
+        {
+          "credit": "National Park Service",
+          "title": "Copper Center Visitor Center",
+          "altText": "Copper Center Visitor Center",
+          "caption": "Copper Center Visitor Center",
+          "url": "https://www.nps.gov/common/uploads/structured_data/9DC3E3D5-D69E-D0CC-CB5DDBE505175B32.jpg"
+        },
+        {
+          "credit": "National Park Service",
+          "title": "Slana Ranger Station",
+          "altText": "Slana Ranger Station",
+          "caption": "Slana Ranger Station",
+          "url": "https://www.nps.gov/common/uploads/structured_data/9DCBE069-A954-BD79-5281A59DC8A04EDE.jpg"
+        },
+        {
+          "credit": "National Park Service",
+          "title": "Chitina Ranger Station",
+          "altText": "Chitina Ranger Station",
+          "caption": "Chitina Ranger Station",
+          "url": "https://www.nps.gov/common/uploads/structured_data/9DD39775-F416-41FB-469ABEA4388BD8F2.jpg"
+        },
+        {
+          "credit": "National Park Service",
+          "title": "Kennecott Visitor Center",
+          "altText": "Kennecott Visitor Center in the historic Blackburn School",
+          "caption": "Kennecott Visitor Center in the historic Blackburn School",
+          "url": "https://www.nps.gov/common/uploads/structured_data/9DE230BE-C2B2-38C5-DF6FF368C1AB8F0B.jpg"
+        },
+        {
+          "credit": "National Park Service",
+          "title": "Yakutat coastal area",
+          "altText": "Yakutat coastal area",
+          "caption": "Yakutat coastal area",
+          "url": "https://www.nps.gov/common/uploads/structured_data/9DED0407-CD98-60E5-7965642A3CD2DA0D.jpg"
+        }
+      ],
+      "weatherInfo": "Varies widely depending on location in park and time of year. Visit https://www.nps.gov/wrst/planyourvisit/weather.htm for detailed information.",
+      "name": "Wrangell - St Elias",
+      "designation": "National Park & Preserve"
+    },
+    {
+      "id": "E2AE772D-7A2B-49CC-9AFA-E8F068506B22",
+      "url": "https://www.nps.gov/wrbr/index.htm",
+      "fullName": "Wright Brothers National Memorial",
+      "parkCode": "wrbr",
+      "description": "Wind, sand, and a dream of flight brought Wilbur and Orville Wright to Kitty Hawk, North Carolina where, after four years of scientific experimentation, they achieved the first successful airplane flights on December 17, 1903. With courage and perseverance, these self-taught engineers relied on teamwork and application of the scientific process. What they achieved changed our world forever.",
+      "latitude": "36.01637713",
+      "longitude": "-75.66997163",
+      "latLong": "lat:36.01637713, long:-75.66997163",
+      "activities": [
+        {
+          "id": "D72206E4-6CD1-4441-A355-F8F1827466B1",
+          "name": "Flying"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        }
+      ],
+      "topics": [
+        {
+          "id": "B912363F-771C-4098-BA3A-938DF38A9D7E",
+          "name": "Aviation"
+        },
+        {
+          "id": "D10852A3-443C-4743-A5FA-6DD6D2A054B3",
+          "name": "Birthplace"
+        },
+        {
+          "id": "FE005582-12C5-472C-8229-3CB004DB050E",
+          "name": "Engineering"
+        },
+        {
+          "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+          "name": "Monuments and Memorials"
+        },
+        {
+          "id": "D1CF31DE-AFED-412B-9425-DD1FD4CBB5C7",
+          "name": "Science, Technology and Innovation"
+        },
+        {
+          "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+          "name": "Transportation"
+        }
+      ],
+      "states": "NC",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "2524732111",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "caha_public_affairs@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "10.00",
+          "description": "The fee allows entrance to Wright Brothers National Memorial for one person, 16 years old or older, for seven consecutive days from the date of purchase.",
+          "title": "Adult"
+        },
+        {
+          "cost": "0.00",
+          "description": "Free admission to Wright Brothers National Memorial for any person 15 years old and younger.",
+          "title": "Children"
+        },
+        {
+          "cost": "25.00",
+          "description": "For commercial vehicles with seating capacity of 1-6 passengers, the cost is $25 + $7/person. Federal passes are not applicable for commercial tour fees.",
+          "title": "Commercial Sedan"
+        },
+        {
+          "cost": "40.00",
+          "description": "For commercial van or small bus with seating capacity of 7-25 passengers. Federal passes are not applicable for commercial tour fees.",
+          "title": "Commercial Van/Small Bus"
+        },
+        {
+          "cost": "100.00",
+          "description": "For commercial motorcoach with seating capacity of 26+ passengers. Federal passes are not applicable for commercial tour fees.",
+          "title": "Commercial Motorcoach"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "35.00",
+          "description": "The annual pass (available for purchase at the entrance station) allows unlimited entry to Wright Brothers National Memorial for 12 months from date of purchase. Pass admits the passholder(s) + 3 adults (16 years of age and older).",
+          "title": "Wright Brothers Annual Pass"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "Wright Brothers National Memorial is located along US 158 in the town of Kill Devil Hills on the Outer Banks of North Carolina.",
+      "directionsUrl": "http://www.nps.gov/wrbr/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-12-25",
+              "name": "Christmas Day",
+              "endDate": "2021-12-25"
+            }
+          ],
+          "description": "These are the times the park grounds and visitor center are open for visitors.",
+          "standardHours": {
+            "wednesday": "9:00AM - 5:00PM",
+            "monday": "9:00AM - 5:00PM",
+            "thursday": "9:00AM - 5:00PM",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "9:00AM - 5:00PM",
+            "friday": "9:00AM - 5:00PM",
+            "saturday": "9:00AM - 5:00PM"
+          },
+          "name": "Hours of Operation"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "27948",
+          "city": "Kill Devil Hills",
+          "stateCode": "NC",
+          "line1": "1000 North Croatan Highway",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "27954",
+          "city": "Manteo",
+          "stateCode": "NC",
+          "line1": "Wright Brothers National Memorial",
+          "type": "Mailing",
+          "line3": "",
+          "line2": "1401 National Park Drive"
+        }
+      ],
+      "images": [
+        {
+          "credit": "Wilbur Wright, Orville Wright, and John Daniels",
+          "title": "First Flight",
+          "altText": "Orville takes to the air in the flyer for the first time as Wilbur assists.",
+          "caption": "Orville takes to the air in the flyer for the first time on December 17, 1903.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C835C3E-1DD8-B71B-0BD5373635F58D88.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Busts and Moon",
+          "altText": "Copper busts of the two brothers with the moon visible in the blue sky.",
+          "caption": "Copper busts of Wilbur and Orville Wright stand atop Big Kill Devil Hill.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C835D5F-1DD8-B71B-0BA12FCABDD65927.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "First Flight Boulder",
+          "altText": "The large boulder and plaque sit where the Wright brothers first flew in their 1903 flyer.",
+          "caption": "This boulder marks the spot where the Wright brothers first flew in their 1903 flyer.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C835E80-1DD8-B71B-0BC326D2D33DF6D8.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Walking Along History",
+          "altText": "Visitors walk along the flight line where Wilbur and Orville Wright flew and landed.",
+          "caption": "Visitors explore the landing spots of the Wright brothers' first flights.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C835FBE-1DD8-B71B-0BA225CDA6DAAB34.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Wright Brothers Monument",
+          "altText": "View straight up at the monument with the Sun directly behind the stonework.",
+          "caption": "Black-and-white image of the Wright Brothers Monument",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C8360DD-1DD8-B71B-0B539D0C7FCB6714.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "National Aviation Day",
+          "altText": "Two young girls look across the grounds of Wright Brothers National Memorial.",
+          "caption": "Visitors enjoy celebrating aviation where modern aviation was born.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C836230-1DD8-B71B-0B79A6C076CAD4DC.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Journey to the Top",
+          "altText": "Visitors moving along a sidewalk to the top of the hill where the monument stands.",
+          "caption": "Visitors climb Big Kill Devil Hill to visit the Wright Brothers Monument.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C83637E-1DD8-B71B-0BC882075FD2D8AB.jpg"
+        }
+      ],
+      "weatherInfo": "Weather on the Outer Banks varies seasonally and daily. Summers can be very hot and sunny (wear sunscreen and drink water), while winters can be cold and wet. High winds are always a possibility any time of the year. It is not uncommon for a brief winter snow each year. Being on a barrier island, the memorial is susceptible to storm impacts, including hurricanes in the summer and nor'easters in the winter. No matter what time of year you visit, dress for the weather, and be ready for wind!",
+      "name": "Wright Brothers",
+      "designation": "National Memorial"
+    },
+    {
+      "id": "686C8EC8-5487-43B9-B5E8-FCABD56227F0",
+      "url": "https://www.nps.gov/wupa/index.htm",
+      "fullName": "Wupatki National Monument",
+      "parkCode": "wupa",
+      "description": "Nestled between the Painted Desert and ponderosa highlands of northern Arizona, Wupatki is a landscape of legacies. Ancient pueblos dot red-rock outcroppings across miles of prairie. Where food and water seem impossible to find, people built pueblos, raised families, farmed, traded, and thrived. Today, if you linger and listen, earth and artifacts whisper their stories to us still.",
+      "latitude": "35.55741077",
+      "longitude": "-111.3957216",
+      "latLong": "lat:35.55741077, long:-111.3957216",
+      "activities": [
+        {
+          "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+          "name": "Auto and ATV"
+        },
+        {
+          "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+          "name": "Scenic Driving"
+        },
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
+          "name": "Road Biking"
+        },
+        {
+          "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+          "name": "Food"
+        },
+        {
+          "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+          "name": "Picnicking"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
+          "name": "Hands-On"
+        },
+        {
+          "id": "31F88DA6-696F-441F-89CF-D7B1415C4CB9",
+          "name": "Citizen Science"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+          "name": "Backcountry Hiking"
+        },
+        {
+          "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
+          "name": "Front-Country Hiking"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        }
+      ],
+      "topics": [
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "A0C86055-4C79-4F70-9D2E-6B9B738290D0",
+          "name": "Ruins"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "B85866E2-0897-4000-9040-605CA335804F",
+          "name": "Wilderness"
+        }
+      ],
+      "states": "AZ",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "9286792365 or 9288561705",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "flag_information@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "25.00",
+          "description": "This fee covers the occupants of one private vehicle for seven days at both Sunset Crater Volcano and Wupatki National Monuments.",
+          "title": "Private Vehicle - Sunset Crater-Wupatki Entrance Fee"
+        },
+        {
+          "cost": "28.00",
+          "description": "This fee covers the occupants of one commercial sedan for one day at both Sunset Crater Volcano and Wupatki National Monuments.",
+          "title": "Commercial Sedan - Sunset Crater-Wupatki Entrance Fee"
+        },
+        {
+          "cost": "40.00",
+          "description": "This fee covers the occupants of one commercial van for one day at both Sunset Crater Volcano and Wupatki National Monuments.",
+          "title": "Commercial Van - Sunset Crater-Wupatki Entrance Fee"
+        },
+        {
+          "cost": "100.00",
+          "description": "This fee covers the occupants of one commercial bus for one day at both Sunset Crater Volcano and Wupatki National Monuments.",
+          "title": "Commercial Bus - Sunset Crater-Wupatki Entrance Fee"
+        },
+        {
+          "cost": "15.00",
+          "description": "This fee covers entry for one bicyclist or pedestrian for seven days at both Sunset Crater Volcano and Wupatki National Monuments.",
+          "title": "Bicyclist/Pedestrian - Sunset Crater-Wupatki Entrance Fee"
+        },
+        {
+          "cost": "20.00",
+          "description": "This fee covers the occupants of one motorcycle for seven days at both Sunset Crater Volcano and Wupatki National Monuments.",
+          "title": "Motorcycle - Sunset Crater-Wupatki Entrance Fee"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "45.00",
+          "description": "This pass is valid for one year from the month of purchase. At Sunset Crater Volcano and Wupatki National Monuments, it covers entry for all occupants of one private vehicle. At Walnut Canyon National Monument, it covers entry for up to four adults; children ages 15 and younger enter for free.",
+          "title": "Flagstaff Annual Pass"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "Wupatki and Sunset Crater Volcano National Monuments are connected by loop road FR-545. Visitors can enter the loop road near mile markers 430 (Sunset Crater Volcano) and 444 (Wupatki) on U.S. Highway 89.",
+      "directionsUrl": "http://www.nps.gov/wupa/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2022-01-01",
+              "name": "Visitor Center Closed January 1",
+              "endDate": "2022-01-01"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-12-25",
+              "name": "Visitor Center Closed December 25",
+              "endDate": "2021-12-25"
+            }
+          ],
+          "description": "The Wupatki National Monument Visitor Center is open 9:00AM to 4:30PM (closed 12-1) MST year round except for December 25th and January 1st. Thanksgiving Day hours are 9:00AM - 1:00PM.\n\nTrails to Wupatki, Wukoki, Citadel, Nalakihu, Box Canyon, and Lomaki Pueblos are open daily from sunrise to sunset",
+          "standardHours": {
+            "wednesday": "Sunrise to Sunset",
+            "monday": "Sunrise to Sunset",
+            "thursday": "Sunrise to Sunset",
+            "sunday": "Sunrise to Sunset",
+            "tuesday": "Sunrise to Sunset",
+            "friday": "Sunrise to Sunset",
+            "saturday": "Sunrise to Sunset"
+          },
+          "name": "Park Hours"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "86004",
+          "city": "Flagstaff",
+          "stateCode": "AZ",
+          "line1": "25137 N. Sunset Crater-Wupatki Loop Rd.",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "86004",
+          "city": "Flagstaff",
+          "stateCode": "AZ",
+          "line1": "6400 U.S. 89",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo / Elliot Schultz",
+          "title": "Wupatki Pueblo",
+          "altText": "a large stone pueblo in a desert beneath partly cloudy skies",
+          "caption": "Wupatki, the monument's namesake pueblo, is made up of more than 100 rooms. The trail also features an ancient ball court and natural blowhole.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7E1F4C-1DD8-B71B-0B5C3A37182BDF0C.jpg"
+        },
+        {
+          "credit": "NPS Photo / Elliot Schultz",
+          "title": "Wukoki Pueblo",
+          "altText": "a man and woman walking toward a three-story sandstone tower",
+          "caption": "Wukoki Pueblo is located three miles from the Wupatki Visitor Center.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7E20CF-1DD8-B71B-0B3B5850F2AF6FFE.jpg"
+        },
+        {
+          "credit": "NPS",
+          "title": "Lomaki Pueblo",
+          "altText": "Walls of a white limestone and red sandstone structure under light blue skies with white clouds.",
+          "caption": "Lomaki means \"beautiful house\" in the Hopi language. The pueblo is located ten miles from the visitor center and is reachable via a short, 0.5 mile trail.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/62BF59BE-FC73-7711-357F551BF797A148.jpg"
+        },
+        {
+          "credit": "NPS Photo / Elliot Schultz",
+          "title": "Dark Skies over the Desert",
+          "altText": "stars and the Milky Way galaxy over a desert juniper tree",
+          "caption": "Wupatki National Monument features exceptionally dark night skies and hosts numerous star parties each year.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7E2447-1DD8-B71B-0B2DC5FE9C911E34.jpg"
+        },
+        {
+          "credit": "NPS",
+          "title": "Citadel Pueblo",
+          "altText": "Side view of the Nalakihu and Citadel Pueblos",
+          "caption": "The Citadel Pueblo sits atop a small cinder hill overlooking the surrounding grasslands.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/62A29D99-A382-37CB-7C4B486D15EFEDF4.jpg"
+        }
+      ],
+      "weatherInfo": "Be prepared for variable and extreme weather conditions. You may expect high winds any time of year, summer temperatures above 100ºF (38ºC), afternoon storms July–September, and occasional snow in winter and early spring. Dress in layers, as Wupatki weather can change quickly at any time of year.",
+      "name": "Wupatki",
+      "designation": "National Monument"
+    },
+    {
+      "id": "F58C6D24-8D10-4573-9826-65D42B8B83AD",
+      "url": "https://www.nps.gov/yell/index.htm",
+      "fullName": "Yellowstone National Park",
+      "parkCode": "yell",
+      "description": "On March 1, 1872, Yellowstone became the first national park for all to enjoy the unique hydrothermal wonders. Today, millions of people come here each year to camp, hike, and enjoy the majesty of the park.",
+      "latitude": "44.59824417",
+      "longitude": "-110.5471695",
+      "latLong": "lat:44.59824417, long:-110.5471695",
+      "activities": [
+        {
+          "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+          "name": "Arts and Culture"
+        },
+        {
+          "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+          "name": "Auto and ATV"
+        },
+        {
+          "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+          "name": "Scenic Driving"
+        },
+        {
+          "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
+          "name": "Astronomy"
+        },
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "299CB934-88DC-474F-A33D-E43E29A149C2",
+          "name": "Mountain Biking"
+        },
+        {
+          "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
+          "name": "Road Biking"
+        },
+        {
+          "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+          "name": "Boating"
+        },
+        {
+          "id": "A510F02B-8938-4679-A4F9-76580BCAE9C7",
+          "name": "Boat Tour"
+        },
+        {
+          "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+          "name": "Camping"
+        },
+        {
+          "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+          "name": "Backcountry Camping"
+        },
+        {
+          "id": "907E8125-15E4-483C-8EAD-B9FA1E85C6F8",
+          "name": "Canoe or Kayak Camping"
+        },
+        {
+          "id": "9159DF0F-951D-4AAE-9987-CEB3CE2A9ADA",
+          "name": "Car or Front Country Camping"
+        },
+        {
+          "id": "80229F2D-972E-40A8-8860-232551CC30D6",
+          "name": "Horse Camping (see also Horse/Stock Use)"
+        },
+        {
+          "id": "7CFF5F03-5ECC-4F5A-8572-75D1F0976C0C",
+          "name": "Group Camping"
+        },
+        {
+          "id": "C5C5971C-E325-4CEB-8C81-EE49A881DF17",
+          "name": "RV Camping"
+        },
+        {
+          "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+          "name": "Fishing"
+        },
+        {
+          "id": "25FB188F-5AAD-459A-9092-28A9801709FF",
+          "name": "Freshwater Fishing"
+        },
+        {
+          "id": "9BC03FAF-28F1-4609-BF6F-643F58071AED",
+          "name": "Fly Fishing"
+        },
+        {
+          "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+          "name": "Food"
+        },
+        {
+          "id": "E53E1320-9B17-41DC-86A5-37EB7D622572",
+          "name": "Dining"
+        },
+        {
+          "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+          "name": "Picnicking"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "C7D5A145-F8EB-4C37-9E92-2F6C6206B196",
+          "name": "Self-Guided Tours - Auto"
+        },
+        {
+          "id": "3DE599E2-22ED-40BF-B383-EDA073563C1E",
+          "name": "Bus/Shuttle Guided Tour"
+        },
+        {
+          "id": "5A241412-0CFB-497A-9B5F-0AB8C03CDE72",
+          "name": "Boat Tour"
+        },
+        {
+          "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
+          "name": "Hands-On"
+        },
+        {
+          "id": "19A59EFB-DF4B-4049-9EE1-A784CAC9C70C",
+          "name": "Arts and Crafts"
+        },
+        {
+          "id": "9456A40A-AF75-4AD3-8BE1-79C4A7DBEDFC",
+          "name": "Volunteer Vacation"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+          "name": "Backcountry Hiking"
+        },
+        {
+          "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
+          "name": "Front-Country Hiking"
+        },
+        {
+          "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+          "name": "Horse Trekking"
+        },
+        {
+          "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
+          "name": "Horseback Riding"
+        },
+        {
+          "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+          "name": "Paddling"
+        },
+        {
+          "id": "21DB3AFC-8AAC-4665-BC1F-7198C0685983",
+          "name": "Canoeing"
+        },
+        {
+          "id": "256543C7-4322-48B3-8978-765E89AA9431",
+          "name": "Canoe or Kayak Camping"
+        },
+        {
+          "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
+          "name": "Kayaking"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "F9B1D433-6B86-4804-AED7-B50A519A3B7C",
+          "name": "Skiing"
+        },
+        {
+          "id": "EAB1EBDE-5B72-493F-8F8F-0EE5B1724436",
+          "name": "Cross-Country Skiing"
+        },
+        {
+          "id": "C38B3C62-1BBF-4EA1-A1A2-35DE21B74C17",
+          "name": "Snow Play"
+        },
+        {
+          "id": "7C912B83-1B1B-4807-9B66-97C12211E48E",
+          "name": "Snowmobiling"
+        },
+        {
+          "id": "01D717BC-18BB-4FE4-95BA-6B13AD702038",
+          "name": "Snowshoeing"
+        },
+        {
+          "id": "587BB2D3-EC35-41B2-B3F7-A39E2B088AEE",
+          "name": "Swimming"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        },
+        {
+          "id": "43800AD1-D439-40F3-AAB3-9FB651FE45BB",
+          "name": "Gift Shop and Souvenirs"
+        }
+      ],
+      "topics": [
+        {
+          "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+          "name": "Architecture and Building"
+        },
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+          "name": "Arts"
+        },
+        {
+          "id": "9BD60DC0-C82B-42BA-A170-456B7423429D",
+          "name": "Photography"
+        },
+        {
+          "id": "12EA2B56-17EC-410A-A10D-BFBA87A0669B",
+          "name": "Explorers and Expeditions"
+        },
+        {
+          "id": "988B4AFC-F478-4673-B66D-E6BDB0CCFF35",
+          "name": "Forts"
+        },
+        {
+          "id": "69E16062-0E4F-4DE0-91FB-E4EDB2484572",
+          "name": "Migrations"
+        },
+        {
+          "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+          "name": "Military"
+        },
+        {
+          "id": "69790851-A62A-4920-AA3E-E61406FFC27D",
+          "name": "Cavalry"
+        },
+        {
+          "id": "97CCB419-196C-4B95-BB3A-621458F78415",
+          "name": "US Army"
+        },
+        {
+          "id": "6766B838-9493-4EF8-830E-2D1EFB917461",
+          "name": "Indigenous and Native Warrior"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "D1CF31DE-AFED-412B-9425-DD1FD4CBB5C7",
+          "name": "Science, Technology and Innovation"
+        },
+        {
+          "id": "40C0866A-3890-41A4-84CA-5935DEE181AE",
+          "name": "Social Movements"
+        },
+        {
+          "id": "4C0EBDE7-EB73-4252-84D9-0650974EC3E5",
+          "name": "Conservation Movement"
+        },
+        {
+          "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+          "name": "Transportation"
+        },
+        {
+          "id": "0BBD4A42-2B3D-4E82-B5C4-1A3874C8682E",
+          "name": "Roads, Routes and Highways"
+        },
+        {
+          "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+          "name": "Wars and Conflicts"
+        },
+        {
+          "id": "B564E9AA-95E9-4648-A7D1-48F94BFBEBB5",
+          "name": "Tribal Conflicts"
+        },
+        {
+          "id": "53798A16-7CDB-4F17-9C28-095F92D2ED8D",
+          "name": "Indian and Frontier Wars"
+        },
+        {
+          "id": "C9C749E3-39C3-45F7-BCC5-9A609E30AA05",
+          "name": "Westward Expansion"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "324C31EC-7D75-41C7-AA28-EF8ACB5B6BF5",
+          "name": "Bison"
+        },
+        {
+          "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+          "name": "Cats (wild)"
+        },
+        {
+          "id": "344CE561-4E98-49BF-ACD2-438E3684DA5D",
+          "name": "Elk"
+        },
+        {
+          "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+          "name": "Fish"
+        },
+        {
+          "id": "9576386A-C84F-4436-9094-C5CD67A672CC",
+          "name": "Wolves"
+        },
+        {
+          "id": "BCE3ACBE-7871-495B-AEA3-5E19BC482405",
+          "name": "Canyons and Canyonlands"
+        },
+        {
+          "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
+          "name": "Climate Change"
+        },
+        {
+          "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+          "name": "Fire"
+        },
+        {
+          "id": "9F6A7003-59D6-4438-935F-760FD04C1073",
+          "name": "Foothills, Plains and Valleys"
+        },
+        {
+          "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
+          "name": "Forests and Woodlands"
+        },
+        {
+          "id": "762170E5-0747-4836-B837-7F2547D3F733",
+          "name": "Coniferous Forests"
+        },
+        {
+          "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
+          "name": "Fossils and Paleontology"
+        },
+        {
+          "id": "A14B362A-C121-4EF0-B1D5-2057FA535D15",
+          "name": "Petrified Wood"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "4BE01DC5-52E6-4F18-8C9A-B22D65965F6D",
+          "name": "Groundwater"
+        },
+        {
+          "id": "5BA15815-F78C-4E10-B9C1-FF5723881F7C",
+          "name": "Aquifers"
+        },
+        {
+          "id": "0E1A04CC-EB51-4F18-93D4-EC0B0B4EC1E3",
+          "name": "Freshwater Springs"
+        },
+        {
+          "id": "F16A7A2C-174D-4FD8-9203-8D8D8EAD644B",
+          "name": "Geothermal"
+        },
+        {
+          "id": "2FC0C556-5B92-4217-AF03-AA395A207D7D",
+          "name": "Hot Springs"
+        },
+        {
+          "id": "ABE91F37-2600-4A28-9483-7CE7F6A649A9",
+          "name": "Geysers"
+        },
+        {
+          "id": "FBB14C45-1663-4714-9D28-B2B99874644D",
+          "name": "Glaciers"
+        },
+        {
+          "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
+          "name": "Grasslands"
+        },
+        {
+          "id": "1CF1F6BB-A037-445B-8CF2-81428E50CE52",
+          "name": "Lakes"
+        },
+        {
+          "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
+          "name": "Mountains"
+        },
+        {
+          "id": "F8C2FE93-DEB3-4B12-9A87-913E3E6B448D",
+          "name": "Natural Sounds"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+          "name": "River and Riparian"
+        },
+        {
+          "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
+          "name": "Rock Landscapes and Features"
+        },
+        {
+          "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+          "name": "Scenic Views"
+        },
+        {
+          "id": "A86F34FB-BD6D-4D09-80CC-421B6113DF2E",
+          "name": "Thickets and Shrublands"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        },
+        {
+          "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
+          "name": "Unique Species"
+        },
+        {
+          "id": "996BEDAE-CB23-4003-B008-3A1F46A72263",
+          "name": "Rare"
+        },
+        {
+          "id": "489D6333-FD72-44DF-83B0-3D4412DD0A75",
+          "name": "Endangered"
+        },
+        {
+          "id": "90F8744F-CD10-4925-955C-064CB1A17EB0",
+          "name": "Volcanoes"
+        },
+        {
+          "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+          "name": "Watersheds"
+        },
+        {
+          "id": "5ED826E0-76BB-47BB-87DD-E081A72B0A04",
+          "name": "Waterfalls"
+        },
+        {
+          "id": "1365C347-952C-475A-B755-731DD523C195",
+          "name": "Wetlands"
+        },
+        {
+          "id": "B85866E2-0897-4000-9040-605CA335804F",
+          "name": "Wilderness"
+        }
+      ],
+      "states": "ID,MT,WY",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "307-344-7381",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          },
+          {
+            "phoneNumber": "307-344-2014",
+            "description": "",
+            "extension": "",
+            "type": "Fax"
+          },
+          {
+            "phoneNumber": "307-344-2386",
+            "description": "",
+            "extension": "",
+            "type": "TTY"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "Contact Yellowstone's park rangers for general park questions, lost and found, or for special use permits.",
+            "emailAddress": "YELL_Information@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "35.00",
+          "description": "Good for entry into Yellowstone National Park for seven days from the date of purchase.",
+          "title": "Yellowstone (non-commercial vehicle)"
+        },
+        {
+          "cost": "30.00",
+          "description": "Good for entry into Yellowstone National Park for seven days from the date of purchase. Snowmobile entry limited to guided tours or permit holders.",
+          "title": "Yellowstone (motorcycle or snowmobile)"
+        },
+        {
+          "cost": "20.00",
+          "description": "Good for entry into Yellowstone National Park for seven days from the date of purchase.",
+          "title": "Yellowstone (individual on foot, bicycle, etc.)"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "70.00",
+          "description": "Annual pass providing free entrance into Yellowstone National Park for one year (valid through the month of purchase). On a snowmobile, this pass admits the signer(s). When traveling by snowcoach or shuttle, this pass admits a signer and up to three additional persons (16 and older) for a total of four people.",
+          "title": "Yellowstone National Park Annual Pass"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "Yellowstone National Park covers nearly 3,500 square miles in the northwest corner of Wyoming (3% of the park is in Montana and 1% is in Idaho). Yellowstone has five entrance stations, and several are closed to regular vehicles during winter. It takes many hours to drive between these entrances, so be sure to check the status of roads at the entrance you intend to use while planning your trip and before you arrive.",
+      "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "Yellowstone is open daily, year-round, although activities and services are limited at night and certain times of year. The park has five entrance stations, but not all entrance stations are open year-round. Make sure to carefully read about access at each station at different times of year. And remember, all dates are weather-dependent.\n\nPlease note that camping is possible only in designated campgrounds.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "All Park Hours"
+        },
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2022-03-16",
+              "name": "Spring Shoulder Season",
+              "endDate": "2022-04-16"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-11-03",
+              "name": "Fall Shoulder Season",
+              "endDate": "2021-12-14"
+            }
+          ],
+          "description": "Adjacent to the town of West Yellowstone, Montana, the West Entrance is usually open (weather-dependent) to wheeled vehicles from the third Friday in April through early November, and to tracked-oversnow (snowmobiles and snowcoaches) vehicles from December 15 to March 15.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "West Entrance"
+        },
+        {
+          "exceptions": [],
+          "description": "Near the gateway community of Gardiner, Montana, the North Entrance is the only park entrance open to wheeled vehicles all year. November through April, the North Entrance provides the only access to Cooke City, Montana. US Highway 212 east of Cooke City is closed to wheeled vehicles November through April. The road from Mammoth to Norris opens to wheeled vehicles the third Friday in April through early November, and to tracked-oversnow vehicles, conditions permitting, from December 15 to early March.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "North Entrance"
+        },
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2022-03-15",
+              "name": "Spring Shoulder Season",
+              "endDate": "2022-04-30"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-11-03",
+              "name": "Fall Shoulder Season",
+              "endDate": "2021-12-21"
+            }
+          ],
+          "description": "Depending on the weather and conditions, this entrance usually opens to wheeled vehicles the first Friday in May and to tracked-oversnow vehicles December 22 through March 15.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "East Entrance"
+        },
+        {
+          "exceptions": [
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2022-03-02",
+              "name": "Spring Shoulder Season",
+              "endDate": "2022-04-30"
+            },
+            {
+              "exceptionHours": {
+                "wednesday": "Closed",
+                "monday": "Closed",
+                "thursday": "Closed",
+                "sunday": "Closed",
+                "tuesday": "Closed",
+                "friday": "Closed",
+                "saturday": "Closed"
+              },
+              "startDate": "2021-11-03",
+              "name": "Fall Shoulder Season",
+              "endDate": "2021-12-14"
+            }
+          ],
+          "description": "Open (weather-dependent) to wheeled vehicles from the second Friday in May through early November and to tracked-oversnow vehicles from December 15 to March 15. Limited services are available near the South Entrance.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "South Entrance"
+        },
+        {
+          "exceptions": [],
+          "description": "Near the gateway communities of Silver Gate and Cooke City, Montana, this entrance is open year around for wheeled vehicle access to Cooke City through Gardiner, Montana. US Highway 212 east of Cooke City is closed to wheeled vehicles November through April. Opening dates for roads east of Cooke City vary from year to year, depending on the weather. The Beartooth Highway is open from late May/early June (weather dependent) to mid October.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Northeast Entrance"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "82190",
+          "city": "Yellowstone National Park",
+          "stateCode": "WY",
+          "line1": "2 Officers Row",
+          "type": "Physical",
+          "line3": "",
+          "line2": "Yellowstone National Park Headquarters"
+        },
+        {
+          "postalCode": "82190-0168",
+          "city": "Yellowstone National Park",
+          "stateCode": "WY",
+          "line1": "PO Box 168",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Grand Prismatic Spring",
+          "altText": "Brilliant blues and greens of a hot spring ringed by oranges, yellows, reds, and browns.",
+          "caption": "The bright colors found in Grand Prismatic Spring come from thermophiles—microorganisms that thrive in hot temperatures",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Aurum Geyser",
+          "altText": "A crowd of people standing along a wooden boardwalk watches a geyser erupt.",
+          "caption": "Aurum Geyser erupting",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg"
+        },
+        {
+          "credit": "NPS/Diane Renkin",
+          "title": "Black Pool",
+          "altText": "A visitor stands on a boardwalk near a hot spring and a lake.",
+          "caption": "Black Pool at the West Thumb Geyser Basin",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D383B-1DD8-B71B-0BEC4A4D6BDF7CAD.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Beehive Geyser",
+          "altText": "People on a wooden boardwalk watch a geyser erupt.",
+          "caption": "Visitors to the Upper Geyser Basin watch Beehive Geyser erupt.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D334F-1DD8-B71B-0B108C7771F4E854.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Wolf howling",
+          "altText": "A wolf howls while standing on a snowy field.",
+          "caption": "Alpha male of the Canyon wolf pack",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D3BD3-1DD8-B71B-0BB607F9BAAE1271.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Fishing Bridge Trailside Museum",
+          "altText": "Visitors walk into a rustic, log and stone building.",
+          "caption": "The stone-and-log architecture of Fishing Bridge Trailside Museum became a prototype for park buildings all around the country",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D573E-1DD8-B71B-0B5C0DF5BB91D043.jpg"
+        },
+        {
+          "credit": "NPS/Diane Renkin",
+          "title": "Great Fountain Geyser",
+          "altText": "A geyser erupting in the middle of a large pool.",
+          "caption": "Great Fountain Geyser erupts against a blue summer sky",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D5AB4-1DD8-B71B-0BF91CF45345ED16.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Old Faithful Geyser in winter",
+          "altText": "A crowd in front of an erupting geyser during a snowy winter day.",
+          "caption": "Winter is a magical time to watch Old Faithful Geyser erupt",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D610A-1DD8-B71B-0BEF676112007818.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Palette Spring",
+          "altText": "Visitors walk in front of a brightly colored, terraced landscape.",
+          "caption": "The vibrant colors of Palette Springs are formed by thermophiles—heat-loving organisms",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D8903-1DD8-B71B-0BA8669AEEF74379.jpg"
+        },
+        {
+          "credit": "NPS/Peggy Olliff",
+          "title": "Bighorn sheep",
+          "altText": "Two bighorn sheep laying on the ground.",
+          "caption": "Two bighorn rams rest and chew their cud",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D95DD-1DD8-B71B-0BC4FA19BD72F0EC.jpg"
+        },
+        {
+          "credit": "NPS/Diane Renkin",
+          "title": "Lower Falls from Artist Point",
+          "altText": "A river plunges into a steep, barren canyon.",
+          "caption": "Lower Falls from Artist Point",
+          "url": "https://www.nps.gov/common/uploads/structured_data/8A729E5B-B263-9C49-7AD4C4B8E70064E0.jpg"
+        },
+        {
+          "credit": "NPS/Diane Renkin",
+          "title": "Bison herd in a thermal area",
+          "altText": "A herd of bison grazing through a barren and steaming thermal area.",
+          "caption": "Bison near Mud Volcano",
+          "url": "https://www.nps.gov/common/uploads/structured_data/8A869F85-FB2E-5EAF-11367EB2DB75963D.jpg"
+        },
+        {
+          "credit": "NPS/Jim Peaco",
+          "title": "Grizzly bear",
+          "altText": "A grizzly bear standing on a fallen tree.",
+          "caption": "Grizzly bear in the woods",
+          "url": "https://www.nps.gov/common/uploads/structured_data/8A902498-9D11-D06D-E352C073E3E85A58.jpg"
+        },
+        {
+          "credit": "NPS/Dave Krueger",
+          "title": "Yellowstone River",
+          "altText": "A greenish river meanders through a hilly river valley.",
+          "caption": "The Yellowstone River near Tower Fall",
+          "url": "https://www.nps.gov/common/uploads/structured_data/8AB8F1A3-D1A0-A6FB-E8E5CAA8B2937264.jpeg"
+        }
+      ],
+      "weatherInfo": "Yellowstone's weather can vary quite a bit, even in a single day. In the summer, daytime highs can exceed 70°F (25°C), only to drop 20 or more degrees when a thunderstorm rolls through. It can snow during any month of the year, and winter lows frequently drop below 0°F (-18°C), especially at night. Bring a range of clothing options, including a warm jacket and rain gear, even in the summer.",
+      "name": "Yellowstone",
+      "designation": "National Park"
+    },
+    {
+      "id": "D09FF0F8-B16E-4D2B-9C37-03202D6B8176",
+      "url": "https://www.nps.gov/york/index.htm",
+      "fullName": "Yorktown Battlefield Part of Colonial National Historical Park",
+      "parkCode": "york",
+      "description": "Discover what it took for the United States to be independent as you explore the site of the last major battle of the Revolutionary War. Here at Yorktown, in the fall of 1781, General George Washington, with allied American and French forces, besieged General Charles Lord Cornwallis’s British army. On October 19, Cornwallis surrendered, effectively ending the war and ensuring independence.",
+      "latitude": "37.2195",
+      "longitude": "-76.4983",
+      "latLong": "lat:37.2195, long:-76.4983",
+      "activities": [
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
+          "name": "Road Biking"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "C7D5A145-F8EB-4C37-9E92-2F6C6206B196",
+          "name": "Self-Guided Tours - Auto"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
+          "name": "Front-Country Hiking"
+        },
+        {
+          "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+          "name": "Horse Trekking"
+        },
+        {
+          "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
+          "name": "Horseback Riding"
+        },
+        {
+          "id": "B204DE60-5A24-43DD-8902-C81625A09A74",
+          "name": "Living History"
+        },
+        {
+          "id": "A8650547-1A30-4222-86C3-A7660A829670",
+          "name": "Reenactments"
+        },
+        {
+          "id": "237A1662-6018-4115-ABD1-B8CCF827E703",
+          "name": "Historic Weapons Demonstration"
+        },
+        {
+          "id": "28880A5B-3D29-41AC-BD8B-24743E7A070F",
+          "name": "First Person Interpretation"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        },
+        {
+          "id": "43800AD1-D439-40F3-AAB3-9FB651FE45BB",
+          "name": "Gift Shop and Souvenirs"
+        }
+      ],
+      "topics": [
+        {
+          "id": "28AEAE85-9DDA-45B6-981B-1CFCDCC61E14",
+          "name": "African American Heritage"
+        },
+        {
+          "id": "F3883A66-A7CB-461B-868E-1B5932224B25",
+          "name": "American Revolution"
+        },
+        {
+          "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
+          "name": "Colonization and Settlement"
+        },
+        {
+          "id": "988B4AFC-F478-4673-B66D-E6BDB0CCFF35",
+          "name": "Forts"
+        },
+        {
+          "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+          "name": "Military"
+        },
+        {
+          "id": "E411F474-A530-4804-9D23-1D94C78B41E4",
+          "name": "Infantry and Militia"
+        },
+        {
+          "id": "B145FAB8-5462-4FE2-964E-464D3A5E7F96",
+          "name": "Artillery"
+        },
+        {
+          "id": "97CCB419-196C-4B95-BB3A-621458F78415",
+          "name": "US Army"
+        },
+        {
+          "id": "6A3658B4-FB6E-4E23-A63A-9AEF11988831",
+          "name": "Battlefields"
+        },
+        {
+          "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+          "name": "Monuments and Memorials"
+        },
+        {
+          "id": "F669BC40-BDC4-41C0-9ACE-B2CD25373045",
+          "name": "Presidents"
+        },
+        {
+          "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+          "name": "Wars and Conflicts"
+        },
+        {
+          "id": "990E22A2-20D8-4CC2-8E6C-D2DF165BCDA5",
+          "name": "American Revolutionary War"
+        },
+        {
+          "id": "A8E54356-20CD-490E-B34D-AC6A430E6F47",
+          "name": "Civil War"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+          "name": "Fish"
+        },
+        {
+          "id": "393F60FB-80D6-46F7-B0FB-BBF3C90F59FD",
+          "name": "Tortoises and Turtles"
+        },
+        {
+          "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
+          "name": "Forests and Woodlands"
+        },
+        {
+          "id": "DE2F0F3C-C0C4-410F-90D3-97EEC33D348E",
+          "name": "Deciduous Forests"
+        },
+        {
+          "id": "F8C2FE93-DEB3-4B12-9A87-913E3E6B448D",
+          "name": "Natural Sounds"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+          "name": "River and Riparian"
+        },
+        {
+          "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+          "name": "Scenic Views"
+        },
+        {
+          "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+          "name": "Watersheds"
+        },
+        {
+          "id": "1365C347-952C-475A-B755-731DD523C195",
+          "name": "Wetlands"
+        },
+        {
+          "id": "FD0BA21A-5F69-4688-9D4B-856DA242DC78",
+          "name": "Marshes"
+        },
+        {
+          "id": "86C6DC89-D311-44F8-A5BC-35F9FDC4AF1C",
+          "name": "Swamps"
+        }
+      ],
+      "states": "VA",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "7578982410",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          },
+          {
+            "phoneNumber": "7578986346",
+            "description": "",
+            "extension": "",
+            "type": "Fax"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "colo_info@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "15.00",
+          "description": "Yorktown Battlefield is part of Colonial National Historical Park. For information about park fees visit Colonial National Historical Park's Fee Page here.\nhttps://www.nps.gov/colo/planyourvisit/fees.htm",
+          "title": "Yorktown Battlefield"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "40.00",
+          "description": "The The Colonial annual pass admits passholder and three accompanying adults unlimited admittance to both NPS areas at Historic Jamestowne and Yorktown Battlefield during regular operating hours. Pass is valid for twelve months from the month of purchase. Note: There is an additional $5.00 Preservation Virginia entrance fee for each adult entering on the Colonial Pass to Historic Jamestowne to visit the Preservation Virginia historic areas.",
+          "title": "Colonial National Historical Park Annual Pass"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "For an internet map search or GPS, use the following: Yorktown Battlefield Visitor Center, 1000 Colonial Parkway, Yorktown, Virginia 23690. Eastbound from the Richmond area via I-64, exit 242B for Yorktown, to the Colonial Parkway. Follow the parkway to its end. West bound Interstate 64 from the Virginia Beach/Norfolk/Hampton area for Yorktown should take Route 105 East (Fort Eustis Boulevard east), exit 250B to Route 17. Turn left onto Route 17. Follow the signs to Yorktown Battlefield.",
+      "directionsUrl": "http://www.nps.gov/york/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "9:00AM - 5:00PM",
+            "monday": "9:00AM - 5:00PM",
+            "thursday": "9:00AM - 5:00PM",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "9:00AM - 5:00PM",
+            "friday": "9:00AM - 5:00PM",
+            "saturday": "9:00AM - 5:00PM"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "9:00AM - 5:00PM",
+            "monday": "9:00AM - 5:00PM",
+            "thursday": "9:00AM - 5:00PM",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "9:00AM - 5:00PM",
+            "friday": "9:00AM - 5:00PM",
+            "saturday": "9:00AM - 5:00PM"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        },
+        {
+          "exceptions": [],
+          "description": "The Yorktown Battlefield Visitor Center and the Eastern National Store is open 9:00 am to 5:00 PM Daily.  The theater and exhibit areas are currently closed. The Moore House, The Nelson House, The Cemetery Lodge and the Poor Potter are also closed but their grounds are open for visitation.\nThe Battlefield Tour Roads are open till Sunset.\nThe Visitor Center is closed Christmas Day, New Years Day and Thanksgiving.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "9:00AM - 5:00PM",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Visitor Center Hours of Operation"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "23690",
+          "city": "Yorktown",
+          "stateCode": "VA",
+          "line1": "Yorktown Battlefield",
+          "type": "Physical",
+          "line3": "",
+          "line2": "1000 Colonial Parkway"
+        },
+        {
+          "postalCode": "23690",
+          "city": "Yorktown",
+          "stateCode": "VA",
+          "line1": "Colonial National Historical Park - Yorktown Battlefield",
+          "type": "Mailing",
+          "line3": "",
+          "line2": "P.O. Box 210"
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo/Linda Williams",
+          "title": "Cannon at Sunset Yorktown Battlefield",
+          "altText": "Cannon at sunset at Yorktown Battlefield",
+          "caption": "Cannon on earthworks at sunset.  Yorktown Battlefield",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7DF20A-1DD8-B71B-0B6F95C33437A94D.jpg"
+        },
+        {
+          "credit": "NPS Photo/Linda Williams",
+          "title": "Lamb's Artillery Fire 18 pounder Cannon Yorktown Battlefield",
+          "altText": "Lamb's Artillery Fire 18 pounder Cannon Yorktown Battlefield",
+          "caption": "We have artillery firing programs twice a month throughout the summer at Yorktown Battlefield",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7DF3BE-1DD8-B71B-0BA3070E3D7843A9.jpg"
+        },
+        {
+          "credit": "NPS Photo/Linda Williams",
+          "title": "The Moore House",
+          "altText": "The Moore House",
+          "caption": "The Moore House where the terms of surrender were negotiated.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7DF5C5-1DD8-B71B-0B930002068FF0F0.jpg"
+        },
+        {
+          "credit": "NPS Photo/Linda Williams",
+          "title": "National Cemetery",
+          "altText": "National Cemetery showing tombstones, American Flag and Cemetery Lodge in sunlight.",
+          "caption": "Civil War National Cemetery",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7DF840-1DD8-B71B-0B96BEC911E1F5B8.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "The Nelson House",
+          "altText": "Nelson house on main street.",
+          "caption": "The Nelson house on main street of Yorktown.  Home of Thomas Nelson Jr.  a signer of the Declaration of Independence.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7DF9BE-1DD8-B71B-0B58076431E15B17.jpg"
+        },
+        {
+          "credit": "NPS Photo/Linda Williams",
+          "title": "Yorktown Victory Monument",
+          "altText": "Yorktown Victory Monument",
+          "caption": "Yorktown Victory Monument",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7E0CC0-1DD8-B71B-0B1A15C76D70B217.jpg"
+        },
+        {
+          "credit": "NPS Photo/Linda Williams",
+          "title": "Yorktown Battlefield Earthworks:Redoubt 9",
+          "altText": "Yorktown Battlefield Earthworks:Redoubt 9",
+          "caption": "Yorktown Battlefield Earthworks:Redoubt 9",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7E0E49-1DD8-B71B-0BF744104FAD9A8A.jpg"
+        }
+      ],
+      "weatherInfo": "Yorktown, VA climate is warm during summer when temperatures tend to be in the 80's and cold during winter when temperatures tend to be in the 30's. The warmest month of the year is July with an average maximum temperature of 89.00 degrees Fahrenheit, while the coldest month of the year is January with an average minimum temperature of 28.10 degrees Fahrenheit. For closures in due to inclement weather at Colonial National Historical Park please phone this 24 hour phone number (757) 856-1240.",
+      "name": "Yorktown Battlefield",
+      "designation": "Part of Colonial National Historical Park"
+    },
+    {
+      "id": "4324B2B4-D1A3-497F-8E6B-27171FAE4DB2",
+      "url": "https://www.nps.gov/yose/index.htm",
+      "fullName": "Yosemite National Park",
+      "parkCode": "yose",
+      "description": "Not just a great valley, but a shrine to human foresight, the strength of granite, the power of glaciers, the persistence of life, and the tranquility of the High Sierra. First protected in 1864, Yosemite National Park is best known for its waterfalls, but within its nearly 1,200 square miles, you can find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area, and much more.",
+      "latitude": "37.84883288",
+      "longitude": "-119.5571873",
+      "latLong": "lat:37.84883288, long:-119.5571873",
+      "activities": [
+        {
+          "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+          "name": "Arts and Culture"
+        },
+        {
+          "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+          "name": "Auto and ATV"
+        },
+        {
+          "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+          "name": "Scenic Driving"
+        },
+        {
+          "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
+          "name": "Astronomy"
+        },
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+          "name": "Boating"
+        },
+        {
+          "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+          "name": "Camping"
+        },
+        {
+          "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+          "name": "Backcountry Camping"
+        },
+        {
+          "id": "B12FAAB9-713F-4B38-83E4-A273F5A43C77",
+          "name": "Climbing"
+        },
+        {
+          "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+          "name": "Fishing"
+        },
+        {
+          "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+          "name": "Food"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
+          "name": "Hands-On"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+          "name": "Backcountry Hiking"
+        },
+        {
+          "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+          "name": "Horse Trekking"
+        },
+        {
+          "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
+          "name": "Horseback Riding"
+        },
+        {
+          "id": "5FF5B286-E9C3-430E-B612-3380D8138600",
+          "name": "Ice Skating"
+        },
+        {
+          "id": "B204DE60-5A24-43DD-8902-C81625A09A74",
+          "name": "Living History"
+        },
+        {
+          "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+          "name": "Paddling"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "4D06CEED-90C6-4B69-B264-32CC90B69BA6",
+          "name": "Tubing"
+        },
+        {
+          "id": "67FDB577-518E-4A3E-B608-E78941116223",
+          "name": "Snow Tubing"
+        },
+        {
+          "id": "F9B1D433-6B86-4804-AED7-B50A519A3B7C",
+          "name": "Skiing"
+        },
+        {
+          "id": "C38B3C62-1BBF-4EA1-A1A2-35DE21B74C17",
+          "name": "Snow Play"
+        },
+        {
+          "id": "01D717BC-18BB-4FE4-95BA-6B13AD702038",
+          "name": "Snowshoeing"
+        },
+        {
+          "id": "587BB2D3-EC35-41B2-B3F7-A39E2B088AEE",
+          "name": "Swimming"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        }
+      ],
+      "topics": [
+        {
+          "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+          "name": "Architecture and Building"
+        },
+        {
+          "id": "28AEAE85-9DDA-45B6-981B-1CFCDCC61E14",
+          "name": "African American Heritage"
+        },
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+          "name": "Arts"
+        },
+        {
+          "id": "05B7868A-3F3C-433D-876E-A886C4BE7A12",
+          "name": "Painting"
+        },
+        {
+          "id": "9BD60DC0-C82B-42BA-A170-456B7423429D",
+          "name": "Photography"
+        },
+        {
+          "id": "227D2677-28CA-4CBF-997F-61108975A497",
+          "name": "Asian American Heritage"
+        },
+        {
+          "id": "607D41B0-F830-4C07-A557-BCEF880A3929",
+          "name": "Burial, Cemetery and Gravesite"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "518B32FB-339D-4C52-B2C2-04BF406AA4B0",
+          "name": "Religion and Spirituality"
+        },
+        {
+          "id": "98F41FDF-B73F-4B68-8010-53CCB2891E3B",
+          "name": "Churches"
+        },
+        {
+          "id": "3CDB67A9-1EAC-408D-88EC-F26FA35E90AF",
+          "name": "Schools and Education"
+        },
+        {
+          "id": "D1CF31DE-AFED-412B-9425-DD1FD4CBB5C7",
+          "name": "Science, Technology and Innovation"
+        },
+        {
+          "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+          "name": "Transportation"
+        },
+        {
+          "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
+          "name": "Tragic Events"
+        },
+        {
+          "id": "D91B6F1A-FED8-490D-B181-9940474CD67C",
+          "name": "Floods"
+        },
+        {
+          "id": "7DA81DAB-5045-4953-9C20-36590AD9FA95",
+          "name": "Women's History"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+          "name": "Cats (wild)"
+        },
+        {
+          "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+          "name": "Fish"
+        },
+        {
+          "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
+          "name": "Climate Change"
+        },
+        {
+          "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+          "name": "Fire"
+        },
+        {
+          "id": "9F6A7003-59D6-4438-935F-760FD04C1073",
+          "name": "Foothills, Plains and Valleys"
+        },
+        {
+          "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
+          "name": "Forests and Woodlands"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "FBB14C45-1663-4714-9D28-B2B99874644D",
+          "name": "Glaciers"
+        },
+        {
+          "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
+          "name": "Grasslands"
+        },
+        {
+          "id": "AEA4C5FD-F25C-4C3D-97FE-2767ED3EE682",
+          "name": "Meadows"
+        },
+        {
+          "id": "1CF1F6BB-A037-445B-8CF2-81428E50CE52",
+          "name": "Lakes"
+        },
+        {
+          "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
+          "name": "Mountains"
+        },
+        {
+          "id": "F8C2FE93-DEB3-4B12-9A87-913E3E6B448D",
+          "name": "Natural Sounds"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "E06F3C94-AC8A-4B1C-A247-8EBA8910D5EE",
+          "name": "Astronomy"
+        },
+        {
+          "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+          "name": "River and Riparian"
+        },
+        {
+          "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
+          "name": "Rock Landscapes and Features"
+        },
+        {
+          "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+          "name": "Scenic Views"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        },
+        {
+          "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
+          "name": "Unique Species"
+        },
+        {
+          "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+          "name": "Watersheds"
+        },
+        {
+          "id": "5ED826E0-76BB-47BB-87DD-E081A72B0A04",
+          "name": "Waterfalls"
+        },
+        {
+          "id": "1365C347-952C-475A-B755-731DD523C195",
+          "name": "Wetlands"
+        },
+        {
+          "id": "B85866E2-0897-4000-9040-605CA335804F",
+          "name": "Wilderness"
+        }
+      ],
+      "states": "CA",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "209/372-0200",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "yose_web_manager@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "35.00",
+          "description": "This fee is valid for seven days.",
+          "title": "Non-commercial car, pickup truck, RV, or van with 15 or fewer passenger seats"
+        },
+        {
+          "cost": "30.00",
+          "description": "The fee is valid for seven days. Cost is per motorcycle (not per person).",
+          "title": "Motorcycle"
+        },
+        {
+          "cost": "20.00",
+          "description": "This fee is valid for seven days. People 15 years and younger are free. Cost is per person.",
+          "title": "Foot, bicycle, horse, or non-commercial bus or van with more than 15 passenger seats"
+        },
+        {
+          "cost": "25.00",
+          "description": "The fee is $25 plus $15 per person.",
+          "title": "Commercial Tour (sedan up to six seats)"
+        },
+        {
+          "cost": "125.00",
+          "description": "",
+          "title": "Commercial Tour (van, 7-15 seats, regardless of occupancy)"
+        },
+        {
+          "cost": "200.00",
+          "description": "",
+          "title": "Commercial Tour (mini bus, 16-25 seats, regardless of occupancy)"
+        },
+        {
+          "cost": "300.00",
+          "description": "",
+          "title": "Commercial Tour (motor coach, 26 or more seats, regardless of occupancy)"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "70.00",
+          "description": "Annual pass providing free entrance to Yosemite for 12 months from the date of purchase.",
+          "title": "Yosemite Annual Pass"
+        },
+        {
+          "cost": "80.00",
+          "description": "Annual pass covering entrance and standard amenity fees for national parks and other federal fee areas, valid for 12 months from date of purchase. This replaces the National Parks Pass and Golden Eagle Pass.",
+          "title": "America the Beautiful—National Parks and Federal Recreational Lands Annual Pass"
+        },
+        {
+          "cost": "80.00",
+          "description": "Lifetime or annual admission and discount pass for US citizens or permanent residents who are age 62 or older. An annual version of this pass, valid for 12 months, costs $20.",
+          "title": "Senior Pass"
+        },
+        {
+          "cost": "0.00",
+          "description": "Lifetime admission and discount pass for US citizens or permanent residents with permanent disabilities.",
+          "title": "Access Pass"
+        },
+        {
+          "cost": "0.00",
+          "description": "Annual pass covering entrance and standard amenity fees for all active US military personnel and their dependents, valid for 12 months from date of issuance. (For active duty military personnel and dependents with proper identification (CAC Card or DD Form 1173).)",
+          "title": "Annual Pass for US Military"
+        },
+        {
+          "cost": "0.00",
+          "description": "Annual pass covering entrance fees for 4th grade students for 2018–2019 school year.",
+          "title": "Annual 4th Grade Pass"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "You can drive to Yosemite year-round and enter via Highways 41, 140, and 120 from the west. Tioga Pass Entrance (via Highway 120 from the east) is closed from approximately November through late May or June. Hetch Hetchy is open all year but may close intermittently due to snow. Please note that GPS units do not always provide accurate directions to or within Yosemite.",
+      "directionsUrl": "http://www.nps.gov/yose/planyourvisit/driving.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "Yosemite National Park is open 24 hours per day, 365 days per year. Reservations are temporarily required to enter Yosemite until local public health conditions improve.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Yosemite National Park"
+        },
+        {
+          "exceptions": [],
+          "description": "Hetch Hetchy area is only open during the day (except for permitted backpackers). All day visitors must exit Hetch Hetchy by the closure time.",
+          "standardHours": {
+            "wednesday": "8:00AM - 5:00PM",
+            "monday": "8:00AM - 5:00PM",
+            "thursday": "8:00AM - 5:00PM",
+            "sunday": "8:00AM - 5:00PM",
+            "tuesday": "8:00AM - 5:00PM",
+            "friday": "8:00AM - 5:00PM",
+            "saturday": "8:00AM - 5:00PM"
+          },
+          "name": "Hetch Hetchy"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "95389",
+          "city": "Yosemite",
+          "stateCode": "CA",
+          "line1": "9039 Village Drive",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo",
+          "title": "Upper Yosemite Fall and Merced River in spring",
+          "altText": "Upper Yosemite Fall and Merced River in spring",
+          "caption": "Upper Yosemite Fall and Merced River in spring",
+          "url": "https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg"
+        },
+        {
+          "credit": "NPS / Cindy Jacoby",
+          "title": "Yosemite Valley from Tunnel View",
+          "altText": "Glaciated valley with vertical cliffs.",
+          "caption": "Tunnel View is perhaps one of the most photographed views in the park.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CAEC-1DD8-B71B-0BA0EEA50BB40F8B.jpg"
+        },
+        {
+          "credit": "NPS / Bob Roney",
+          "title": "Rainbow over Half Dome",
+          "altText": "A rainbow over a mountain in the distance.",
+          "caption": "A hike up to Sentinel Dome rewards people with great views of the landscape around them.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg"
+        },
+        {
+          "credit": "NPS / Cindy Jacoby",
+          "title": "Cathedral Peak and Lake in Autumn",
+          "altText": "A mountain reflecting in a lake.",
+          "caption": "Cathedral Peak is one of the most recognizable peaks in the Yosemite Wilderness.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
+        },
+        {
+          "credit": "NPS Photo / Cindy Jacoby",
+          "title": "Lower Yosemite Fall",
+          "altText": "A waterfall flowing down a granite cliff.",
+          "caption": "The walk to Lower Yosemite Fall is a popular and easy hike.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CDD0-1DD8-B71B-0B6E5868AFC75B6B.jpg"
+        },
+        {
+          "credit": "NPS / Cindy Jacoby",
+          "title": "Yosemite Falls on a Winter Morning",
+          "altText": "Two tall waterfalls flowing down snow covered granite walls.",
+          "caption": "Yosemite Falls will sometimes only trickle at the end of summer, but wet winters can rejuvenate the flow.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CC4C-1DD8-B71B-0BE967E5E5D93F25.jpg"
+        },
+        {
+          "credit": "NPS",
+          "title": "Glen Aulin",
+          "altText": "Mountains reflecting in water",
+          "caption": "Glen Auilin is one of five High Sierra Camps, located in the Yosemite high country.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C82D-1DD8-B71B-0B8D6902B62369E2.jpg"
+        },
+        {
+          "credit": "NPS / Cindy Jacoby",
+          "title": "Giant Sequoia Trees in the Mariposa Grove of Giant Sequoias",
+          "altText": "Cluster of tall trees with cloudy sky.",
+          "caption": "Yosemite National Park's massive giant sequoias (Sequoiadendron giganteum) live in three groves in the park. The most famous of these is the Mariposa Grove, which contains about 500 mature giant sequoias.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C8560E1-1DD8-B71B-0BD3183636F4B861.jpg"
+        },
+        {
+          "credit": "NPS",
+          "title": "Tenaya Lake at Sunset",
+          "altText": "Mountains surrounding a lake.",
+          "caption": "Tenaya Lake is a favorite place to stop along the Tioga Road in summer.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C97E-1DD8-B71B-0B5DD2112C58C175.jpg"
+        },
+        {
+          "credit": "NPS / Cindy Jacoby",
+          "title": "Half Dome",
+          "altText": "Granite dome with trace amounts of snow.",
+          "caption": "Half Dome is one of the most recognizable granitic formations in the world.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CF74-1DD8-B71B-0B9C7FF83F7C68EB.jpg"
+        },
+        {
+          "credit": "NPS Photo/ Christine Fey",
+          "title": "El Capitan",
+          "altText": "El Capitan and reflection in Merced River with some low clouds",
+          "caption": "El Capitan rises over 3,000 feet above the floor of Yosemite Valley.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/058C8410-D5BA-32F4-BC468014AF42CB0B.jpg"
+        }
+      ],
+      "weatherInfo": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (Yosemite Valley can be rainy or snowy in any given winter storm.)",
+      "name": "Yosemite",
+      "designation": "National Park"
+    },
+    {
+      "id": "9854D136-AFC0-4966-BB40-FE9323B56A49",
+      "url": "https://www.nps.gov/yuho/index.htm",
+      "fullName": "Yucca House National Monument",
+      "parkCode": "yuho",
+      "description": "Through a continuing tradition of public and private cooperation, Yucca House National Monument preserves one of the largest archeological sites in SW Colorado. The unexcavated nature of the site preserves its integrity and beauty for future generations of scientists and visitors. Experience a sense of discovery by visiting a site that has remained largely untouched for the past 800 years!",
+      "latitude": "37.24778944",
+      "longitude": "-108.6861274",
+      "latLong": "lat:37.24778944, long:-108.6861274",
+      "activities": [
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        }
+      ],
+      "topics": [
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        }
+      ],
+      "states": "CO",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "9705294465",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "meve_general_information@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "There is no entrance fee for Yucca House National Monument.",
+          "title": "No Entrance Fee"
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "0.00",
+          "description": "There is no entrance fee for Yucca House National Monument. No passes are available.",
+          "title": "No Entrance Pass is available."
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "•From Cortez, take Hwy. 491 south approximately 8 miles. •Take a right on MC County Road B (green sign), which is a dirt road one mile south of MC Road C. •Drive 0.8 miles, crossing a paved road (MC Road 21), and take the next dirt road on the right (before the farmhouse on the left). •Follow this road north and west for 1.4 miles, and head towards a white ranch house with a red roof on the west horizon. •Once at the ranch house, Yucca House NM is on the left side if the driveway.",
+      "directionsUrl": "http://www.nps.gov/yuho/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "Open year-round, weather pending. No services are available.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Yucca House National Monument"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "81321",
+          "city": "Cortez",
+          "stateCode": "CO",
+          "line1": "Off County Rd 20.5",
+          "type": "Physical",
+          "line3": "",
+          "line2": ""
+        },
+        {
+          "postalCode": "81330",
+          "city": "Mesa Verde",
+          "stateCode": "CO",
+          "line1": "PO Box 8",
+          "type": "Mailing",
+          "line3": "",
+          "line2": ""
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo",
+          "title": "Yucca House Spring",
+          "altText": "Cattails with mesa in background.",
+          "caption": "Cattails define marshy locations watered by springs.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C2020-1DD8-B71B-0B9F3E84D4AE2CD0.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "View of Mesa Verde from Yucca House",
+          "altText": "View of Mesa Verde landform",
+          "caption": "View of Mesa Verde above from Yucca House in the valley below.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C2179-1DD8-B71B-0BD549D711B7C146.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Walls of the Yucca House Pueblo",
+          "altText": "Masonry walls seen through shrubbery",
+          "caption": "Ancient walls of Yucca House still standing today.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C238F-1DD8-B71B-0B00D1C3C27BFBFB.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Ancestral Puebloan Wall at Yucca House",
+          "altText": "Close up view of an ancient wall at Yucca House",
+          "caption": "View of an Ancestral Puebloan wall still standing at Yucca House.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C24F8-1DD8-B71B-0B4DA773A67908B3.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Yucca House in Context",
+          "altText": "View of  ancient wall in the center of agricultural land surrounding it.",
+          "caption": "The Yucca House archeological site is surrounded by agricultural land today.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7C2736-1DD8-B71B-0BF4D35DE98A58DB.jpg"
+        }
+      ],
+      "weatherInfo": "Spring and Fall are mild with daytime temperatures ranging from 50 F to 80 F. Winter temperatures are below 50 F with occasional snowstorms. Summers are hot and dry, with highs in the 90s.",
+      "name": "Yucca House",
+      "designation": "National Monument"
+    },
+    {
+      "id": "6F550E4D-AE26-4250-A674-397E2DF88092",
+      "url": "https://www.nps.gov/yuch/index.htm",
+      "fullName": "Yukon - Charley Rivers National Preserve",
+      "parkCode": "yuch",
+      "description": "Located in Interior Alaska, Yukon-Charley Rivers offers exploration in a largely untouched landscape. Whether you float the mighty Yukon River or paddle the Charley River's whitewater, your memories will last a lifetime. Geology, cultural history, gold rush remnants, wildlife, and vast scenery will be a part of your experience. But, the strongest element will be solitude. Your adventure awaits.",
+      "latitude": "65.0935608",
+      "longitude": "-142.7960021",
+      "latLong": "lat:65.0935608, long:-142.7960021",
+      "activities": [
+        {
+          "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+          "name": "Boating"
+        },
+        {
+          "id": "E0E4CE55-3119-46DE-86EB-6817CD8D5F30",
+          "name": "Motorized Boating"
+        },
+        {
+          "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+          "name": "Camping"
+        },
+        {
+          "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+          "name": "Backcountry Camping"
+        },
+        {
+          "id": "907E8125-15E4-483C-8EAD-B9FA1E85C6F8",
+          "name": "Canoe or Kayak Camping"
+        },
+        {
+          "id": "8C495067-8E94-4D78-BBD4-3379DACF6550",
+          "name": "Dog Sledding"
+        },
+        {
+          "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+          "name": "Fishing"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+          "name": "Backcountry Hiking"
+        },
+        {
+          "id": "8386EEAF-985F-4DE8-9037-CCF91975AC94",
+          "name": "Hunting and Gathering"
+        },
+        {
+          "id": "25559F45-F162-4B8B-BEC2-B341034A2AF4",
+          "name": "Hunting"
+        },
+        {
+          "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+          "name": "Paddling"
+        },
+        {
+          "id": "21DB3AFC-8AAC-4665-BC1F-7198C0685983",
+          "name": "Canoeing"
+        },
+        {
+          "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
+          "name": "Kayaking"
+        },
+        {
+          "id": "75B92BEB-A36D-4064-88B7-92EEC6D17611",
+          "name": "Whitewater Rafting"
+        },
+        {
+          "id": "F9B1D433-6B86-4804-AED7-B50A519A3B7C",
+          "name": "Skiing"
+        },
+        {
+          "id": "EAB1EBDE-5B72-493F-8F8F-0EE5B1724436",
+          "name": "Cross-Country Skiing"
+        },
+        {
+          "id": "7C912B83-1B1B-4807-9B66-97C12211E48E",
+          "name": "Snowmobiling"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        }
+      ],
+      "topics": [
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
+          "name": "Colonization and Settlement"
+        },
+        {
+          "id": "12EA2B56-17EC-410A-A10D-BFBA87A0669B",
+          "name": "Explorers and Expeditions"
+        },
+        {
+          "id": "0B575E33-B68F-4F3D-998E-B03284606CF3",
+          "name": "Industry"
+        },
+        {
+          "id": "BDC806A8-5470-4A8B-A0F9-CD804BE3028A",
+          "name": "Mining"
+        },
+        {
+          "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+          "name": "Military"
+        },
+        {
+          "id": "97CCB419-196C-4B95-BB3A-621458F78415",
+          "name": "US Army"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
+          "name": "Tragic Events"
+        },
+        {
+          "id": "D91B6F1A-FED8-490D-B181-9940474CD67C",
+          "name": "Floods"
+        },
+        {
+          "id": "C9C749E3-39C3-45F7-BCC5-9A609E30AA05",
+          "name": "Westward Expansion"
+        },
+        {
+          "id": "83DDFE66-914E-4402-AD3E-ACA731AB2537",
+          "name": "The Gold Rush"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "9576386A-C84F-4436-9094-C5CD67A672CC",
+          "name": "Wolves"
+        },
+        {
+          "id": "77B7EFDF-1A74-409C-8BA2-324EC919DB0E",
+          "name": "Arctic"
+        },
+        {
+          "id": "C8F16A24-90B7-47D9-B2E0-5F2A9237D0F4",
+          "name": "Tundra"
+        },
+        {
+          "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+          "name": "Fire"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "B5E62BF4-5AE6-4100-8DE1-66652943FAEC",
+          "name": "Aurora Borealis"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        },
+        {
+          "id": "596BAA6D-F66B-4348-8433-FEFF35A8005E",
+          "name": "Water Trails"
+        },
+        {
+          "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+          "name": "Watersheds"
+        },
+        {
+          "id": "B85866E2-0897-4000-9040-605CA335804F",
+          "name": "Wilderness"
+        }
+      ],
+      "states": "AK",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "907-459-3730",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "",
+            "emailAddress": "fair_information@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "0.00",
+          "description": "There is no entrance fee for Yukon-Charley Rivers National Preserve",
+          "title": "Entrance Fee"
+        }
+      ],
+      "entrancePasses": [],
+      "fees": [],
+      "directionsInfo": "Although there is no direct highway connection to Yukon-Charley Rivers National Preserve, visitors are able to access the preserve by either air travel from Fairbanks, or water or air travel from two small towns on the road system(Eagle and Circle), near the preserve boundaries.",
+      "directionsUrl": "http://www.nps.gov/yuch/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "The preserve is open 24-hours a day",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Open 24-hours"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "99701",
+          "city": "Fairbanks",
+          "stateCode": "AK",
+          "line1": "101 Dunkel St",
+          "type": "Physical",
+          "line3": "",
+          "line2": "Suite 110"
+        },
+        {
+          "postalCode": "99701",
+          "city": "Fairbanks",
+          "stateCode": "AK",
+          "line1": "101 Dunkel St",
+          "type": "Mailing",
+          "line3": "",
+          "line2": "Suite 110"
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo / Josh Spice",
+          "title": "Aerial view of the Yukon River",
+          "altText": "Aerial view of the Yukon River during fall colors",
+          "caption": "The Yukon River is a vast body of water that has carved its path into the landscape over millions of years.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/5441BF50-05AD-F33E-6A0339476B5B18EF.jpg"
+        },
+        {
+          "credit": "NPS Photo / Josh Spice",
+          "title": "Coal Creek Dredge",
+          "altText": "Historic Coal Creek Dredge",
+          "caption": "The historic Coal Creek Dredge sits nonoperational at its original site, near Slaven's Roadhouse",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7A625C-1DD8-B71B-0B937F599D9D10DF.jpg"
+        },
+        {
+          "credit": "NPS Photo / Greg Kinman",
+          "title": "Eagle Visitor Center",
+          "altText": "Eagle Visitor Center in front of Eagle Bluff",
+          "caption": "The Eagle Visitor Center sits atop a small bluff overlooking the Yukon River.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7A6453-1DD8-B71B-0BD5799A0348C713.jpg"
+        },
+        {
+          "credit": "NPS Photo / Josh Spice",
+          "title": "Slaven's Roadhouse during fall colors",
+          "altText": "Slaven's Roadhouse during fall colors",
+          "caption": "A historic roadhouse and public use cabin on the Yukon River",
+          "url": "https://www.nps.gov/common/uploads/structured_data/56A9969F-9BE7-F7A4-2DF42106328FEFBE.jpg"
+        },
+        {
+          "credit": "NPS Photo / Josh Spice",
+          "title": "Calico Bluff and the Yukon River",
+          "altText": "Calico Bluff rising above the Yukon River that also winds into the distance behind the bluff",
+          "caption": "Calico Bluff, showing 4 million years of rock layers, rises above the Yukon River and is one of many bluffs along the 130 miles of river in the preserve",
+          "url": "https://www.nps.gov/common/uploads/structured_data/576A1897-A20F-B183-CE6A8AB15207E519.jpg"
+        },
+        {
+          "credit": "NPS Photo / Josh Spice",
+          "title": "The Wild and Scenic Charley River",
+          "altText": "Aerial view of the Charley River winding through the tundra and mountains",
+          "caption": "The 105 mile-long Wild and Scenic Charley River's watershed is completely protected within the preserve boundary.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/586B0BCE-D61C-2105-5C518EB2E5A138C0.jpg"
+        }
+      ],
+      "weatherInfo": "The area that Yukon-Charley Rivers encompasses is generally classified as sub-arctic, with exceptionally cold winters, relatively warm summers, low annual precipitation, and generally high winds.",
+      "name": "Yukon - Charley Rivers",
+      "designation": "National Preserve"
+    },
+    {
+      "id": "41BAB8ED-C95F-447D-9DA1-FCC4E4D808B2",
+      "url": "https://www.nps.gov/zion/index.htm",
+      "fullName": "Zion National Park",
+      "parkCode": "zion",
+      "description": "Follow the paths where ancient native people and pioneers walked. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience wilderness in a narrow slot canyon. Zion’s unique array of plants and animals will enchant you as you absorb the rich history of the past and enjoy the excitement of present day adventures.",
+      "latitude": "37.29839254",
+      "longitude": "-113.0265138",
+      "latLong": "lat:37.29839254, long:-113.0265138",
+      "activities": [
+        {
+          "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+          "name": "Arts and Culture"
+        },
+        {
+          "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
+          "name": "Astronomy"
+        },
+        {
+          "id": "D37A0003-8317-4F04-8FB0-4CF0A272E195",
+          "name": "Stargazing"
+        },
+        {
+          "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+          "name": "Biking"
+        },
+        {
+          "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
+          "name": "Road Biking"
+        },
+        {
+          "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+          "name": "Camping"
+        },
+        {
+          "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+          "name": "Backcountry Camping"
+        },
+        {
+          "id": "9159DF0F-951D-4AAE-9987-CEB3CE2A9ADA",
+          "name": "Car or Front Country Camping"
+        },
+        {
+          "id": "80229F2D-972E-40A8-8860-232551CC30D6",
+          "name": "Horse Camping (see also Horse/Stock Use)"
+        },
+        {
+          "id": "07CBCA6A-46B8-413F-8B6C-ABEDEBF9853E",
+          "name": "Canyoneering"
+        },
+        {
+          "id": "B12FAAB9-713F-4B38-83E4-A273F5A43C77",
+          "name": "Climbing"
+        },
+        {
+          "id": "87D3B1CD-3903-4561-ABB1-2DD870C43F2F",
+          "name": "Rock Climbing"
+        },
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+          "name": "Hiking"
+        },
+        {
+          "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
+          "name": "Front-Country Hiking"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+          "name": "Wildlife Watching"
+        },
+        {
+          "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+          "name": "Birdwatching"
+        },
+        {
+          "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+          "name": "Park Film"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        },
+        {
+          "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+          "name": "Shopping"
+        },
+        {
+          "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+          "name": "Bookstore and Park Store"
+        }
+      ],
+      "topics": [
+        {
+          "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+          "name": "Architecture and Building"
+        },
+        {
+          "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+          "name": "Archeology"
+        },
+        {
+          "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+          "name": "Arts"
+        },
+        {
+          "id": "0B575E33-B68F-4F3D-998E-B03284606CF3",
+          "name": "Industry"
+        },
+        {
+          "id": "FE2FF71D-E850-460E-A727-27B292BF1603",
+          "name": "Logging and Timber Cutting"
+        },
+        {
+          "id": "14FA9FF3-7D86-4406-9A6D-BE9032A1C578",
+          "name": "Laborer and Worker"
+        },
+        {
+          "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+          "name": "Native American Heritage"
+        },
+        {
+          "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+          "name": "Transportation"
+        },
+        {
+          "id": "8785B770-396D-4A2B-9C26-3E94F6253B71",
+          "name": "Tunnels"
+        },
+        {
+          "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
+          "name": "Tragic Events"
+        },
+        {
+          "id": "D91B6F1A-FED8-490D-B181-9940474CD67C",
+          "name": "Floods"
+        },
+        {
+          "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+          "name": "Animals"
+        },
+        {
+          "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+          "name": "Birds"
+        },
+        {
+          "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+          "name": "Cats (wild)"
+        },
+        {
+          "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+          "name": "Fish"
+        },
+        {
+          "id": "393F60FB-80D6-46F7-B0FB-BBF3C90F59FD",
+          "name": "Tortoises and Turtles"
+        },
+        {
+          "id": "BCE3ACBE-7871-495B-AEA3-5E19BC482405",
+          "name": "Canyons and Canyonlands"
+        },
+        {
+          "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+          "name": "Fire"
+        },
+        {
+          "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
+          "name": "Fossils and Paleontology"
+        },
+        {
+          "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+          "name": "Geology"
+        },
+        {
+          "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+          "name": "Night Sky"
+        },
+        {
+          "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+          "name": "River and Riparian"
+        },
+        {
+          "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
+          "name": "Rock Landscapes and Features"
+        },
+        {
+          "id": "72E87FCE-B48F-48E8-8761-4849A79736AF",
+          "name": "Arches"
+        },
+        {
+          "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+          "name": "Trails"
+        },
+        {
+          "id": "596BAA6D-F66B-4348-8433-FEFF35A8005E",
+          "name": "Water Trails"
+        },
+        {
+          "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
+          "name": "Unique Species"
+        },
+        {
+          "id": "B85866E2-0897-4000-9040-605CA335804F",
+          "name": "Wilderness"
+        }
+      ],
+      "states": "UT",
+      "contacts": {
+        "phoneNumbers": [
+          {
+            "phoneNumber": "435-772-3256",
+            "description": "",
+            "extension": "",
+            "type": "Voice"
+          },
+          {
+            "phoneNumber": "435-772-3426",
+            "description": "",
+            "extension": "",
+            "type": "Fax"
+          }
+        ],
+        "emailAddresses": [
+          {
+            "description": "Park Information, including Visitor Center, can be answered here.",
+            "emailAddress": "zion_park_information@nps.gov"
+          }
+        ]
+      },
+      "entranceFees": [
+        {
+          "cost": "35.00",
+          "description": "Admits private, non-commercial vehicle (15 passenger capacity or less) and all occupants to Zion National Park, including both the Zion Canyon and Kolob Canyon areas.",
+          "title": "Private Vehicle: Valid for 7 days."
+        },
+        {
+          "cost": "30.00",
+          "description": "Admits one non-commercial motorcycle to Zion National Park, including both the Zion Canyon and Kolob Canyon areas.",
+          "title": "Motorcycle: Valid for 7 days."
+        },
+        {
+          "cost": "20.00",
+          "description": "Admits one individual with no car to Zion National Park, including both the Zion Canyon and Kolob Canyon areas. Typically used for bicyclists, hikers and pedestrians. Youth 15 and under are admitted free.",
+          "title": "Per Person: Valid for 7 days."
+        },
+        {
+          "cost": "35.00",
+          "description": "Organized groups such as Scouts, Clubs, Youth Groups, Churches, Reunions, etc. that do not qualify for an Academic Fee Waiver are charged as follows: \n$35.00 Non-commercial vehicles with a vehicle capacity of 15 or less.\n$20.00 per person Non-commercial vehicles with a capacity of 16 or greater. Fees will not exceed the commercial fee for the same-sized vehicle. Youth 15 and under are free. Individuals or families with any valid Annual or Lifetime pass may use their pass for entry at the per person rate.",
+          "title": "Non-Commercial Organized Groups: Valid for 7 days."
+        }
+      ],
+      "entrancePasses": [
+        {
+          "cost": "50.00",
+          "description": "Valid for 12 months from purchase date. Admits the pass holder/s and passengers in a non-commercial vehicle (14 passenger capacity or less) to Zion National Park.",
+          "title": "Zion Annual Pass"
+        }
+      ],
+      "fees": [],
+      "directionsInfo": "Zion National Park is located on State Route 9 in Springdale, Utah. You may drive yourself on all open park roads except the Zion Canyon Scenic Drive. During most of the year, the Scenic Drive is accessed by shuttle bus only. Shuttles are free and can be found at the Zion Canyon Visitor Center.",
+      "directionsUrl": "http://www.nps.gov/zion/planyourvisit/directions.htm",
+      "operatingHours": [
+        {
+          "exceptions": [],
+          "description": "Zion National Park is open every day of the year.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          },
+          "name": "Zion National Park"
+        }
+      ],
+      "addresses": [
+        {
+          "postalCode": "84767",
+          "city": "Springdale",
+          "stateCode": "UT",
+          "line1": "1 Zion Park Blvd.",
+          "type": "Physical",
+          "line3": "",
+          "line2": "State Route 9"
+        },
+        {
+          "postalCode": "84767",
+          "city": "Springdale",
+          "stateCode": "UT",
+          "line1": "Zion National Park",
+          "type": "Mailing",
+          "line3": "State Route 9",
+          "line2": "1 Zion Park Blvd."
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS Photo",
+          "title": "Temples and Towers of the Virgin",
+          "altText": "A towering sandstone rock formation.",
+          "caption": "The Temples and Towers can be seen from the back patio of the Human History Museum.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7F0098-1DD8-B71B-0B6C0191D7391384.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Zion Canyon Visitor Center",
+          "altText": "Zion Canyon Visitor Center with a sandstone peak in the background",
+          "caption": "The Zion Canyon Visitor Center sits near the sandstone peak known as the Watchman",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7EFF41-1DD8-B71B-0B50E940FE9F2658.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Mountain of the Sun",
+          "altText": "A white and pink sandstone peak, lit up in the sunlight.",
+          "caption": "The Mountain of the Sun in Zion Canyon.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7F0203-1DD8-B71B-0B2DCAE32B684884.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "The Zion Narrows",
+          "altText": "A narrow canyon with a gentle river flowing in the bottom",
+          "caption": "The Zion Narrows is a challenging wilderness experience.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7F0366-1DD8-B71B-0B1C1F98A8C4E757.jpg"
+        },
+        {
+          "credit": "NPS Photo",
+          "title": "Kolob Arch",
+          "altText": "A large red sandstone arch high up on a cliff.",
+          "caption": "Deep in Zion's Wilderness sits Kolob Arch, one of the largest free-standing arches in the world.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7F04EA-1DD8-B71B-0BF8CE99D6958A0E.jpg"
+        }
+      ],
+      "weatherInfo": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F. In summer, temperatures in Zion National Park often exceed 100°F/38°C. Zion experiences monsoons from mid-July into September that result in an increased risk of flash floods. Always be aware of the threat of storms and lightning and be prepared for a wide range of weather conditions. Winters are generally mild.",
+      "name": "Zion",
+      "designation": "National Park"
+    }
+  ]
+}
