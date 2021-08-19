@@ -59,6 +59,7 @@ export default function SignUp() {
         <pwa-auth
           googlekey="..."
           facebookkey="..."
+          windowskey = "..."
         ></pwa-auth>
         <Typography component="h1" variant="h5">
           Sign up
