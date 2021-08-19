@@ -1,6 +1,7 @@
 'use strict'
 
-const {db, models: {User} } = require('../server/db')
+const {db, models: {User} } = require('../server/db');
+const data = require('../server/db/npsApiData');
 
 /**
  * seed - this function clears the database, updates tables to
