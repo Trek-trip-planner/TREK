@@ -6,7 +6,9 @@ const db = require("./db");
 const User = require("./models/User");
 const Trip = require("./models/Trip");
 const Trip_StartingPt = require("./models/Trip_StartingPt");
-const ParkInfo = require("./models/ParkInfo");
+const Park = require("./models/Park");
+const EntranceFees = require("./models/EntranceFees");
+const Image = require("./models/Image");
 
 //associations
 User.hasMany(Trip);
@@ -15,8 +17,14 @@ Trip.belongsTo(User);
 Trip_StartingPt.hasMany(Trip);
 Trip.belongsTo(Trip_StartingPt);
 
-Trip.belongsToMany(ParkInfo, { through: "trip-park" });
-ParkInfo.belongsToMany(Trip, { through: "trip-park" });
+Trip.belongsToMany(Park, { through: "trip-park" });
+Park.belongsToMany(Trip, { through: "trip-park" });
+
+Park.hasMany(EntranceFees)
+EntranceFees.belongsTo(Park)
+
+Park.hasMany(Image)
+Image.belongsTo(Park)
 
 module.exports = {
   db,
@@ -24,6 +32,8 @@ module.exports = {
     User,
     Trip,
     Trip_StartingPt,
-    ParkInfo,
+    Park,
+    EntranceFees,
+    Image,
   },
 };

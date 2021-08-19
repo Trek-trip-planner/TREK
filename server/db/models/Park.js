@@ -1,29 +1,23 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
 
-const ParkInfo = db.define("parkInfo", {
+const Park = db.define("park", {
   fullName: {
     type: Sequelize.STRING,
   },
-  latLong: {
+  latitude: {
     type: Sequelize.STRING,
   },
-  images: {
-    type: Sequelize.ARRAY(Sequelize.STRING),
+  longittude: {
+    type: Sequelize.STRING,
   },
   description: {
     type: Sequelize.STRING,
   },
-  directionInfo: {
-    type: Sequelize.STRING,
-  },
-  entranceFees: {
-    type: Sequelize.ARRAY(Sequelize.STRING),
-  },
   weatherInfo: {
     type: Sequelize.STRING,
   },
-  operatingHours: {
+  standardHours: {
     type: Sequelize.ARRAY(Sequelize.STRING),
   },
   topics: {
@@ -32,9 +26,9 @@ const ParkInfo = db.define("parkInfo", {
   states: {
     type: Sequelize.STRING,
   },
-  email: {
+  emailAddress: {
     type: Sequelize.STRING,
   },
 });
 
-module.exports = ParkInfo;
+module.exports = Park;
