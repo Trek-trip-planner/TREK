@@ -1,9 +1,29 @@
 "use strict";
 
-const {
-  db,
-  models: { User },
-} = require("../server/db");
+const {db, models: {User} } = require('../server/db');
+const data = require('../server/db/npsApiData');
+
+const mappedData = data.map((park)=> {
+const parkInfo = {fullName:park.fullName, description: park.description, latitude: park.latitude,longitude: park.longitude,weatherInfo: park.weatherInfo, states: park.states, emailAddress: park.contact.emailAddresses[0].emailAddress,npsParkId:park.id }
+const standardHours = park.operatingHours.standardHours
+const keyOfStandardHours = Object.keys(standardHours)
+for(let key in keyOfStandardHours) {
+   key = key + ': ' + standardHours[key]
+}
+parkInfo.standardHours = keyOfStandardHours
+const parkTopic = park.topics.map((topic)=> topic.name)
+parkInfo.topics = parkTopic
+ return parkInfo
+});
+const imagesData = data.map((park)=>{
+  park.images.forEach(img => img.npsParkId = park.id )
+  return park.images
+}).flat()
+
+const entranceFeeData = data.map((park)=> {
+  park.entranceFees.forEach(fee => fee.npsParkId = park.id)
+  return park.entranceFees
+}).flat();
 
 /**
  * seed - this function clears the database, updates tables to
@@ -26,6 +46,25 @@ async function seed() {
       email: "murphy@email.com",
     }),
   ]);
+  
+  //Creating ParkInfo
+  const parksInfo =  await Promise.all(
+    mappedData.map((park)=> {
+      return Park.create(park)
+    })
+  )
+
+  const imagesInfo =  await Promise.all(
+    imagesData.map((img)=> {
+      return Image.create(img)
+    })
+  )
+
+  const entrancesFeeInfo =  await Promise.all(
+    entranceFeeData.map((fee)=> {
+      return EntranceFees.create(fee)
+    })
+  )
 
   console.log(`seeded ${users.length} users`);
   console.log(`seeded successfully`);
@@ -36,6 +75,7 @@ async function seed() {
     },
   };
 }
+
 
 /*
  We've separated the `seed` function from the `runSeed` function.
