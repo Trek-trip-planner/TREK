@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SignUp(props) {
   const classes = useStyles();
-  const { name, displayName, handleSubmit, error } = props;
+  const { name, handleSubmit, error } = props;
 
   return (
     <Container component='main' maxWidth='xs'>
@@ -140,8 +140,8 @@ function SignUp(props) {
           </Grid>
           <Grid container justifyContent='flex-end'>
             <Grid item>
-              <Link href='#' variant='body2'>
-                Already have an account? Sign in *need to connect this link*
+              <Link href='/login' variant='body2'>
+                Already have an account? Sign in
               </Link>
             </Grid>
           </Grid>
