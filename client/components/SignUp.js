@@ -132,7 +132,10 @@ function SignUp(props) {
               ></pwa-auth>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <pwa-auth appearance='list' facebookkey='...'></pwa-auth>
+              <pwa-auth
+                appearance='list'
+                facebookkey='226020876114705'
+              ></pwa-auth>
             </Grid>
           </Grid>
           <Grid container justifyContent='flex-end'>
