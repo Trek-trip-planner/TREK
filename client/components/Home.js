@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import HomeCarousel from './ImgCarousel';
 import IndividualPark from './IndividualPark';
-
+import history from '../history';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +32,7 @@ function Home () {
           <HomeCarousel />
         </Container>
         <Container align='center'>
-          <Button >
+          <Button onClick={() => history.push("/all-parks")} >
             Explore All Parks
           </Button>
         </Container>

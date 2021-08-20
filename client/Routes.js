@@ -6,6 +6,7 @@ import SingleParkPage from './components/SingleParkPage';
 import { me } from './store';
 import Home from './components/Home';
 import SignUp from './components/SignUp';
+import AllParks from './components/AllParks';
 import Login from './components/Login';
 
 class Routes extends Component {
@@ -21,6 +22,7 @@ class Routes extends Component {
         {isLoggedIn ? (
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
             <Route path='/singlePark' component={SingleParkPage} />
@@ -28,6 +30,7 @@ class Routes extends Component {
         ) : (
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
           </Switch>
@@ -56,6 +59,4 @@ const mapDispatch = (dispatch) => {
   };
 };
 
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
 export default withRouter(connect(mapState, mapDispatch)(Routes));
