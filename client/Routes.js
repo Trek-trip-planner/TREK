@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { Login } from './components/AuthForm';
+import SingleParkPage from './components/SingleParkPage';
+// import { Login } from './components/AuthForm';
 import { me } from './store';
 import Home from './components/Home';
 import SignUp from './components/SignUp';
-import SingleParkPage from './components/SingleParkPage';
+import Login from './components/Login';
 
 class Routes extends Component {
   componentDidMount() {
