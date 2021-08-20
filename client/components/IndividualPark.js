@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -10,31 +11,23 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
-function IndividualPark () {
-
-  // const [parks] = useState()
-
+function IndividualPark({ park }) {
   return (
-    <Card className={"root"} align="center">
+    <Card className={'root'} align='center'>
       <CardActionArea>
-        <CardMedia
-          id="park"
-          image="img src"
-        />
-        {/* <CardHeader
-          title={'Park Name'}
-        /> */}
-        <CardContent className="museum-info-wrapper">
-          <Typography variant="body2" color="textSecondary" component="p">
+        <CardMedia id='park' image={park.image[0]} />
+        <CardHeader title={park.name} />
+        <CardContent className='museum-info-wrapper'>
+          <Typography variant='body2' color='textSecondary' component='p'>
             Park Name
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            State
+          <Typography variant='body2' color='textSecondary' component='p'>
+            {park.state}
           </Typography>
           <Button
-            variant="contained"
-            color="primary"
-            className="purchase-button"
+            variant='contained'
+            color='primary'
+            className='purchase-button'
             endIcon={<KeyboardArrowRightIcon />}
           >
             View Park Details
@@ -44,6 +37,5 @@ function IndividualPark () {
     </Card>
   );
 }
-
 
 export default IndividualPark;

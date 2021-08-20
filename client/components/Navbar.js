@@ -29,6 +29,7 @@ function Navbar() {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [isLoggedIn] = React.useState();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -55,8 +56,19 @@ function Navbar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={() => history.push("/login")} >Login</MenuItem>
-            <MenuItem onClick={() => history.push("/signup")} >Sign Up</MenuItem>
+            {!isLoggedIn &&
+              <React.Fragment>
+                <MenuItem onClick={() => history.push("/login")} >Login</MenuItem>
+                <MenuItem onClick={() => history.push("/signup")} >Sign Up</MenuItem>
+              </React.Fragment>
+            }
+            {isLoggedIn &&
+              <React.Fragment>
+                <MenuItem onClick={() => history.push("/login")} >My Trips</MenuItem>
+                <MenuItem onClick={() => history.push("/account")} >Account</MenuItem>
+                <MenuItem onClick={() => history.push("/logout")} >Logout</MenuItem>
+              </React.Fragment>
+            }
           </Menu>
         </div>
       </Toolbar>
