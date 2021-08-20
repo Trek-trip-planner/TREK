@@ -6,9 +6,9 @@ a {
   text-decoration: none;
 }
 
-label {
+/* label {
   display: block;
-}
+} */
 
 .MuiToolbar-root {
   display: flex;
@@ -20,10 +20,10 @@ nav a {
   margin: 1em;
 }
 
-form div {
+/* form div {
   margin: 1em;
   display: inline-block;
-}
+} */
 
 .carousel {
   width: 100%;
