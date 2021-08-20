@@ -11,18 +11,34 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
+const useStyles = makeStyles((theme) => ({
+  media: {
+    height: 300,
+    paddingTop: '0%',
+  },
+}));
+
 function IndividualPark({ park }) {
+  const classes = useStyles();
+  const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
+
   return (
     <Card className={'root'} align='center'>
       <CardActionArea>
-        <CardMedia id='park' image={park.image[0]} />
-        <CardHeader title={park.name} />
+        <CardMedia
+          component='img'
+          className={classes.media}
+          // square
+          id='park'
+          src={parkImg}
+        />
+        {/* <CardHeader title={park.fullName} /> */}
         <CardContent className='museum-info-wrapper'>
           <Typography variant='body2' color='textSecondary' component='p'>
-            Park Name
+            {park.fullName}
           </Typography>
           <Typography variant='body2' color='textSecondary' component='p'>
-            {park.state}
+            {park.states}
           </Typography>
           <Button
             variant='contained'
