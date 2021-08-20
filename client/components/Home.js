@@ -1,10 +1,10 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import { HomeCarousel } from './ImgCarousel';
+import HomeCarousel from './ImgCarousel';
+import IndividualPark from './IndividualPark';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,13 +15,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover'
   },
   contain: {
-    disableGutters: 'false'
+    disableGutters: 'false',
+    padding: 0,
+    maxWidth: 'unset'
   }
 }));
 
 function Home () {
   const classes = useStyles();
-  //const parks = this.props.parks
+  // const [parks] = useState()
 
   return (
     <div >
@@ -30,12 +32,14 @@ function Home () {
           <HomeCarousel />
         </Container>
         <Container align='center'>
-          link to park cards
+          <Button >
+            Explore All Parks
+          </Button>
         </Container>
         {/* <Grid container spacing={3}>
           {parks.map((park) => (
-            <Grid item key={review.id} xs={12} md={6} lg={4} >
-              < individual park card component park={park}/>
+            <Grid item key={park.id} xs={12} md={6} lg={4} >
+              <IndividualPark park={park}/>
             </Grid>
           ))}
         </Grid> */}
@@ -43,4 +47,4 @@ function Home () {
   )
 }
 
-export default Home
+export default Home;
