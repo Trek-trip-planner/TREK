@@ -1,47 +1,67 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/core/Menu'
+import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import history from '../history';
 
-const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
-    <h1>FS-App-Template</h1>
-    <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
-    </nav>
-    <hr />
-  </div>
-)
-
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    isLoggedIn: !!state.auth.id
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position: 'unset',
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    color: 'white',
+    edge: 'end'
+  },
+  logo: {
+    maxWidth: 100,
+    cursor: 'pointer'
   }
+}));
+
+function Navbar() {
+  const classes = useStyles();
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <AppBar className={classes.root}>
+      <Toolbar >
+        <Typography edge="start" >
+          <img src={'/favicon-02.jpg'} alt='logo' className={classes.logo + " logo"} onClick={() => history.push("/")} />
+        </Typography>
+        <div >
+          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <MenuIcon className={classes.menuButton} />
+          </Button>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={() => history.push("/login")} >Login</MenuItem>
+            <MenuItem onClick={() => history.push("/signup")} >Sign Up</MenuItem>
+          </Menu>
+        </div>
+      </Toolbar>
+    </AppBar>
+  );
 }
 
-const mapDispatch = dispatch => {
-  return {
-    handleClick() {
-      dispatch(logout())
-    }
-  }
-}
-
-export default connect(mapState, mapDispatch)(Navbar)
+export default Navbar
