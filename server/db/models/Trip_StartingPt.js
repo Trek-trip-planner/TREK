@@ -1,7 +1,7 @@
-const Sequelize = require("sequelize");
-const db = require("../db");
+const Sequelize = require('sequelize');
+const db = require('../db');
 
-const Trip_StartingPt = db.define("trip_StartingPt", {
+const Trip_StartingPt = db.define('trip_StartingPt', {
   address: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -17,7 +17,7 @@ const Trip_StartingPt = db.define("trip_StartingPt", {
   },
   country: {
     type: Sequelize.STRING,
-    defaultValue: "United States",
+    defaultValue: 'United States',
   },
 });
 
