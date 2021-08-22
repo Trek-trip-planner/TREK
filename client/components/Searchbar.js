@@ -60,26 +60,24 @@ function Searchbar(props) {
     })();
   }, []);
 
-  function handleSearchValue(e) {
-    console.log('event.target.value', e.target.value);
-    setSearchValue(e.target.value);
-  }
-
-  function handleClick(searchValue) {
-    console.log('searchValue', searchValue);
+  // function handleClick(searchValue) {
+  //   console.log('searchValue', searchValue);
+  // }
+  function onInputChange(event, value) {
+    console.log('value', value);
   }
 
   return (
     <div className={classes.search}>
       <Autocomplete
-        onChange={handleSearchValue}
+        onInputChange={onInputChange}
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
         renderInput={(park) => <TextField {...park} variant='outlined' />}
       />
-      <Button onClick={() => handleClick(searchValue)}>
+      <Button>
         <div className={classes.searchIcon}>
           <SearchIcon />
         </div>
