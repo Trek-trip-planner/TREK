@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 function IndividualPark({ park }) {
   const classes = useStyles();
+  // o: probably makes sense to set defaults in db
   const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
 
   return (
