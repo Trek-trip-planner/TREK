@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import SearchIcon from '@material-ui/icons/Search';
 import history from '../history';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { fetchParksThunk } from '../store/parks';
@@ -10,6 +10,9 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   search: {
+
+    color: 'inherit',
+
     display: 'flex',
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -36,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     borderRadius: theme.shape.borderRadius,
+    color: 'inherit',
     display: 'flex',
     justifyContent: 'center',
     padding: theme.spacing(1, 1, 1, 0),
@@ -49,6 +53,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+const CssTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'white',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'white',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'white',
+      },
+      '&:hover fieldset': {
+        borderColor: 'white',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'white',
+      },
+      '&.MuiInputBase-root': {
+        color: 'white',
+      },
+    },
+  },
+})(TextField);
+
+
 function Searchbar(props) {
   const classes = useStyles();
   const [searchValue, setSearchValue] = useState('');
@@ -59,6 +90,10 @@ function Searchbar(props) {
     })();
   }, []);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99e836b14bced670865d27539cb460efaa7f07e0
   function onInputChange(event, value) {
     console.log('value', value);
     let parkName = value.fullName.split(' ').join('-');
@@ -68,16 +103,27 @@ function Searchbar(props) {
   return (
     <div className={classes.search}>
       <Autocomplete
+<<<<<<< HEAD
         onChange={onInputChange}
+=======
+
+        onChange={onInputChange}
+
+
+>>>>>>> 99e836b14bced670865d27539cb460efaa7f07e0
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
-        renderInput={(park) => <TextField {...park} variant='outlined' />}
+
+        renderInput={(park) => (
+          <CssTextField {...park} variant='outlined' color='white' />
+        )}
       />
       <Button>
         <div className={classes.searchIcon}>
-          <SearchIcon />
+          <SearchIcon style={{ color: 'white' }} />
+
         </div>
       </Button>
     </div>
