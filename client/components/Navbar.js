@@ -77,7 +77,7 @@ function Navbar() {
             )}
             {isLoggedIn && (
               <React.Fragment>
-                <MenuItem onClick={() => history.push('/login')}>
+                <MenuItem onClick={() => history.push('/mytrips')}>
                   My Trips
                 </MenuItem>
                 <MenuItem onClick={() => history.push('/account')}>
