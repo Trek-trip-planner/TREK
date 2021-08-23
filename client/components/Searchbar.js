@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-
 import { connect } from 'react-redux';
 import SearchIcon from '@material-ui/icons/Search';
 import history from '../history';
 
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-
 
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -15,7 +13,6 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   search: {
-
     color: 'inherit',
 
     display: 'flex',
@@ -40,13 +37,11 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     pointerEvents: 'none',
 
-
     alignItems: 'center',
     justifyContent: 'center',
   },
   inputInput: {
     borderRadius: theme.shape.borderRadius,
-
 
     color: 'inherit',
 
@@ -62,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
 
 const CssTextField = withStyles({
   root: {
@@ -89,7 +83,6 @@ const CssTextField = withStyles({
   },
 })(TextField);
 
-
 function Searchbar(props) {
   const classes = useStyles();
   const [searchValue, setSearchValue] = useState('');
@@ -100,33 +93,25 @@ function Searchbar(props) {
     })();
   }, []);
 
-
   function onInputChange(event, value) {
     console.log('value', value);
-    let parkName = value.fullName.split(' ').join('-');
+    let parkName = value.fullName.split(' ').join('_');
     history.push(`/${parkName}`);
   }
 
   return (
     <div className={classes.search}>
       <Autocomplete
-
         onChange={onInputChange}
-
-
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
-
-        renderInput={(park) => (
-          <CssTextField {...park} variant='outlined' color='white' />
-        )}
+        renderInput={(park) => <CssTextField {...park} variant='outlined' />}
       />
       <Button>
         <div className={classes.searchIcon}>
           <SearchIcon style={{ color: 'white' }} />
-
         </div>
       </Button>
     </div>
