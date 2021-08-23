@@ -21,14 +21,22 @@ import { fetchParkThunk } from '../store/park';
 import CheckIcon from '@material-ui/icons/Check';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 
 function SingleParkPage(props) {
   const { park, getParkInfo } = props;
-  // useEffect(() => {
-  //   (async () => {
-  //     await getParkInfo(props.match.params.id);
-  //   })();
-  // }, []);
+  const parkName = props.match.params.parkName;
+  useEffect(() => {
+    (async () => {
+      await getParkInfo(parkName);
+    })();
+  }, [parkName]);
+
+  if (!park.id) {
+    return <Typography>Loading...</Typography>;
+  }
+
+  const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
 
   return (
     <Container component='main' style={{ margin: 10 }} maxWidth={false}>
@@ -40,11 +48,11 @@ function SingleParkPage(props) {
         style={{ margin: 10, wrap: 'noWrap' }}
       >
         {/* <Grid item xs={6}> */}
-        <Card display='flex' justifyContent='center'>
-          <CardHeader title='Zion National Park' />
+        <Card display='flex' justifyContent='center' style={{ padding: 5 }}>
+          <CardHeader title={park.fullName} />
           <CardMedia
-            image='/home-imgs/ZionNP.jpg'
-            title='Zion National Park'
+            image={parkImg}
+            title={park.fullName}
             style={{ height: 500, width: 700 }}
           />
           <CardContent>
@@ -54,7 +62,7 @@ function SingleParkPage(props) {
           </CardContent>
         </Card>
         {/* </Grid> */}
-        <Grid item xs={6}>
+        <Grid item xs={6} style={{ padding: 5 }}>
           <Paper elevation={3}>
             <Typography>Map Render Area</Typography>
             <Typography>Line 2</Typography>
@@ -63,34 +71,37 @@ function SingleParkPage(props) {
       </Grid>
       <Grid container justifyContent='flex-start' style={{ margin: 10 }}>
         <Grid item xs={6}>
-          <Typography variant='h6'>Park Amenities:</Typography>
+          <Typography variant='h6'>Park Description:</Typography>
+          <Typography>{park.description}</Typography>
+          <Typography variant='h6'>Weather Details:</Typography>
+          <Typography>{park.weatherInfo}</Typography>
+          <Typography variant='h6'>Notable Interests:</Typography>
           <List>
-            <ListItem>
-              <ListItemIcon>
-                <CheckIcon />
-              </ListItemIcon>
-              <ListItemText primary='Item In List' />
-            </ListItem>
-          </List>
-          <Typography variant='h6'>Park Activities</Typography>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <FiberManualRecordIcon />
-              </ListItemIcon>
-              <ListItemText primary='Item In List' />
-            </ListItem>
+            {park.topics.map((topic) => (
+              <ListItem>
+                <ListItemIcon>
+                  <FilterHdrIcon />
+                </ListItemIcon>
+                <ListItemText primary={topic} />
+              </ListItem>
+            ))}
           </List>
         </Grid>
         <Grid item xs={6}>
-          <Typography variant='h6'>Park Description:</Typography>
+          <Typography variant='h6'>States:</Typography>
+          <Typography>{park.states}</Typography>
+          <Typography variant='h6'>Email Contact:</Typography>
+          <Typography>{park.emailAddress}</Typography>
+          <Typography variant='h6'>Entrance Fees:</Typography>
           <List>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRightIcon />
-              </ListItemIcon>
-              <ListItemText primary='Item In List' />
-            </ListItem>
+            {park.entranceFees.map((fee) => (
+              <ListItem>
+                <ListItemIcon>
+                  <FilterHdrIcon />
+                </ListItemIcon>
+                <ListItemText primary={`$${fee.cost} - ${fee.description}`} />
+              </ListItem>
+            ))}
           </List>
         </Grid>
       </Grid>
@@ -106,7 +117,7 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => {
   return {
-    getParkInfo: (parkId) => dispatch(fetchParkThunk(parkId)),
+    getParkInfo: (parkName) => dispatch(fetchParkThunk(parkName)),
   };
 };
 
