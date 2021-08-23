@@ -22,6 +22,7 @@ import CheckIcon from '@material-ui/icons/Check';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
+import PopUpWindow from './PopUpWindow';
 
 function SingleParkPage(props) {
   const { park, getParkInfo } = props;
@@ -56,9 +57,7 @@ function SingleParkPage(props) {
             style={{ height: 500, width: 700 }}
           />
           <CardContent>
-            <Button variant='contained' style={{ margin: 10 }}>
-              add park to trip
-            </Button>
+            <PopUpWindow />
           </CardContent>
         </Card>
         {/* </Grid> */}
