@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import SearchIcon from '@material-ui/icons/Search';
-
+import history from '../history';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { fetchParksThunk } from '../store/parks';
@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     height: '70%',
     position: 'absolute',
     pointerEvents: 'none',
-    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -60,17 +59,16 @@ function Searchbar(props) {
     })();
   }, []);
 
-  // function handleClick(searchValue) {
-  //   console.log('searchValue', searchValue);
-  // }
   function onInputChange(event, value) {
     console.log('value', value);
+    let parkName = value.fullName.split(' ').join('-');
+    history.push(`/${parkName}`);
   }
 
   return (
     <div className={classes.search}>
       <Autocomplete
-        onInputChange={onInputChange}
+        onChange={onInputChange}
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
