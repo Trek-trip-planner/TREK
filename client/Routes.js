@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
+import SingleParkPage from './components/SingleParkPage';
+// import { Login } from './components/AuthForm';
 import { me } from './store';
 import Home from './components/Home';
 import SignUp from './components/SignUp';
@@ -25,6 +27,7 @@ class Routes extends Component {
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
             <Route exact path='/mytrips' component={Trips} />
+            <Route exact path='/singlePark' component={SingleParkPage} />
           </Switch>
         ) : (
           <Switch>
@@ -32,6 +35,7 @@ class Routes extends Component {
             <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
+            <Route exact path='/singlePark' component={SingleParkPage} />
           </Switch>
         )}
       </div>

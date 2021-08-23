@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -32,7 +32,6 @@ function IndividualPark({ park }) {
           id='park'
           src={parkImg}
         />
-        {/* <CardHeader title={park.fullName} /> */}
         <CardContent className='museum-info-wrapper'>
           <Typography variant='body2' color='textSecondary' component='p'>
             {park.fullName}
