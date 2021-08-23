@@ -47,6 +47,7 @@ function Home(props) {
   const sliceEnd = sliceStart + 6;
 
   return (
+
     <div>
       <Container className={classes.contain}>
         <HomeCarousel />
@@ -69,6 +70,7 @@ function Home(props) {
           </Grid>
         ))}
       </Grid>
+
     </div>
   );
 }
