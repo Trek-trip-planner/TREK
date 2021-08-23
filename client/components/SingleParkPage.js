@@ -3,15 +3,18 @@ import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
-  Box,
   Grid,
   Button,
-  Card,
   Typography,
   List,
   ListItem,
   ListItemText,
   ListItemIcon,
+  Paper,
+  Card,
+  CardHeader,
+  CardMedia,
+  CardContent,
 } from '@material-ui/core';
 import Image from 'material-ui-image';
 import { fetchParkThunk } from '../store/park';
@@ -31,21 +34,31 @@ function SingleParkPage(props) {
     <Container component='main' style={{ margin: 10 }} maxWidth={false}>
       <Grid
         container
-        justifyContent='space-between'
+        justifyContent='space-around'
         alignItems='center'
-        style={{ margin: 10 }}
+        spacing={3}
+        style={{ margin: 10, wrap: 'noWrap' }}
       >
+        {/* <Grid item xs={6}> */}
+        <Card display='flex' justifyContent='center'>
+          <CardHeader title='Zion National Park' />
+          <CardMedia
+            image='/home-imgs/ZionNP.jpg'
+            title='Zion National Park'
+            style={{ height: 500, width: 700 }}
+          />
+          <CardContent>
+            <Button variant='contained' style={{ margin: 10 }}>
+              add park to trip
+            </Button>
+          </CardContent>
+        </Card>
+        {/* </Grid> */}
         <Grid item xs={6}>
-          <Typography variant='h4' gutterBottom>
-            Zion National Park
-          </Typography>
-          <Grid style={{ width: 500, height: 500 }}>
-            <Image src='/home-imgs/ZionNP.jpg' />
-          </Grid>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography>Map Render Area</Typography>
-          <Typography>Line 2</Typography>
+          <Paper elevation={3}>
+            <Typography>Map Render Area</Typography>
+            <Typography>Line 2</Typography>
+          </Paper>
         </Grid>
       </Grid>
       <Grid container justifyContent='flex-start' style={{ margin: 10 }}>
