@@ -32,9 +32,9 @@ function AllParks(props) {
     setPage(value);
     window.scrollTo(0, 0);
   };
-  const numOfPages = Math.ceil(props.parks.length / 9);
-  const pageStart = 9 * (page - 1);
-  const pageEnd = 9 * page;
+  const numOfPages = Math.ceil(props.parks.length / 15);
+  const pageStart = 15 * (page - 1);
+  const pageEnd = 15 * page;
 
   return (
     <Container className='account-wrapper'>

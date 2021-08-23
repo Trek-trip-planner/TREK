@@ -1,25 +1,22 @@
 import axios from 'axios';
 
 const GET_PARK = 'GET_PARK';
-const GET_PARK_IMAGE = 'GET_PARK_IMAGE';
 
 const getPark = (park) => ({
   type: GET_PARK,
-  park
-})
-
-
+  park,
+});
 
 export const fetchParkThunk = (id) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/api/parks/${id}`)
-      dispatch(getPark(data))
+      const { data } = await axios.get(`/api/parks/${id}`);
+      dispatch(getPark(data));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
-}
+  };
+};
 
 const initialState = {};
 

@@ -1,18 +1,18 @@
-const router = require('express').Router()
-const { models: { Park, Image }} = require('../db')
+const router = require('express').Router();
+const {
+  models: { Park, Image },
+} = require('../db');
 
 router.get('/', async (req, res, next) => {
   try {
-    const parks = await Park.findAll(
-      { include: { model: Image } }
-    );
+    const parks = await Park.findAll({ include: { model: Image } });
     res.json(parks);
   } catch (error) {
-    next(error)
+    next(error);
   }
 });
 
-router.get('/:id', async (req, res, next) => {
+router.get('/:parkName', async (req, res, next) => {
   try {
     const park = await Park.findByPk(req.params.id);
     if (!park) {
@@ -20,8 +20,8 @@ router.get('/:id', async (req, res, next) => {
     }
     res.status(200).json(park);
   } catch (error) {
-    next(error)
+    next(error);
   }
-})
+});
 
-module.exports = router
+module.exports = router;

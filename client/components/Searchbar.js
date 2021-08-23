@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import SearchIcon from '@material-ui/icons/Search';
 
@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   search: {
+    color: 'inherit',
     display: 'flex',
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -37,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     borderRadius: theme.shape.borderRadius,
+    color: 'inherit',
     display: 'flex',
     justifyContent: 'center',
     padding: theme.spacing(1, 1, 1, 0),
@@ -49,6 +51,31 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+const CssTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'white',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'white',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'white',
+      },
+      '&:hover fieldset': {
+        borderColor: 'white',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'white',
+      },
+      '&.MuiInputBase-root': {
+        color: 'white',
+      },
+    },
+  },
+})(TextField);
 
 function Searchbar(props) {
   const classes = useStyles();
@@ -75,11 +102,13 @@ function Searchbar(props) {
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
-        renderInput={(park) => <TextField {...park} variant='outlined' />}
+        renderInput={(park) => (
+          <CssTextField {...park} variant='outlined' color='white' />
+        )}
       />
       <Button>
         <div className={classes.searchIcon}>
-          <SearchIcon />
+          <SearchIcon style={{ color: 'white' }} />
         </div>
       </Button>
     </div>
