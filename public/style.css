@@ -39,7 +39,8 @@ nav a {
   background-position: center;
 }
 
-.carouselInner .left, .carouselInner .right {
+.carouselInner .left,
+.carouselInner .right {
   flex: 5%;
   height: 60vh;
   background-color: rgb(0, 0, 0, 40%);
@@ -58,4 +59,8 @@ nav a {
   color: white;
   text-align: center;
   align-self: flex-end;
+}
+
+.MuiSvgIcon-root {
+  color: white;
 }

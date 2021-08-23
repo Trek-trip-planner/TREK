@@ -28,6 +28,7 @@ class Routes extends Component {
             <Route exact path='/signup' component={SignUp} />
             <Route exact path='/mytrips' component={Trips} />
             <Route exact path='/singlePark' component={SingleParkPage} />
+            <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
         ) : (
           <Switch>
@@ -35,7 +36,7 @@ class Routes extends Component {
             <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
-            <Route exact path='/singlePark' component={SingleParkPage} />
+            <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
         )}
       </div>
