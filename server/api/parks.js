@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const {
-  models: { Park, Image },
+
+  models: { Park, Image, EntranceFees },
+
+
 } = require('../db');
 
 router.get('/', async (req, res, next) => {
@@ -14,7 +17,23 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:parkName', async (req, res, next) => {
   try {
-    const park = await Park.findByPk(req.params.id);
+    let parkName = req.params.parkName.split('-').join(' ');
+    console.log('PARK NAME: ', parkName);
+
+    //const park = await Park.findByPk(req.params.id);
+
+    const park = await Park.findOne({
+      where: {
+        fullName: parkName,
+      },
+      include: [
+        {
+          model: EntranceFees,
+        },
+        { model: Image },
+      ],
+    });
+
     if (!park) {
       res.sendStatus(404);
     }
