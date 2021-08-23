@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import history from '../history';
 import { makeStyles } from '@material-ui/core/styles';
@@ -32,6 +32,7 @@ function IndividualPark({ park }) {
   return (
     <Card className={'root'} align='center'>
       <CardActionArea>
+
         <Link onClick={preventDefault}>
           <CardMedia
             component='img'
@@ -41,6 +42,8 @@ function IndividualPark({ park }) {
             src={parkImg}
           />
         </Link>
+
+       
         <CardContent className='museum-info-wrapper'>
           <Typography variant='body2' color='textSecondary' component='p'>
             {park.fullName}
