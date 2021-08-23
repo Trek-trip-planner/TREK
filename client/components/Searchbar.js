@@ -10,7 +10,6 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   search: {
-
     color: 'inherit',
 
     display: 'flex',
@@ -53,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const CssTextField = withStyles({
   root: {
     '& label.Mui-focused': {
@@ -79,7 +77,6 @@ const CssTextField = withStyles({
   },
 })(TextField);
 
-
 function Searchbar(props) {
   const classes = useStyles();
   const [searchValue, setSearchValue] = useState('');
@@ -90,10 +87,6 @@ function Searchbar(props) {
     })();
   }, []);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99e836b14bced670865d27539cb460efaa7f07e0
   function onInputChange(event, value) {
     console.log('value', value);
     let parkName = value.fullName.split(' ').join('-');
@@ -103,19 +96,11 @@ function Searchbar(props) {
   return (
     <div className={classes.search}>
       <Autocomplete
-<<<<<<< HEAD
         onChange={onInputChange}
-=======
-
-        onChange={onInputChange}
-
-
->>>>>>> 99e836b14bced670865d27539cb460efaa7f07e0
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
-
         renderInput={(park) => (
           <CssTextField {...park} variant='outlined' color='white' />
         )}
@@ -123,7 +108,6 @@ function Searchbar(props) {
       <Button>
         <div className={classes.searchIcon}>
           <SearchIcon style={{ color: 'white' }} />
-
         </div>
       </Button>
     </div>
