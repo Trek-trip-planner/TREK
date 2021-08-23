@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 'unset',
   },
   title: {
-    cursor: 'pointer',
     align: 'center',
     fontWeight: 'fontWeightBold',
     padding: 20,
@@ -47,7 +46,6 @@ function Home(props) {
   const sliceEnd = sliceStart + 6;
 
   return (
-
     <div>
       <Container className={classes.contain}>
         <HomeCarousel />
@@ -58,7 +56,6 @@ function Home(props) {
           variant='h4'
           component='h3'
           color='primary'
-          onClick={() => history.push('/all-parks')}
         >
           Explore All Parks
         </Typography>
@@ -70,7 +67,6 @@ function Home(props) {
           </Grid>
         ))}
       </Grid>
-
     </div>
   );
 }

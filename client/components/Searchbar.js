@@ -89,7 +89,7 @@ function Searchbar(props) {
 
   function onInputChange(event, value) {
     console.log('value', value);
-    let parkName = value.fullName.split(' ').join('-');
+    let parkName = value.fullName.split(' ').join('_');
     history.push(`/${parkName}`);
   }
 
@@ -101,9 +101,7 @@ function Searchbar(props) {
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
-        renderInput={(park) => (
-          <CssTextField {...park} variant='outlined' color='white' />
-        )}
+        renderInput={(park) => <CssTextField {...park} variant='outlined' />}
       />
       <Button>
         <div className={classes.searchIcon}>
