@@ -30,7 +30,8 @@ export const authenticate =
       });
       window.localStorage.setItem(TOKEN, res.data.token);
       dispatch(me());
-      history.push('/');
+      //NEED TO CHANGE THIS!!!! But working for button "Add to trip" 
+      // history.push('/');
     } catch (authError) {
       return dispatch(setAuth({ error: authError }));
     }

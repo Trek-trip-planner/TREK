@@ -9,9 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import history from '../history';
-
 import SearchBar from './Searchbar';
-
 import { logout } from '../store/auth';
 
 

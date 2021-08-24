@@ -7,7 +7,7 @@ const {
 
 router.get('/', async (req, res, next) => {
   try {
-    const trips = await Trip.findAll({include:[User]});
+    const trips = await Trip.findAll({include:{model:User}});
     res.json(trips);
   } catch (error) {
     next(error);
