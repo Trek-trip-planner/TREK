@@ -16,17 +16,27 @@ import {
   CardMedia,
   CardContent,
 } from '@material-ui/core';
-import Image from 'material-ui-image';
 import { fetchParkThunk } from '../store/park';
-import CheckIcon from '@material-ui/icons/Check';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import PopUpWindow from './PopUpWindow';
+
+const useStyles = makeStyles((theme) => ({
+  info: {
+    padding: 10,
+  },
+  gridLeft: {
+    padding: 10,
+  },
+  gridRight: {
+    padding: 10,
+  },
+}));
 
 function SingleParkPage(props) {
   const { park, getParkInfo } = props;
   const parkName = props.match.params.parkName;
+  const classes = useStyles();
+
   useEffect(() => {
     (async () => {
       await getParkInfo(parkName);
@@ -34,7 +44,7 @@ function SingleParkPage(props) {
   }, [parkName]);
 
   if (!park.id) {
-    return <Typography>Loading...</Typography>;
+    return <Typography align='center'>Loading...</Typography>;
   }
 
   const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
@@ -50,7 +60,7 @@ function SingleParkPage(props) {
       >
         {/* <Grid item xs={6}> */}
         <Card display='flex' style={{ padding: 5 }}>
-          <CardHeader title={park.fullName} />
+          <CardHeader title={park.fullName} align='center' />
           <CardMedia
             image={parkImg}
             title={park.fullName}
@@ -69,34 +79,34 @@ function SingleParkPage(props) {
         </Grid>
       </Grid>
       <Grid container justifyContent='flex-start' style={{ margin: 10 }}>
-        <Grid item xs={6}>
+        <Grid item xs={6} className={classes.gridLeft}>
           <Typography variant='h6'>Park Description:</Typography>
-          <Typography>{park.description}</Typography>
+          <Typography className={classes.info}>{park.description}</Typography>
           <Typography variant='h6'>Weather Details:</Typography>
-          <Typography>{park.weatherInfo}</Typography>
+          <Typography className={classes.info}>{park.weatherInfo}</Typography>
           <Typography variant='h6'>Notable Interests:</Typography>
           <List>
             {park.topics.map((topic, index) => (
               <ListItem key={index}>
                 <ListItemIcon>
-                  <FilterHdrIcon />
+                  <FilterHdrIcon color='secondary' />
                 </ListItemIcon>
                 <ListItemText primary={topic} />
               </ListItem>
             ))}
           </List>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} className={classes.gridRight}>
           <Typography variant='h6'>States:</Typography>
-          <Typography>{park.states}</Typography>
+          <Typography className={classes.info}>{park.states}</Typography>
           <Typography variant='h6'>Email Contact:</Typography>
-          <Typography>{park.emailAddress}</Typography>
+          <Typography className={classes.info}>{park.emailAddress}</Typography>
           <Typography variant='h6'>Entrance Fees:</Typography>
           <List>
             {park.entranceFees.map((fee, index) => (
               <ListItem key={index}>
                 <ListItemIcon>
-                  <FilterHdrIcon />
+                  <FilterHdrIcon color='secondary' />
                 </ListItemIcon>
                 <ListItemText primary={`$${fee.cost} - ${fee.description}`} />
               </ListItem>
