@@ -10,8 +10,8 @@ import Login from './components/Login';
 import Trips from './components/Trips';
 
 class Routes extends Component {
-  componentDidMount() {
-    this.props.loadInitialData();
+  async componentDidMount() {
+    await this.props.loadInitialData();
   }
 
   render() {
@@ -25,8 +25,9 @@ class Routes extends Component {
             <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
-            <Route exact path='/mytrips' component={Trips} />
+
             <Route exact path='/singlePark' component={SingleParkPage} />
+            <Route exact path='/mytrips' component={Trips} />
             <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
         ) : (
