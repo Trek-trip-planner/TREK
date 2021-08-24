@@ -47,6 +47,11 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
 }));
 
 function CreateTrip(props) {
@@ -123,21 +128,33 @@ function CreateTrip(props) {
                 autoComplete='shipping country'
               />
             </Grid>
+          </Grid>
+          <Grid container spacing={3}>
             <Typography variant='h6' gutterBottom>
               {`Date(s):`}
             </Typography>
-            <form className={classes.container} noValidate>
-              <TextField
-                id='date'
-                label='Birthday'
-                type='date'
-                defaultValue='2017-05-24'
-                className={classes.textField}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
-            </form>
+            <Grid item xs={12} sm={6}>
+              <form noValidate>
+                <TextField
+                  id='startDate'
+                  label='Start Date'
+                  type='date'
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+                <TextField
+                  id='endDate'
+                  label='End Date'
+                  type='date'
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+              </form>
+            </Grid>
           </Grid>
           <Button
             type='submit'
