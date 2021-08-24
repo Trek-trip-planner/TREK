@@ -3,19 +3,10 @@ import history from '../history';
 
 const TOKEN = 'token';
 
-/**
- * ACTION TYPES
- */
 const SET_AUTH = 'SET_AUTH';
 
-/**
- * ACTION CREATORS
- */
 const setAuth = (auth) => ({ type: SET_AUTH, auth });
 
-/**
- * THUNK CREATORS
- */
 export const me = () => async (dispatch) => {
   const token = window.localStorage.getItem(TOKEN);
   if (token) {
@@ -47,16 +38,13 @@ export const authenticate =
 
 export const logout = () => {
   window.localStorage.removeItem(TOKEN);
-  history.push('/login');
+  history.push('/');
   return {
     type: SET_AUTH,
     auth: {},
   };
 };
 
-/**
- * REDUCER
- */
 export default function (state = {}, action) {
   switch (action.type) {
     case SET_AUTH:
