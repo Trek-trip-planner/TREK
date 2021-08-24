@@ -25,10 +25,11 @@ const mappedData = data.map((park) => {
     const standardHours = park.operatingHours[0].standardHours;
 
     const keyOfStandardHours = Object.keys(standardHours);
-    for (let key in keyOfStandardHours) {
-      key = key + ': ' + standardHours[key];
-    }
-    parkInfo.standardHours = keyOfStandardHours;
+    let newHoursArray = keyOfStandardHours.map((key) => {
+      return key + ': ' + standardHours[key];
+    });
+
+    parkInfo.standardHours = newHoursArray;
   }
 
   const parkTopic = park.topics.map((topic) => topic.name);
@@ -230,7 +231,48 @@ async function seed() {
     StartingPoint30,
   ] = startingPointsInstances;
 
-  const [Park1,Park2, Park3,Park4,Park5,Park6,Park7,Park8,Park9,Park10,Park11,Park12,Park13,Park14,Park15,Park16,Park17,Park18,Park19,Park20,Park21,Park22,Park23,Park24,Park25,Park26,Park27,Park28,Park29,Park30,Park31,Park32,Park33,Park34,Park35,Park36,Park37,Park38,Park39,Park40] = parksInfo;
+  const [
+    Park1,
+    Park2,
+    Park3,
+    Park4,
+    Park5,
+    Park6,
+    Park7,
+    Park8,
+    Park9,
+    Park10,
+    Park11,
+    Park12,
+    Park13,
+    Park14,
+    Park15,
+    Park16,
+    Park17,
+    Park18,
+    Park19,
+    Park20,
+    Park21,
+    Park22,
+    Park23,
+    Park24,
+    Park25,
+    Park26,
+    Park27,
+    Park28,
+    Park29,
+    Park30,
+    Park31,
+    Park32,
+    Park33,
+    Park34,
+    Park35,
+    Park36,
+    Park37,
+    Park38,
+    Park39,
+    Park40,
+  ] = parksInfo;
 
   //associate users to trips
   await User1.setTrips([Trip1]);
@@ -298,68 +340,63 @@ async function seed() {
   await StartingPoint30.setTrips([Trip40]);
 
   //Park to Trips
-  await Park1.setTrips([Trip1,])
-  await Park2.setTrips([Trip2])
-  await Park3.setTrips([Trip3])
-  await Park4.setTrips([Trip4])
-  await Park5.setTrips([Trip5])
-  await Park6.setTrips([Trip6])
-  await Park7.setTrips([Trip7])
-  await Park8.setTrips([Trip8])
-  await Park9.setTrips([Trip9])
-  await Park12.setTrips([Trip10])
-  await Park13.setTrips([Trip11])
-  await Park14.setTrips([Trip14])
-  await Park15.setTrips([Trip15])
-  await Park16.setTrips([Trip16])
-  await Park17.setTrips([Trip17])
-  await Park18.setTrips([Trip18])
-  await Park19.setTrips([Trip19])
-  await Park20.setTrips([Trip12])
-  await Park21.setTrips([Trip13])
-  await Park23.setTrips([Trip14])
-  await Park22.setTrips([Trip15])
-  await Park24.setTrips([Trip16])
-  await Park25.setTrips([Trip17])
-  await Park26.setTrips([Trip18])
-  await Park27.setTrips([Trip21])
-  await Park28.setTrips([Trip20])
-  await Park29.setTrips([Trip19])
-  await Trip1.setParks([Park1])
-  await Trip2.setParks([Park2])
-  await Trip3.setParks([Park3])
-  await Trip4.setParks([Park4])
-  await Trip5.setParks([Park5])
-  await Trip6.setParks([Park6])
-  await Trip7.setParks([Park7])
-  await Trip8.setParks([Park8])
-  await Trip9.setParks([Park9])
-  await Trip10.setParks([Park10])
-  await Trip11.setParks([Park11])
-  await Trip12.setParks([Park12])
-  await Trip13.setParks([Park13])
-  await Trip14.setParks([Park14])
-  await Trip15.setParks([Park15])
-  await Trip16.setParks([Park16])
-  await Trip17.setParks([Park17])
-  await Trip18.setParks([Park18])
-  await Trip19.setParks([Park19])
-  await Trip20.setParks([Park20])
-  await Trip21.setParks([Park21])
-  await Trip22.setParks([Park22])
-  await Trip23.setParks([Park23])
-  await Trip24.setParks([Park24])
-  await Trip25.setParks([Park25])
-  await Trip26.setParks([Park26])
-  await Trip27.setParks([Park27])
-  await Trip28.setParks([Park28])
-  await Trip29.setParks([Park29])
-  await Trip30.setParks([Park30])
-
-
-
-
-
+  await Park1.setTrips([Trip1]);
+  await Park2.setTrips([Trip2]);
+  await Park3.setTrips([Trip3]);
+  await Park4.setTrips([Trip4]);
+  await Park5.setTrips([Trip5]);
+  await Park6.setTrips([Trip6]);
+  await Park7.setTrips([Trip7]);
+  await Park8.setTrips([Trip8]);
+  await Park9.setTrips([Trip9]);
+  await Park12.setTrips([Trip10]);
+  await Park13.setTrips([Trip11]);
+  await Park14.setTrips([Trip14]);
+  await Park15.setTrips([Trip15]);
+  await Park16.setTrips([Trip16]);
+  await Park17.setTrips([Trip17]);
+  await Park18.setTrips([Trip18]);
+  await Park19.setTrips([Trip19]);
+  await Park20.setTrips([Trip12]);
+  await Park21.setTrips([Trip13]);
+  await Park23.setTrips([Trip14]);
+  await Park22.setTrips([Trip15]);
+  await Park24.setTrips([Trip16]);
+  await Park25.setTrips([Trip17]);
+  await Park26.setTrips([Trip18]);
+  await Park27.setTrips([Trip21]);
+  await Park28.setTrips([Trip20]);
+  await Park29.setTrips([Trip19]);
+  await Trip1.setParks([Park1]);
+  await Trip2.setParks([Park2]);
+  await Trip3.setParks([Park3]);
+  await Trip4.setParks([Park4]);
+  await Trip5.setParks([Park5]);
+  await Trip6.setParks([Park6]);
+  await Trip7.setParks([Park7]);
+  await Trip8.setParks([Park8]);
+  await Trip9.setParks([Park9]);
+  await Trip10.setParks([Park10]);
+  await Trip11.setParks([Park11]);
+  await Trip12.setParks([Park12]);
+  await Trip13.setParks([Park13]);
+  await Trip14.setParks([Park14]);
+  await Trip15.setParks([Park15]);
+  await Trip16.setParks([Park16]);
+  await Trip17.setParks([Park17]);
+  await Trip18.setParks([Park18]);
+  await Trip19.setParks([Park19]);
+  await Trip20.setParks([Park20]);
+  await Trip21.setParks([Park21]);
+  await Trip22.setParks([Park22]);
+  await Trip23.setParks([Park23]);
+  await Trip24.setParks([Park24]);
+  await Trip25.setParks([Park25]);
+  await Trip26.setParks([Park26]);
+  await Trip27.setParks([Park27]);
+  await Trip28.setParks([Park28]);
+  await Trip29.setParks([Park29]);
+  await Trip30.setParks([Park30]);
 
   console.log(`seeded ${usersInstances.length} users`);
   console.log(`seeded successfully`);
