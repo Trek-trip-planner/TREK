@@ -57,7 +57,7 @@ function SingleParkPage(props) {
             style={{ height: 500, width: 700 }}
           />
           <CardContent>
-            <PopUpWindow />
+            <PopUpWindow park={park}/>
           </CardContent>
         </Card>
         {/* </Grid> */}

@@ -6,12 +6,17 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { connect } from 'react-redux';
+import Login from './Login';
+import CreateTrip from './CreateTrip';
 
-function PopUpWindow() {
+function PopUpWindow(props) {
+  const { park } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
+    console.log('this.props', props.park);
   };
 
   const handleClose = () => {
@@ -32,31 +37,48 @@ function PopUpWindow() {
         onClose={handleClose}
         aria-labelledby='form-dialog-title'
       >
-        <DialogTitle id='form-dialog-title'>Subscribe</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin='dense'
-            id='name'
-            label='Email Address'
-            type='email'
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color='primary'>
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color='primary'>
-            Subscribe
-          </Button>
-        </DialogActions>
+        <div>
+          {props.isLoggedIn ? (
+            <div>
+              {/* <DialogTitle id='form-dialog-title'>Sign in</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  Please Sign into your Trek account.
+                </DialogContentText>
+                <TextField
+                  autoFocus
+                  margin='dense'
+                  id='name'
+                  label='Email Address'
+                  type='email'
+                  fullWidth
+                />
+              </DialogContent> */}
+              <CreateTrip park={park} />
+              <DialogActions>
+                <Button onClick={handleClose} color='primary'>
+                  Cancel
+                </Button>
+              </DialogActions>
+            </div>
+          ) : (
+            <div>
+              <Login />
+              <DialogActions>
+                <Button onClick={handleClose} color='primary'>
+                  Cancel
+                </Button>
+              </DialogActions>
+            </div>
+          )}
+        </div>
       </Dialog>
     </div>
   );
 }
-export default PopUpWindow;
+const mapState = (state) => {
+  return {
+    isLoggedIn: !!state.auth.id,
+  };
+};
+export default connect(mapState)(PopUpWindow);
