@@ -5,12 +5,15 @@ import { MB_PUBKEY } from '../secrets';
 
 mapboxgl.accessToken = MB_PUBKEY;
 
-export default function SingleParkMap() {
+export default function SingleParkMap(props) {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const numLat = Number(props.park.latitude);
+  const numLong = Number(props.park.longitude);
+
+  const [lng, setLng] = useState(Number(numLong.toFixed(4)));
+  const [lat, setLat] = useState(Number(numLat.toFixed(4)));
+  const [zoom, setZoom] = useState(13);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -20,6 +23,9 @@ export default function SingleParkMap() {
       center: [lng, lat],
       zoom: zoom,
     });
+    const marker1 = new mapboxgl.Marker()
+      .setLngLat([Number(numLong.toFixed(4)), Number(numLat.toFixed(4))])
+      .addTo(map.current);
   });
 
   useEffect(() => {
