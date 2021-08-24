@@ -10,8 +10,6 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   search: {
-    color: 'inherit',
-
     display: 'flex',
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -42,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -105,7 +102,7 @@ function Searchbar(props) {
       />
       <Button>
         <div className={classes.searchIcon}>
-          <SearchIcon style={{ color: 'white' }} />
+          <SearchIcon styles={{ color: 'white' }} />
         </div>
       </Button>
     </div>
