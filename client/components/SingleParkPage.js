@@ -18,6 +18,7 @@ import {
 } from '@material-ui/core';
 import { fetchParkThunk } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
+import PopUpWindow from './PopUpWindow';
 
 const useStyles = makeStyles((theme) => ({
   info: {
@@ -66,15 +67,7 @@ function SingleParkPage(props) {
             style={{ height: 500, width: 700 }}
           />
           <CardContent>
-            <Button
-              // className={classes.button}
-              variant='contained'
-              align='center'
-              // style={{ margin: 10 }}
-              color='primary'
-            >
-              add park to trip
-            </Button>
+            <PopUpWindow park={park}/>
           </CardContent>
         </Card>
         {/* </Grid> */}
