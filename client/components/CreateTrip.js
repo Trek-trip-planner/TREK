@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Paper,
@@ -47,22 +48,53 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
 }));
 
 function CreateTrip(props) {
-  const { park } = props;
+  const { park, userId } = props;
   const classes = useStyles();
 
-  const [value, setValue] = useState([null, null]);
+  handleSubmit = (evt) => {
+    evt.preventDefault();
+    const userId = userId;
+    const parkId = park.id;
+    const tripName = evt.target.tripName;
+    const startingPoint = evt.target.address1;
+    const city = evt.target.city;
+    const state = evt.target.state;
+    const zip = evt.target.zip;
+    const country = evt.target.country;
+    const startDate = evt.target.startDate;
+    const endDate = evt.target.endDate;
+  };
 
   return (
-    <main className={classes.layout}>
+    <form className={classes.layout} onSubmit={handleSubmit}>
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
           {`Create your trip to ${park.fullName}!`}
         </Typography>
         <React.Fragment>
           <Typography variant='h6' gutterBottom>
+            Trip Name:
+          </Typography>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <TextField
+                required
+                id='tripName'
+                name='tripName'
+                label='Trip Name'
+                fullWidth
+              />
+            </Grid>
+          </Grid>
+          <Typography variant='h6' gutterBottom style={{ paddingTop: 15 }}>
             Starting location:
           </Typography>
           <Grid container spacing={3}>
@@ -74,15 +106,6 @@ function CreateTrip(props) {
                 label='Address line 1'
                 fullWidth
                 autoComplete='shipping address-line1'
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id='address2'
-                name='address2'
-                label='Address line 2'
-                fullWidth
-                autoComplete='shipping address-line2'
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -97,6 +120,7 @@ function CreateTrip(props) {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                required
                 id='state'
                 name='state'
                 label='State/Province/Region'
@@ -123,21 +147,35 @@ function CreateTrip(props) {
                 autoComplete='shipping country'
               />
             </Grid>
-            <Typography variant='h6' gutterBottom>
+          </Grid>
+          <Grid container spacing={3}>
+            <Typography variant='h6' gutterBottom style={{ paddingTop: 15 }}>
               {`Date(s):`}
             </Typography>
-            <form className={classes.container} noValidate>
-              <TextField
-                id='date'
-                label='Birthday'
-                type='date'
-                defaultValue='2017-05-24'
-                className={classes.textField}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
-            </form>
+            <Grid item xs={12} sm={6}>
+              <div noValidate>
+                <TextField
+                  required
+                  id='startDate'
+                  label='Start Date'
+                  type='date'
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+                <TextField
+                  required
+                  id='endDate'
+                  label='End Date'
+                  type='date'
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+              </div>
+            </Grid>
           </Grid>
           <Button
             type='submit'
@@ -151,8 +189,12 @@ function CreateTrip(props) {
         </React.Fragment>
       </Paper>
       <Copyright />
-    </main>
+    </form>
   );
 }
-
-export default CreateTrip;
+const mapState = (state) => {
+  return {
+    userId: state.auth.id,
+  };
+};
+export default connect(mapState)(CreateTrip);

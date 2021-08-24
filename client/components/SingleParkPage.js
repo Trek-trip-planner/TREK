@@ -16,9 +16,10 @@ import {
   CardMedia,
   CardContent,
 } from '@material-ui/core';
-import { fetchParkThunk } from '../store/park';
+import { fetchParkThunk, clearPark } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import PopUpWindow from './PopUpWindow';
+import SingleParkMap from './SingleParkMap';
 
 const useStyles = makeStyles((theme) => ({
   info: {
@@ -41,6 +42,7 @@ function SingleParkPage(props) {
     (async () => {
       await getParkInfo(parkName);
     })();
+    return () => props.clearPark();
   }, [parkName]);
 
   if (!park.id) {
@@ -67,14 +69,13 @@ function SingleParkPage(props) {
             style={{ height: 500, width: 700 }}
           />
           <CardContent>
-            <PopUpWindow park={park}/>
+            <PopUpWindow park={park} />
           </CardContent>
         </Card>
         {/* </Grid> */}
         <Grid item xs={6} style={{ padding: 5 }}>
           <Paper elevation={3}>
-            <Typography>Map Render Area</Typography>
-            <Typography>Line 2</Typography>
+            <SingleParkMap park={park} />
           </Paper>
         </Grid>
       </Grid>
@@ -127,6 +128,7 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     getParkInfo: (parkName) => dispatch(fetchParkThunk(parkName)),
+    clearPark: () => dispatch(clearPark()),
   };
 };
 
