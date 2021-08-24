@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
 import { connect } from 'react-redux';
 import SearchIcon from '@material-ui/icons/Search';
 import history from '../history';
-
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { fetchParksThunk } from '../store/parks';
@@ -13,8 +10,6 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   search: {
-    color: 'inherit',
-
     display: 'flex',
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -36,19 +31,15 @@ const useStyles = makeStyles((theme) => ({
     height: '70%',
     position: 'absolute',
     pointerEvents: 'none',
-
     alignItems: 'center',
     justifyContent: 'center',
   },
   inputInput: {
     borderRadius: theme.shape.borderRadius,
-
     color: 'inherit',
-
     display: 'flex',
     justifyContent: 'center',
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -111,7 +102,7 @@ function Searchbar(props) {
       />
       <Button>
         <div className={classes.searchIcon}>
-          <SearchIcon style={{ color: 'white' }} />
+          <SearchIcon styles={{ color: 'white' }} />
         </div>
       </Button>
     </div>
