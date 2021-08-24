@@ -9,6 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { connect } from 'react-redux';
 import Login from './Login';
 import CreateTrip from './CreateTrip';
+import history from '../history';
 
 function PopUpWindow(props) {
   const { park } = props;
@@ -40,20 +41,6 @@ function PopUpWindow(props) {
         <div>
           {props.isLoggedIn ? (
             <div>
-              {/* <DialogTitle id='form-dialog-title'>Sign in</DialogTitle>
-              <DialogContent>
-                <DialogContentText>
-                  Please Sign into your Trek account.
-                </DialogContentText>
-                <TextField
-                  autoFocus
-                  margin='dense'
-                  id='name'
-                  label='Email Address'
-                  type='email'
-                  fullWidth
-                />
-              </DialogContent> */}
               <CreateTrip park={park} />
               <DialogActions>
                 <Button onClick={handleClose} color='primary'>
@@ -63,8 +50,19 @@ function PopUpWindow(props) {
             </div>
           ) : (
             <div>
-              <Login />
+              <DialogTitle id='form-dialog-title'>Sign in</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  Please Sign into your Trek account.
+                </DialogContentText>
+              </DialogContent>
               <DialogActions>
+                <Button onClick={() => history.push('/signup')} color='primary'>
+                  Sign up
+                </Button>
+                <Button onClick={() => history.push('/login')} color='primary'>
+                  Login
+                </Button>
                 <Button onClick={handleClose} color='primary'>
                   Cancel
                 </Button>
