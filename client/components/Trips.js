@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
-import trips from '../../script/Trips';
+import { connect } from "react-redux";
+import { fetchTrips } from '../store/trips';
 import Trip from './AddTrip';
 import Grid from '@material-ui/core/Grid';
-import { Container } from '@material-ui/core';
+import { Button, Container, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+// import Paper from "material-ui/Paper";
+import Checkbox from '@material-ui/core/Checkbox';
+import { IconButton } from '@material-ui/core/';
+import { Delete } from '@material-ui/icons';
 
-export default class Trips extends Component {
-  state = {
-    trips: trips,
-  };
-  deleteTour = tripName => {
+ export class Trips extends Component {
+
+
+  componentDidMount(){
+    this.props.fetchTrips()
+  }
+
+  deleteTrip(tripName) {
     const {trips}= this.state
     const updatedTrips = trips.filter(trip => trip.name !== tripName );
     this.setState({
@@ -19,35 +32,56 @@ export default class Trips extends Component {
   }
 
   render() {
-    const { trips } = this.state
-    console.log('props', this.props.match.params.id);
+    const  trips  = this.props.trips
+    // const slNo = 1;
+    // slNo++
 
     return (
-      <Container className='account-wrapper'>
-        <Typography
-          variant='h4'
-          component='h3'
-          color='secondary'
-          align='center'
-          fontWeight='fontWeightBold'
-          m={2}
-        >
-          <Box fontWeight='fontWeightBold' m={1}>
-            My trips
-          </Box>
-        </Typography>
-        <Grid container spacing={3}>
-          {trips.length !== 0 ? (
-            trips.map((trip) => (
-              <Grid item key={trip.name} xs={12} md={6} lg={4}>
-                <Trip trip={trip} deleteTour = {this.deleteTour} />
-              </Grid>
-            ))
-          ) : (
-            <h3>Loading</h3>
-          )}
-        </Grid>
-      </Container>
+      <Paper>
+        <Table size="small">
+        <TableHead>
+          <TableRow>
+          <TableCell> # </TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Date</TableCell>
+            <TableCell>Starting Pt</TableCell>
+            <TableCell >Remove Trip</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {trips.map((trip) => (
+            <TableRow key={trip.id}>
+              <TableCell>#</TableCell>
+              <TableCell>{trip.name}</TableCell>
+              <TableCell>date</TableCell>
+              <TableCell>{}</TableCell>
+              <TableCell>
+                <Button color ="secondary"
+                 onClick={() => this.deleteTrip(`${trip.name}`)}
+                >  Delete</Button>
+
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+        </Table>
+      </Paper>
+
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    trips: state.trips,
+    isLoggedIn: !!state.auth.id
+  };
+};
+//mapping state to props
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchTrips: () => dispatch(fetchTrips()),
+  };
+};
+//mapping props and dispatching to thunk creator
+export default connect(mapStateToProps, mapDispatchToProps)(Trips);

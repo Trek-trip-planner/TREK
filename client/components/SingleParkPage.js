@@ -48,7 +48,7 @@ function SingleParkPage(props) {
         style={{ margin: 10, wrap: 'noWrap' }}
       >
         {/* <Grid item xs={6}> */}
-        <Card display='flex' justifyContent='center' style={{ padding: 5 }}>
+        <Card display='flex' style={{ padding: 5 }}>
           <CardHeader title={park.fullName} />
           <CardMedia
             image={parkImg}
@@ -77,8 +77,8 @@ function SingleParkPage(props) {
           <Typography>{park.weatherInfo}</Typography>
           <Typography variant='h6'>Notable Interests:</Typography>
           <List>
-            {park.topics.map((topic) => (
-              <ListItem>
+            {park.topics.map((topic, index) => (
+              <ListItem key={index}>
                 <ListItemIcon>
                   <FilterHdrIcon />
                 </ListItemIcon>
@@ -94,8 +94,8 @@ function SingleParkPage(props) {
           <Typography>{park.emailAddress}</Typography>
           <Typography variant='h6'>Entrance Fees:</Typography>
           <List>
-            {park.entranceFees.map((fee) => (
-              <ListItem>
+            {park.entranceFees.map((fee, index) => (
+              <ListItem key={index}>
                 <ListItemIcon>
                   <FilterHdrIcon />
                 </ListItemIcon>

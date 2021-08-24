@@ -83,7 +83,7 @@ function Navbar(props) {
               </MenuItem>,
             ]}
             {props.isLoggedIn && [
-              <MenuItem key={'mytrips'} onClick={() => history.push('/login')}>
+              <MenuItem key={'mytrips'} onClick={() => history.push('/mytrips')}>
                 My Trips
               </MenuItem>,
               <MenuItem
