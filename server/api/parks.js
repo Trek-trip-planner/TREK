@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {
-  models: { Park, Image, EntranceFees },
+  models: { Park, Image, EntranceFees},
 } = require('../db');
 
 router.get('/', async (req, res, next) => {
@@ -39,5 +39,7 @@ router.get('/:parkName', async (req, res, next) => {
     next(error);
   }
 });
+
+
 
 module.exports = router;
