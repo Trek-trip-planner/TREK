@@ -7,12 +7,10 @@ const getPark = (park) => ({
   park,
 });
 
-
 export const fetchParkThunk = (parkName) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`/api/parks/${parkName}`);
-
       dispatch(getPark(data));
     } catch (error) {
       console.log(error);
