@@ -21,26 +21,14 @@ export class Trips extends Component {
 
   componentDidMount() {
     this.props.fetchTrips(this.props.userId);
-    // this.props.deleteTripThunk(this.props.id)
   }
-
-  // deleteTrip(id) {
-  //   const {trips } = this.props;
-  //   console.log('trips', trips);
-  //   const updatedTrips = trips.filter((trip) => trip.id !== id);
-
-  //   this.setState({
-  //     trips: updatedTrips,
-  //   });
-  // }
-
   render() {
     const trips = this.props.trips;
+    // if(!trips) {
+    //   alert('No trips to delete')
+    // }
 
     console.log('trips', trips)
-    // console.log('user', user)
-
-
     return (
       <Paper>
         <Table size='small'>
@@ -74,7 +62,7 @@ export class Trips extends Component {
                 <TableCell>
                   <Button
                     color='secondary'
-                    // onClick={() => this.props.deleteTripThunk(trip.id)}
+                    onClick={() => this.props.deleteTripThunk(trip.id)}
                   >
                     {' '}
                     Delete
@@ -96,12 +84,11 @@ const mapStateToProps = (state) => {
     isLoggedIn: !!state.auth.id,
   };
 };
-//mapping state to props
+
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchTrips: (userId) => dispatch(fetchTrips(userId)),
     deleteTripThunk:(id) => dispatch(deleteTripThunk(id))
   };
 };
-//mapping props and dispatching to thunk creator
 export default connect(mapStateToProps, mapDispatchToProps)(Trips);
