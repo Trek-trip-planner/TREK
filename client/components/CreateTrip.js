@@ -59,7 +59,7 @@ function CreateTrip(props) {
   const { park, userId } = props;
   const classes = useStyles();
 
-  handleSubmit = (evt) => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
     const userId = userId;
     const parkId = park.id;
