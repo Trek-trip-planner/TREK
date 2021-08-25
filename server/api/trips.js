@@ -3,8 +3,6 @@ const {
   models: { Trip},
 } = require('../db');
 
-
-
 router.get('/:userId', async (req, res, next) => {
   try {
     const trips = await Trip.findAll({where:{userId:req.params.userId}});
@@ -21,7 +19,7 @@ router.delete('/:id', async (req, res, next) => {
       next({status:403})
     }
     await trip.destroy();
-    res.sendStatus(200).json(trip);
+    res.json(trip);
   } catch (error) {
     next(error);
   }
