@@ -15,6 +15,9 @@ export const fetchTrip = (id) => {
       dispatch(getTrip(data));
     } catch (error) {
       console.log(error);
+    }
+  }
+}
 
 const CLEAR_TRIP = 'CLEAR_TRIP';
 
