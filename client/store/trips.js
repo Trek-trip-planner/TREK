@@ -7,6 +7,7 @@ const getTrips = (trips) => ({
   type: GET_TRIPS,
   trips
 });
+
 export const removeTrip = (id) => {
   return {
     type: DELETE_TRIP,

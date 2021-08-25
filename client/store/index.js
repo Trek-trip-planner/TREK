@@ -6,8 +6,9 @@ import auth from './auth'
 import park from './park';
 import parks from './parks';
 import trips from './trips'
+import trip from './trip'
 
-const reducer = combineReducers({ auth, parks, park,trips })
+const reducer = combineReducers({ auth, parks, park, trips, trip })
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )
