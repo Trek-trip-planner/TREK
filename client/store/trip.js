@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const GET_TRIP = 'GET_TRIP';
 
 const getTrip = (trip) => ({
@@ -15,6 +14,9 @@ export const fetchTrip = (id) => {
       dispatch(getTrip(data));
     } catch (error) {
       console.log(error);
+    }
+  };
+};
 
 const CLEAR_TRIP = 'CLEAR_TRIP';
 

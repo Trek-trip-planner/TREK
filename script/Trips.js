@@ -1,4 +1,3 @@
-
 const trips = [
   {
     name: 'Ctenophorus ornatus',
