@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import history from '../history';
 
 const GET_TRIP = 'GET_TRIP';
 
@@ -15,7 +15,9 @@ export const fetchTrip = (id) => {
       dispatch(getTrip(data));
     } catch (error) {
       console.log(error);
-
+    }
+  };
+};
 const CLEAR_TRIP = 'CLEAR_TRIP';
 
 export const clearTrip = () => {
@@ -29,6 +31,7 @@ export const createNewTrip = (tripInfo) => {
     try {
       const { data } = await axios.post('/api/mytrips/addTrip', tripInfo);
       dispatch(getTrip(data));
+      history.push(`/mytrips/${data.id}`);
     } catch (error) {
       console.log('Error fetching single trip: ', error.message);
     }
