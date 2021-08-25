@@ -1,6 +1,7 @@
 import axios from 'axios';
 import history from '../history';
 
+
 const GET_TRIP = 'GET_TRIP';
 
 const getTrip = (trip) => ({
@@ -18,6 +19,7 @@ export const fetchTrip = (id) => {
     }
   };
 };
+
 const CLEAR_TRIP = 'CLEAR_TRIP';
 
 export const clearTrip = () => {
