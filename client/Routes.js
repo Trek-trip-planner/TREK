@@ -7,6 +7,7 @@ import Home from './components/Home';
 import SignUp from './components/SignUp';
 import AllParks from './components/AllParks';
 import Login from './components/Login';
+import SingleTrip from './components/SingleTrip';
 import Trips from './components/Trips';
 
 class Routes extends Component {
@@ -25,6 +26,7 @@ class Routes extends Component {
             <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
+            <Route exact path='/mytrips/:tripId' component={SingleTrip} />
             <Route exact path='/mytrips' component={Trips} />
             <Route path='/:parkName' component={SingleParkPage} />
           </Switch>

@@ -59,3 +59,9 @@ nav a {
 .map-container {
   height: 500px;
 }
+
+.trip-detials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

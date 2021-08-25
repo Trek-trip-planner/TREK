@@ -3,10 +3,22 @@ const {
   models: { Trip, Trip_StartingPt, User, Park },
 } = require('../db');
 
-router.get('/:userId', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    const trips = await Trip.findAll({ where: { userId: req.params.userId } });
+    const trips = await Trip.findAll({ where: { userId: req.query.userId } });
     res.json(trips);
+  } catch (error) {
+    next(error);
+  }
+});
+
+
+router.get('/:id', async (req, res, next) => {
+  try {
+    const trip = await Trip.findByPk(req.params.id, {
+      include: [{ model: Park }, { model: Trip_StartingPt }],
+    });
+    res.json(trip);
   } catch (error) {
     next(error);
   }
@@ -46,6 +58,7 @@ router.post('/addTrip', async (req, res, next) => {
     });
 
     res.send(trip);
+
   } catch (error) {
     next(error);
   }

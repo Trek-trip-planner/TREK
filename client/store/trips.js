@@ -20,8 +20,9 @@ export const fetchTrips = (userId) => {
   return async (dispatch) => {
     try {
       console.log('user', userId);
-      const { data } = await axios.get(`/api/mytrips/${userId}`);
-
+      const { data } = await axios.get(`/api/mytrips`, {
+        params: { userId: userId },
+      });
       dispatch(getTrips(data));
     } catch (error) {
       console.log(error);

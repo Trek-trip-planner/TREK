@@ -1,6 +1,21 @@
 import axios from 'axios';
 
-const GET_SINGLE_TRIP = 'GET_SINGLE_TRIP';
+
+const GET_TRIP = 'GET_TRIP';
+
+const getTrip = (trip) => ({
+  type: GET_TRIP,
+  trip,
+});
+
+export const fetchTrip = (id) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.get(`/api/mytrips/${id}`);
+      dispatch(getTrip(data));
+    } catch (error) {
+      console.log(error);
+
 const CLEAR_TRIP = 'CLEAR_TRIP';
 
 export const clearTrip = () => {
@@ -9,27 +24,22 @@ export const clearTrip = () => {
   };
 };
 
-export const haveSingleTrip = (trip) => {
-  return {
-    type: GET_SINGLE_TRIP,
-    trip,
-  };
-};
-
 export const createNewTrip = (tripInfo) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.post('/api/mytrips/addTrip', tripInfo);
-      dispatch(haveSingleTrip(data));
+      dispatch(getTrip(data));
     } catch (error) {
       console.log('Error fetching single trip: ', error.message);
     }
   };
 };
 
-export default function (state = {}, action) {
+const initialState = {};
+
+export default function tripReducer(state = initialState, action) {
   switch (action.type) {
-    case GET_SINGLE_TRIP:
+    case GET_TRIP:
       return action.trip;
     case CLEAR_TRIP:
       return {};
