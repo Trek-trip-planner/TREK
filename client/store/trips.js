@@ -33,7 +33,6 @@ export const deleteTripThunk = (id) => {
       const { data: trip } = await axios.delete(`/api/mytrips/${id}`);
       dispatch(removeTrip(trip));
       history.go();
-      // history.push('/mytrips')
     } catch (error) {
       console.log(error);
     }
