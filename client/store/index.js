@@ -9,6 +9,7 @@ import trips from './trips';
 import trip from './trip';
 
 const reducer = combineReducers({ auth, parks, park, trips, trip });
+
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({ collapsed: true }))
 );

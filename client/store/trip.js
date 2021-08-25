@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 const GET_TRIP = 'GET_TRIP';
 
 const getTrip = (trip) => ({
@@ -14,6 +15,22 @@ export const fetchTrip = (id) => {
       dispatch(getTrip(data));
     } catch (error) {
       console.log(error);
+
+const CLEAR_TRIP = 'CLEAR_TRIP';
+
+export const clearTrip = () => {
+  return {
+    type: CLEAR_TRIP,
+  };
+};
+
+export const createNewTrip = (tripInfo) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.post('/api/mytrips/addTrip', tripInfo);
+      dispatch(getTrip(data));
+    } catch (error) {
+      console.log('Error fetching single trip: ', error.message);
     }
   };
 };
@@ -24,6 +41,8 @@ export default function tripReducer(state = initialState, action) {
   switch (action.type) {
     case GET_TRIP:
       return action.trip;
+    case CLEAR_TRIP:
+      return {};
     default:
       return state;
   }

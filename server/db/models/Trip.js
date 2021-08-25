@@ -6,6 +6,12 @@ const Trip = db.define('trip', {
     type: Sequelize.STRING,
     defaultValue: 'Trip',
   },
+  startDate: {
+    type: Sequelize.STRING,
+  },
+  endDate: {
+    type: Sequelize.STRING,
+  },
 });
 
 module.exports = Trip;
