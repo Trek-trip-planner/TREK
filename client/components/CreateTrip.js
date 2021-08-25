@@ -10,6 +10,7 @@ import {
   Button,
   Box,
 } from '@material-ui/core';
+import { createNewTrip } from '../store/trip';
 
 function Copyright() {
   return (
@@ -59,10 +60,12 @@ function CreateTrip(props) {
   const { park, userId } = props;
   const classes = useStyles();
 
-  handleSubmit = (evt) => {
+  const handleSubmit = (evt, userId) => {
     evt.preventDefault();
-    const userId = userId;
+    //const userId = userId;
     const parkId = park.id;
+
+    // NOT ACCESSING VALUES W/IN TEXTFIELD/INPUT - need to rework how we are pulling form data on submit
     const tripName = evt.target.tripName;
     const startingPoint = evt.target.address1;
     const city = evt.target.city;
@@ -71,10 +74,26 @@ function CreateTrip(props) {
     const country = evt.target.country;
     const startDate = evt.target.startDate;
     const endDate = evt.target.endDate;
+    console.log('STARTING POINT: ', startingPoint);
+    // props.createTrip({
+    //   userId,
+    //   parkId,
+    //   tripName,
+    //   startingPoint,
+    //   city,
+    //   state,
+    //   zip,
+    //   country,
+    //   startDate,
+    //   endDate,
+    // });
   };
 
   return (
-    <form className={classes.layout} onSubmit={handleSubmit}>
+    <form
+      className={classes.layout}
+      onSubmit={(evt) => handleSubmit(evt, userId)}
+    >
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
           {`Create your trip to ${park.fullName}!`}
@@ -192,9 +211,17 @@ function CreateTrip(props) {
     </form>
   );
 }
+
 const mapState = (state) => {
   return {
     userId: state.auth.id,
   };
 };
-export default connect(mapState)(CreateTrip);
+
+const mapDispatch = (dispatch) => {
+  return {
+    createTrip: (tripInfo) => dispatch(createNewTrip(tripInfo)),
+  };
+};
+
+export default connect(mapState, mapDispatch)(CreateTrip);
