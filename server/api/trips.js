@@ -26,7 +26,6 @@ router.get('/:id', async (req, res, next) => {
   }
 });
 
-//TESTED W/ POSTMAN - WORKS
 router.post('/addTrip', async (req, res, next) => {
   try {
     const newTripInfo = {
@@ -60,6 +59,56 @@ router.post('/addTrip', async (req, res, next) => {
     });
 
     res.send(trip);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.put('/editTrip', async (req, res, next) => {
+  try {
+    const startingPoint = await Trip_StartingPt.findByPk(
+      req.body.startingPointID,
+      { include: Trip }
+    );
+    if (startingPoint.trips.length === 1) {
+      const [numOfAffectedRows, affectedRows] = await Trip_StartingPt.update(
+        req.body,
+        {
+          where: { id: req.body.startingPointID },
+          returning: true,
+        }
+      );
+      if (!numOfAffectedRows) {
+        return next({
+          status: 404,
+          message: `Starting point with id ${req.body.startingPointID} not found.`,
+        });
+      }
+    } else {
+      const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
+        where: {
+          address: req.body.startingPoint,
+          city: req.body.city,
+          state: req.body.state,
+          zip: req.body.zip,
+          country: req.body.country,
+        },
+      });
+      instance.addTrip(req.body.id);
+    }
+
+    const [numOfAffectedRows, affectedRows] = await Trip.update(req.body, {
+      where: { id: req.body.tripId },
+      include: { model: Trip_StartingPt },
+      returning: true,
+    });
+    if (!numOfAffectedRows) {
+      return next({
+        status: 404,
+        message: `Trip with id ${tripId} not found.`,
+      });
+    }
+    res.json(affectedRows);
   } catch (error) {
     next(error);
   }

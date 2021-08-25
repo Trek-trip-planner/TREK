@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Link, Typography } from '@material-ui/core';
-import { createNewTrip } from '../store/trip';
+import { editTrip } from '../store/trips';
 import TripFormTextField from './TripFormTextField';
 
 function Copyright() {
@@ -45,10 +45,10 @@ function EditTrip(props) {
   const { trip, userId } = props;
   const classes = useStyles();
 
-  const handleSubmit = (evt, userId) => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
     const tripId = trip.id;
-    const tripName = evt.target.tripName?.value;
+    const name = evt.target.tripName?.value;
     const startingPoint = evt.target.address1?.value;
     const city = evt.target.city?.value;
     const state = evt.target.state?.value;
@@ -58,9 +58,9 @@ function EditTrip(props) {
     const endDate = evt.target.endDate?.value;
 
     props.editTrip({
-      userId,
       tripId,
-      tripName,
+      startingPointID: trip.tripStartingPtId,
+      name,
       startingPoint,
       city,
       state,
@@ -77,7 +77,11 @@ function EditTrip(props) {
         <Typography component='h1' variant='h4' align='center'>
           {`Edit your trip`}
         </Typography>
-        <TripFormTextField handleSubmit={handleSubmit} userId={userId} trip = {trip}/>
+        <TripFormTextField
+          handleSubmit={handleSubmit}
+          userId={userId}
+          trip={trip}
+        />
       </Paper>
       <Copyright />
     </main>

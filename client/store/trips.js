@@ -3,6 +3,14 @@ import history from '../history';
 
 const GET_TRIPS = 'GET_TRIPS';
 const DELETE_TRIP = 'DELETE_TRIP';
+const UPDATED_TRIP = 'UPDATED_TRIP';
+
+export const updateTrip = (updatedtrip) => {
+  return {
+    type: UPDATED_TRIP,
+    updatedtrip,
+  };
+};
 
 const getTrips = (trips) => ({
   type: GET_TRIPS,
@@ -40,6 +48,18 @@ export const deleteTripThunk = (id) => {
   };
 };
 
+export const editTrip = (tripInfo) => {
+  return async (dispatch) => {
+    try {
+      console.log('Trip Info: ', tripInfo);
+      const { data } = await axios.put('/api/mytrips/editTrip', tripInfo);
+      console.log('data return from the editTrip thunk', data[0]);
+      dispatch(updateTrip(data));
+    } catch (error) {
+      console.log('Error editing the trip!', error.message);
+    }
+  };
+};
 const initialState = [];
 
 export default function tripsReducer(state = initialState, action) {
@@ -49,6 +69,13 @@ export default function tripsReducer(state = initialState, action) {
     case DELETE_TRIP:
       const updatedTrips = [...state].filter((trip) => trip.id !== action.id);
       return updatedTrips;
+    case UPDATED_TRIP:
+      return state.map((trip) => {
+        if (trip.id === action.updatedtrip.id) {
+          return action.updatedtrip;
+        }
+        return trip;
+      });
     default:
       return state;
   }
