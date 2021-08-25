@@ -66,39 +66,36 @@ function CreateTrip(props) {
     const parkId = park.id;
 
     // NOT ACCESSING VALUES W/IN TEXTFIELD/INPUT - need to rework how we are pulling form data on submit
-    const tripName = evt.target.tripName;
-    const startingPoint = evt.target.address1;
-    const city = evt.target.city;
-    const state = evt.target.state;
-    const zip = evt.target.zip;
-    const country = evt.target.country;
-    const startDate = evt.target.startDate;
-    const endDate = evt.target.endDate;
-    console.log('STARTING POINT: ', startingPoint);
-    // props.createTrip({
-    //   userId,
-    //   parkId,
-    //   tripName,
-    //   startingPoint,
-    //   city,
-    //   state,
-    //   zip,
-    //   country,
-    //   startDate,
-    //   endDate,
-    // });
+    const tripName = evt.target.tripName?.value;
+    const startingPoint = evt.target.address1?.value;
+    const city = evt.target.city?.value;
+    const state = evt.target.state?.value;
+    const zip = evt.target.zip?.value;
+    const country = evt.target.country?.value;
+    const startDate = evt.target.startDate?.value;
+    const endDate = evt.target.endDate?.value;
+    
+    props.createTrip({
+      userId,
+      parkId,
+      tripName,
+      startingPoint,
+      city,
+      state,
+      zip,
+      country,
+      startDate,
+      endDate,
+    });
   };
 
   return (
-    <form
-      className={classes.layout}
-      onSubmit={(evt) => handleSubmit(evt, userId)}
-    >
+    <main className={classes.layout}>
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
           {`Create your trip to ${park.fullName}!`}
         </Typography>
-        <React.Fragment>
+        <form onSubmit={(evt) => handleSubmit(evt, userId)}>
           <Typography variant='h6' gutterBottom>
             Trip Name:
           </Typography>
@@ -205,10 +202,10 @@ function CreateTrip(props) {
           >
             Create
           </Button>
-        </React.Fragment>
+        </form>
       </Paper>
       <Copyright />
-    </form>
+    </main>
   );
 }
 

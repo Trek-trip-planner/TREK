@@ -33,8 +33,7 @@ export const deleteTripThunk = (id) => {
   return async (dispatch) => {
     try {
       const { data: trip } = await axios.delete(`/api/mytrips/${id}`);
-      dispatch(removeTrip(trip));
-      history.go();
+      dispatch(removeTrip(id));
     } catch (error) {
       console.log(error);
     }
