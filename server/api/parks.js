@@ -33,8 +33,9 @@ router.get('/:parkName', async (req, res, next) => {
 
     if (!park) {
       res.sendStatus(404);
+    } else {
+      res.status(200).json(park);
     }
-    res.status(200).json(park);
   } catch (error) {
     next(error);
   }

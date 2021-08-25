@@ -16,7 +16,7 @@ import {
   CardMedia,
   CardContent,
 } from '@material-ui/core';
-import { fetchParkThunk } from '../store/park';
+import { fetchParkThunk, clearPark } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import PopUpWindow from './PopUpWindow';
 import SingleParkMap from './SingleParkMap';
@@ -42,6 +42,7 @@ function SingleParkPage(props) {
     (async () => {
       await getParkInfo(parkName);
     })();
+    return () => props.clearPark();
   }, [parkName]);
 
   if (!park.id) {
@@ -74,7 +75,7 @@ function SingleParkPage(props) {
         {/* </Grid> */}
         <Grid item xs={6} style={{ padding: 5 }}>
           <Paper elevation={3}>
-            <SingleParkMap />
+            <SingleParkMap park={park} />
           </Paper>
         </Grid>
       </Grid>
@@ -127,6 +128,7 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     getParkInfo: (parkName) => dispatch(fetchParkThunk(parkName)),
+    clearPark: () => dispatch(clearPark()),
   };
 };
 
