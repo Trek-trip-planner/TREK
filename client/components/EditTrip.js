@@ -41,13 +41,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function CreateTrip(props) {
-  const { park, userId } = props;
+function EditTrip(props) {
+  const { trip, userId } = props;
   const classes = useStyles();
 
   const handleSubmit = (evt, userId) => {
     evt.preventDefault();
-    const parkId = park.id;
+    const tripId = trip.id;
     const tripName = evt.target.tripName?.value;
     const startingPoint = evt.target.address1?.value;
     const city = evt.target.city?.value;
@@ -57,9 +57,9 @@ function CreateTrip(props) {
     const startDate = evt.target.startDate?.value;
     const endDate = evt.target.endDate?.value;
 
-    props.createTrip({
+    props.editTrip({
       userId,
-      parkId,
+      tripId,
       tripName,
       startingPoint,
       city,
@@ -75,9 +75,9 @@ function CreateTrip(props) {
     <main className={classes.layout}>
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
-          {`Create your trip to ${park.fullName}!`}
+          {`Edit your trip`}
         </Typography>
-        <TripFormTextField handleSubmit={handleSubmit} userId={userId} />
+        <TripFormTextField handleSubmit={handleSubmit} userId={userId} trip = {trip}/>
       </Paper>
       <Copyright />
     </main>
@@ -92,8 +92,8 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => {
   return {
-    createTrip: (tripInfo) => dispatch(createNewTrip(tripInfo)),
+    editTrip: (tripInfo) => dispatch(editTrip(tripInfo)),
   };
 };
 
-export default connect(mapState, mapDispatch)(CreateTrip);
+export default connect(mapState, mapDispatch)(EditTrip);

@@ -7,67 +7,83 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { connect } from 'react-redux';
-import Login from './Login';
 import CreateTrip from './CreateTrip';
 import history from '../history';
+import { useLocation } from 'react-router-dom';
+import EditTrip from './EditTrip';
+import EditIcon from '@material-ui/icons/Edit';
 
 function PopUpWindow(props) {
-  const { park } = props;
+  let location = useLocation();
+
+  const { park, trip } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
-    console.log('this.props', props.park);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
+  const checkLogIn = props.isLoggedIn ? (
+    <div>
+      <CreateTrip park={park} location={location} />
+      <DialogActions>
+        <Button onClick={handleClose} color='primary'>
+          Cancel
+        </Button>
+      </DialogActions>
+    </div>
+  ) : (
+    <div>
+      <DialogTitle id='form-dialog-title'>Sign in</DialogTitle>
+      <DialogContent>
+        <DialogContentText>
+          Please Sign into your Trek account.
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={() => history.push('/signup')} color='primary'>
+          Sign up
+        </Button>
+        <Button onClick={() => history.push('/login')} color='primary'>
+          Login
+        </Button>
+        <Button onClick={handleClose} color='primary'>
+          Cancel
+        </Button>
+      </DialogActions>
+    </div>
+  );
+
   return (
     <div>
-      <Button
-        onClick={handleClickOpen}
-        variant='contained'
-        style={{ margin: 10 }}
-      >
-        add park to trip
-      </Button>
+      {location.pathname === '/mytrips' ? (
+        <Button color='secondary' onClick={handleClickOpen}>
+          <EditIcon color='primary' />
+        </Button>
+      ) : (
+        <Button
+          onClick={handleClickOpen}
+          variant='contained'
+          style={{ margin: 10 }}
+        >
+          add park to trip
+        </Button>
+      )}
+
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby='form-dialog-title'
       >
         <div>
-          {props.isLoggedIn ? (
-            <div>
-              <CreateTrip park={park} />
-              <DialogActions>
-                <Button onClick={handleClose} color='primary'>
-                  Cancel
-                </Button>
-              </DialogActions>
-            </div>
+          {location.pathname === '/mytrips' ? (
+            <EditTrip trip={trip} />
           ) : (
-            <div>
-              <DialogTitle id='form-dialog-title'>Sign in</DialogTitle>
-              <DialogContent>
-                <DialogContentText>
-                  Please Sign into your Trek account.
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={() => history.push('/signup')} color='primary'>
-                  Sign up
-                </Button>
-                <Button onClick={() => history.push('/login')} color='primary'>
-                  Login
-                </Button>
-                <Button onClick={handleClose} color='primary'>
-                  Cancel
-                </Button>
-              </DialogActions>
-            </div>
+            checkLogIn
           )}
         </div>
       </Dialog>

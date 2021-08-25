@@ -5,13 +5,15 @@ const {
 
 router.get('/', async (req, res, next) => {
   try {
-    const trips = await Trip.findAll({ where: { userId: req.query.userId } });
+    const trips = await Trip.findAll({
+      where: { userId: req.query.userId },
+      include: { model: Trip_StartingPt },
+    });
     res.json(trips);
   } catch (error) {
     next(error);
   }
 });
-
 
 router.get('/:id', async (req, res, next) => {
   try {
@@ -58,7 +60,6 @@ router.post('/addTrip', async (req, res, next) => {
     });
 
     res.send(trip);
-
   } catch (error) {
     next(error);
   }

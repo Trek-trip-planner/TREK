@@ -1,4 +1,6 @@
-import React, { useStyles } from 'react';
+import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { TextField, Grid, Typography, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   submit: {
@@ -11,11 +13,35 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+export default function TripFormTextField(props) {
+  const [tripName, setTripName] = useState('');
+  const [startingPoint, setStartingPoint] = useState('');
+  const [city, setCity] = useState('');
+  const [zip, setZip] = useState('');
+  const [state, setState] = useState('');
+  const [country, setCountry] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
-export default function tripFormTextField() {
+  const { trip } = props;
+
+  useEffect(() => {
+    if (props.trip) {
+      setTripName(trip.name);
+      setStartingPoint(trip.trip_StartingPt.address);
+      setCity(trip.trip_StartingPt.city);
+      setZip(trip.trip_StartingPt.zip);
+      setCountry(trip.trip_StartingPt.country);
+      setStartDate(trip.startDate);
+      setEndDate(trip.endDate);
+      setState(trip.trip_StartingPt.state);
+    }
+  }, []);
+
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <form onSubmit={(evt) => handleSubmit(evt, userId)}>
+      <form onSubmit={(evt) => props.handleSubmit(evt, props.userId)}>
         <Typography variant='h6' gutterBottom>
           Trip Name:
         </Typography>
@@ -27,6 +53,8 @@ export default function tripFormTextField() {
               name='tripName'
               label='Trip Name'
               fullWidth
+              value={tripName}
+              onChange={(ev) => setTripName(ev.target.value)}
             />
           </Grid>
         </Grid>
@@ -42,6 +70,8 @@ export default function tripFormTextField() {
               label='Address line 1'
               fullWidth
               autoComplete='shipping address-line1'
+              value={startingPoint}
+              onChange={(ev) => setStartingPoint(ev.target.value)}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -52,25 +82,31 @@ export default function tripFormTextField() {
               label='City'
               fullWidth
               autoComplete='shipping address-level2'
+              value={city}
+              onChange={(ev) => setCity(ev.target.value)}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
               required
+              value={state}
               id='state'
               name='state'
               label='State/Province/Region'
               fullWidth
+              onChange={(ev) => setState(ev.target.value)}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
               required
+              value={zip}
               id='zip'
               name='zip'
               label='Zip / Postal code'
               fullWidth
               autoComplete='shipping postal-code'
+              onChange={(ev) => setZip(ev.target.value)}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -80,7 +116,9 @@ export default function tripFormTextField() {
               name='country'
               label='Country'
               fullWidth
+              value={country}
               autoComplete='shipping country'
+              onChange={(ev) => setCountry(ev.target.value)}
             />
           </Grid>
         </Grid>
@@ -95,6 +133,8 @@ export default function tripFormTextField() {
                 id='startDate'
                 label='Start Date'
                 type='date'
+                value={startDate}
+                onChange={(ev) => setStartDate(ev.target.value)}
                 className={classes.textField}
                 InputLabelProps={{
                   shrink: true,
@@ -104,8 +144,10 @@ export default function tripFormTextField() {
                 required
                 id='endDate'
                 label='End Date'
+                value={endDate}
                 type='date'
                 className={classes.textField}
+                onChange={(ev) => setEndDate(ev.target.value)}
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -120,7 +162,7 @@ export default function tripFormTextField() {
           color='primary'
           className={classes.submit}
         >
-          Create
+          {props.trip ? 'Edit' : 'Create'}
         </Button>
       </form>
     </React.Fragment>
