@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 //import 'mapbox-gl/dist/mapbox-gl.css';
-import { MB_PUBKEY } from '../secrets';
+//import { MB_PUBKEY } from '../secrets';
 
 mapboxgl.accessToken = MB_PUBKEY;
 
@@ -26,6 +26,8 @@ export default function SingleParkMap(props) {
     const marker1 = new mapboxgl.Marker()
       .setLngLat([Number(numLong.toFixed(4)), Number(numLat.toFixed(4))])
       .addTo(map.current);
+
+    return () => map.current.remove();
   });
 
   useEffect(() => {

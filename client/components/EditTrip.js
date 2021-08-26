@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Link, Typography } from '@material-ui/core';
-import { createNewTrip } from '../store/trip';
+import { editTrip } from '../store/trips';
 import TripFormTextField from './TripFormTextField';
 
 function Copyright() {
@@ -41,14 +41,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function CreateTrip(props) {
-  const { park, userId } = props;
+function EditTrip(props) {
+  const { trip, userId } = props;
   const classes = useStyles();
 
-  const handleSubmit = (evt, userId) => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
-    const parkId = park.id;
-    const tripName = evt.target.tripName?.value;
+    const tripId = trip.id;
+    const name = evt.target.tripName?.value;
     const startingPoint = evt.target.address1?.value;
     const city = evt.target.city?.value;
     const state = evt.target.state?.value;
@@ -57,11 +57,11 @@ function CreateTrip(props) {
     const startDate = evt.target.startDate?.value;
     const endDate = evt.target.endDate?.value;
 
-    props.createTrip({
-      userId,
-      parkId,
-      tripName,
-      startingPoint,
+    props.editTrip({
+      tripId,
+      startingPointID: trip.tripStartingPtId,
+      name,
+      address: startingPoint,
       city,
       state,
       zip,
@@ -75,9 +75,13 @@ function CreateTrip(props) {
     <main className={classes.layout}>
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
-          {`Create your trip to ${park.fullName}!`}
+          {`Edit your trip`}
         </Typography>
-        <TripFormTextField handleSubmit={handleSubmit} userId={userId} />
+        <TripFormTextField
+          handleSubmit={handleSubmit}
+          userId={userId}
+          trip={trip}
+        />
       </Paper>
       <Copyright />
     </main>
@@ -92,8 +96,8 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => {
   return {
-    createTrip: (tripInfo) => dispatch(createNewTrip(tripInfo)),
+    editTrip: (tripInfo) => dispatch(editTrip(tripInfo)),
   };
 };
 
-export default connect(mapState, mapDispatch)(CreateTrip);
+export default connect(mapState, mapDispatch)(EditTrip);
