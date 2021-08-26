@@ -78,6 +78,7 @@ router.put('/editTrip', async (req, res, next) => {
       zip: req.body.zip,
       country: req.body.country,
     };
+
     const exist = await Trip_StartingPt.findOne({
       where: fullAddress,
     });
