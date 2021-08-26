@@ -59,7 +59,7 @@ function Login(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          Sign in
+          Login
         </Typography>
         <form
           className={classes.form}
@@ -99,8 +99,9 @@ function Login(props) {
             variant='contained'
             color='primary'
             className={classes.submit}
+            onClick={() => history.push('/')}
           >
-            Sign In
+            Login
           </Button>
           <Grid container justifyContent='flex-end'>
             <Grid item>
