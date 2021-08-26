@@ -51,10 +51,10 @@ export const deleteTripThunk = (id) => {
 export const editTrip = (tripInfo) => {
   return async (dispatch) => {
     try {
-      console.log('Trip Info: ', tripInfo);
       const { data } = await axios.put('/api/mytrips/editTrip', tripInfo);
-      console.log('data return from the editTrip thunk', data[0]);
       dispatch(updateTrip(data));
+      // console.log('data: ', data[0].id);
+      // history.push(`/mytrips/${data[0].id}`);
     } catch (error) {
       console.log('Error editing the trip!', error.message);
     }

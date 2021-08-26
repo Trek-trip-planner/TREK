@@ -78,19 +78,39 @@ router.put('/editTrip', async (req, res, next) => {
       zip: req.body.zip,
       country: req.body.country,
     };
-    const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
+    const exist = await Trip_StartingPt.findOne({
       where: fullAddress,
     });
 
-    await instance.addTrip(req.body.tripId);
-
-    if (startingPoint.trips.length > 1) {
-      await startingPoint.removeTrip(req.body.tripId);
+    if (exist) {
+      await exist.addTrip(req.body.tripId);
+      if (startingPoint.trips.length > 1) {
+        await startingPoint.removeTrip(req.body.tripId);
+      } else {
+        await startingPoint.destroy();
+      }
     } else {
-      await startingPoint.destroy();
+      if (startingPoint.trips.length > 1) {
+        const newAddress = await Trip_StartingPt.create(fullAddress);
+        await newAddress.addTrip(req.body.tripId);
+      } else {
+        await startingPoint.update(fullAddress);
+      }
     }
 
-    
+    //Works but not the best
+    // const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
+    //   where: fullAddress,
+    // });
+
+    // await instance.addTrip(req.body.tripId);
+
+    // if (startingPoint.trips.length > 1) {
+    //   await startingPoint.removeTrip(req.body.tripId);
+    // } else {
+    //   await startingPoint.destroy();
+    // }
+
     //   if (exist) {
     //     exist.addTrip(req.body.tripId);
     //   } else {

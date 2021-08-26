@@ -26,6 +26,8 @@ export default function SingleParkMap(props) {
     const marker1 = new mapboxgl.Marker()
       .setLngLat([Number(numLong.toFixed(4)), Number(numLat.toFixed(4))])
       .addTo(map.current);
+
+    return () => map.current.remove();
   });
 
   useEffect(() => {
