@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
-//import { MB_PUBKEY } from '../secrets';
+// import { MB_PUBKEY } from '../secrets';
 
 mapboxgl.accessToken = MB_PUBKEY;
 
