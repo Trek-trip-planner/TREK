@@ -6,6 +6,8 @@ module.exports = () => {
 
   const envKeys = Object.keys(env).reduce((prev, next) => {
     prev[next] = JSON.stringify(env[next]);
+
+
     return prev;
   }, {});
 
