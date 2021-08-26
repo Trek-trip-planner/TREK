@@ -6,10 +6,6 @@ a {
   text-decoration: none;
 }
 
-/* label {
-  display: block;
-} */
-
 .MuiToolbar-root {
   display: flex;
   justify-content: space-between;
@@ -19,11 +15,6 @@ nav a {
   display: inline-block;
   margin: 1em;
 }
-
-/* form div {
-  margin: 1em;
-  display: inline-block;
-} */
 
 .carousel {
   width: 100%;
@@ -63,4 +54,18 @@ nav a {
 
 .MuiSvgIcon-root {
   color: white;
+}
+
+.map-container {
+  height: 500px;
+}
+
+.trip-detials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.my-trip-header {
+  padding: 30px;
 }

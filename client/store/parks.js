@@ -10,6 +10,7 @@ const getParks = (parks) => ({
 export const fetchParksThunk = () => {
   return async (dispatch) => {
     try {
+      console.log('parks')
       const { data } = await axios.get(`/api/parks`)
       dispatch(getParks(data))
     } catch (error) {

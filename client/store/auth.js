@@ -30,7 +30,7 @@ export const authenticate =
       });
       window.localStorage.setItem(TOKEN, res.data.token);
       dispatch(me());
-      history.push('/');
+      history.go(-1);
     } catch (authError) {
       return dispatch(setAuth({ error: authError }));
     }
