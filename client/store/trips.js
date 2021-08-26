@@ -13,6 +13,14 @@ const getToken = () => {
 
 const GET_TRIPS = 'GET_TRIPS';
 const DELETE_TRIP = 'DELETE_TRIP';
+const UPDATED_TRIP = 'UPDATED_TRIP';
+
+export const updateTrip = (updatedtrip) => {
+  return {
+    type: UPDATED_TRIP,
+    updatedtrip,
+  };
+};
 
 const getTrips = (trips) => ({
   type: GET_TRIPS,
@@ -29,19 +37,16 @@ export const removeTrip = (id) => {
 export const fetchTrips = (userId) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(
-        `/api/mytrips`,
-        {
-          params: { userId: userId },
-        },
-        getToken()
-      );
+      const { data } = await axios.get(`/api/mytrips`, getToken(), {
+        params: { userId: userId },
+      });
       dispatch(getTrips(data));
     } catch (error) {
       console.log(error);
     }
   };
 };
+
 export const deleteTripThunk = (id) => {
   return async (dispatch) => {
     try {
@@ -56,6 +61,18 @@ export const deleteTripThunk = (id) => {
   };
 };
 
+export const editTrip = (tripInfo) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.put('/api/mytrips/editTrip', tripInfo);
+      dispatch(updateTrip(data));
+      // console.log('data: ', data[0].id);
+      // history.push(`/mytrips/${data[0].id}`);
+    } catch (error) {
+      console.log('Error editing the trip!', error.message);
+    }
+  };
+};
 const initialState = [];
 
 export default function tripsReducer(state = initialState, action) {
@@ -65,6 +82,13 @@ export default function tripsReducer(state = initialState, action) {
     case DELETE_TRIP:
       const updatedTrips = [...state].filter((trip) => trip.id !== action.id);
       return updatedTrips;
+    case UPDATED_TRIP:
+      return state.map((trip) => {
+        if (trip.id === action.updatedtrip.id) {
+          return action.updatedtrip;
+        }
+        return trip;
+      });
     default:
       return state;
   }

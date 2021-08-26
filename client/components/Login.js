@@ -99,7 +99,6 @@ function Login(props) {
             variant='contained'
             color='primary'
             className={classes.submit}
-            onClick={() => history.push('/')}
           >
             Login
           </Button>

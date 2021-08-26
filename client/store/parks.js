@@ -4,20 +4,19 @@ const GET_PARKS = 'GET_PARKS';
 
 const getParks = (parks) => ({
   type: GET_PARKS,
-  parks
-})
+  parks,
+});
 
 export const fetchParksThunk = () => {
   return async (dispatch) => {
     try {
-      console.log('parks')
-      const { data } = await axios.get(`/api/parks`)
-      dispatch(getParks(data))
+      const { data } = await axios.get(`/api/parks`);
+      dispatch(getParks(data));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
-}
+  };
+};
 
 const initialState = [];
 
