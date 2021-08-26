@@ -10,7 +10,7 @@ module.exports = () => {
 
     return prev;
   }, {});
-
+  console.log('envKeys', envKeys);
   return {
     entry: ['./client/index.js'],
     output: {
