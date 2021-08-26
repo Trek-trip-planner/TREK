@@ -61,7 +61,7 @@ function EditTrip(props) {
       tripId,
       startingPointID: trip.tripStartingPtId,
       name,
-      startingPoint,
+      address: startingPoint,
       city,
       state,
       zip,
