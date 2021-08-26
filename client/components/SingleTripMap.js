@@ -29,6 +29,17 @@ export default function MyTripMap() {
       setZoom(map.current.getZoom().toFixed(2));
     });
   });
+  const directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+  });
+  map.current.addControl(directions, 'top-left');
+
+  map.current.on('load', function () {
+    // const startLng
+    directions.setOrigin('12, Elm Street, NY'); // can be address in form setOrigin("12, Elm Street, NY")
+
+    directions.setDestinaion([lng, lat]); // can be address
+  });
 
   return (
     <div>
