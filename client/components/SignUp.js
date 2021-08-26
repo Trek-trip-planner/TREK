@@ -121,7 +121,6 @@ function SignUp(props) {
             variant='contained'
             color='primary'
             className={classes.submit}
-            onClick={() => history.push('/')}
           >
             Sign Up
           </Button>
