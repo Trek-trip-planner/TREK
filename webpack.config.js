@@ -33,6 +33,10 @@ module.exports = () => {
         },
       ],
     },
+    performance: {
+      maxAssetSize: 100000,
+      maxEntrypointSize: 400000,
+    },
     plugins: [new webpack.DefinePlugin(envKeys)],
   };
 };
