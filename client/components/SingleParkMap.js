@@ -3,7 +3,12 @@ import mapboxgl from 'mapbox-gl';
 //import 'mapbox-gl/dist/mapbox-gl.css';
 // import { MB_PUBKEY } from '../secrets';
 
+if (process.env.NODE_ENV === 'production') {
+  mapboxgl.accessToken =process.env.MB_PUBKEY;
+} else {
 mapboxgl.accessToken = MB_PUBKEY;
+
+}
 
 export default function SingleParkMap(props) {
   const mapContainer = useRef(null);
