@@ -1,6 +1,16 @@
 import axios from 'axios';
 import history from '../history';
 
+const getToken = () => {
+  const token = window.localStorage.getItem('token');
+  const headers = {
+    headers: {
+      authorization: token,
+    },
+  };
+  return headers;
+};
+
 const GET_TRIPS = 'GET_TRIPS';
 const DELETE_TRIP = 'DELETE_TRIP';
 const UPDATED_TRIP = 'UPDATED_TRIP';
@@ -27,8 +37,7 @@ export const removeTrip = (id) => {
 export const fetchTrips = (userId) => {
   return async (dispatch) => {
     try {
-      console.log('user', userId);
-      const { data } = await axios.get(`/api/mytrips`, {
+      const { data } = await axios.get(`/api/mytrips`, getToken(), {
         params: { userId: userId },
       });
       dispatch(getTrips(data));
@@ -37,10 +46,14 @@ export const fetchTrips = (userId) => {
     }
   };
 };
+
 export const deleteTripThunk = (id) => {
   return async (dispatch) => {
     try {
-      const { data: trip } = await axios.delete(`/api/mytrips/${id}`);
+      const { data: trip } = await axios.delete(
+        `/api/mytrips/${id}`,
+        getToken()
+      );
       dispatch(removeTrip(id));
     } catch (error) {
       console.log(error);

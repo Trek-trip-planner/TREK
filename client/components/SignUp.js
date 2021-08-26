@@ -13,7 +13,6 @@ import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import { authenticate } from '../store';
 
-
 function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
