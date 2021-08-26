@@ -7,7 +7,6 @@ module.exports = () => {
   const envKeys = Object.keys(env).reduce((prev, next) => {
     prev[next] = JSON.stringify(env[next]);
 
-
     return prev;
   }, {});
 
@@ -27,6 +26,10 @@ module.exports = () => {
           options: {
             presets: ['@babel/preset-react'],
           },
+        },
+        {
+          test: /\.css?$/,
+          use: ['style-loader', 'css-loader'],
         },
       ],
     },
