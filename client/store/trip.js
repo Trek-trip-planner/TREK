@@ -1,7 +1,6 @@
 import axios from 'axios';
 import history from '../history';
 
-
 const GET_TRIP = 'GET_TRIP';
 
 const getTrip = (trip) => ({
@@ -27,6 +26,7 @@ export const clearTrip = () => {
     type: CLEAR_TRIP,
   };
 };
+
 
 export const createNewTrip = (tripInfo) => {
   return async (dispatch) => {

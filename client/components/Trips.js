@@ -16,6 +16,7 @@ import {
   TableHead,
   TableRow,
 } from '@material-ui/core';
+import PopUpWindow from "./PopUpWindow"
 
 export class Trips extends Component {
   constructor(props) {
@@ -64,10 +65,7 @@ export class Trips extends Component {
                 <TableCell>{trip.startDate}</TableCell>
                 <TableCell>{trip.endDate}</TableCell>
                 <TableCell>
-                  {/* change this button to pop up component */}
-                  <Button color='secondary'>
-                    <EditIcon color='primary' />
-                  </Button>
+                  <PopUpWindow trip ={trip}/>
                 </TableCell>
                 <TableCell>
                   <Button
