@@ -124,18 +124,16 @@ router.put('/editTrip', async (req, res, next) => {
     }
 
     //updating name & date(s)
-    const [numOfAffectedRows, affectedRows] = await Trip.update(req.body, {
-      where: { id: req.body.tripId },
-      include: { model: Trip_StartingPt },
-      returning: true,
-    });
-    if (!numOfAffectedRows) {
+    const trip = await Trip.findByPk(req.body.tripId, { include: { model: Trip_StartingPt }})
+  
+    if (!trip) {
       return next({
         status: 404,
         message: `Trip with id ${tripId} not found.`,
       });
     }
-    res.json(affectedRows);
+    await trip.update(req.body)
+    res.json(trip);
   } catch (error) {
     next(error);
   }

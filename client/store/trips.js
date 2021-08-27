@@ -66,8 +66,6 @@ export const editTrip = (tripInfo) => {
     try {
       const { data } = await axios.put('/api/mytrips/editTrip', tripInfo);
       dispatch(updateTrip(data));
-      // console.log('data: ', data[0].id);
-      // history.push(`/mytrips/${data[0].id}`);
     } catch (error) {
       console.log('Error editing the trip!', error.message);
     }
