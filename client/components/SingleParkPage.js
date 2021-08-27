@@ -22,10 +22,10 @@ import PopUpWindow from './PopUpWindow';
 import SingleParkMap from './SingleParkMap';
 
 const useStyles = makeStyles((theme) => ({
-  mapContainer: {
-    height: 400,
-    width: 600,
-  },
+  // mapContainer: {
+  //   height: 400,
+  //   width: 600,
+  // },
   root: {
     margin: 0,
     padding: 0,
@@ -38,7 +38,11 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     padding: 30,
   },
-  
+  topDiv: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    paddingBottom: 30,
+  },
 }));
 
 function SingleParkPage(props) {
@@ -69,16 +73,15 @@ function SingleParkPage(props) {
       >
         {park.fullName}
       </Typography>
-      <Grid
+      <Container
+        className={classes.topDiv}
         container
         justifyContent='space-around'
         alignItems='flex-start'
         style={{ wrap: 'noWrap' }}
         display='flex'
       >
-        {/* <Grid item xs={6}> */}
         <Card display='flex'>
-          {/* <CardHeader title={park.fullName} align='center' /> */}
           <CardMedia
             image={parkImg}
             title={park.fullName}
@@ -88,13 +91,12 @@ function SingleParkPage(props) {
             <PopUpWindow park={park} />
           </CardContent>
         </Card>
-        {/* </Grid> */}
         <Grid item xs={6} className={classes.mapContainer}>
           <Paper elevation={3}>
             <SingleParkMap park={park} />
           </Paper>
         </Grid>
-      </Grid>
+      </Container>
       <Grid container justifyContent='flex-start' className={classes.grid}>
         <Grid item xs={6}>
           <Typography variant='h6' color='primary'>
