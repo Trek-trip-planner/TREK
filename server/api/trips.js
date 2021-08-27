@@ -95,80 +95,45 @@ router.put('/editTrip', async (req, res, next) => {
       address: req.body.address,
       city: req.body.city,
       state: req.body.state,
-      zip: req.body.zip,
+      zip: Number(req.body.zip),
       country: req.body.country,
     };
 
-    const exist = await Trip_StartingPt.findOne({
-      where: fullAddress,
-    });
+    const toEditAddress = startingPoint.address === fullAddress.address && startingPoint.city === fullAddress.city && startingPoint.state === fullAddress.state && startingPoint.zip === fullAddress.zip && startingPoint.country === fullAddress.country
 
-    if (exist) {
-      await exist.addTrip(req.body.tripId);
-      if (startingPoint.trips.length > 1) {
-        await startingPoint.removeTrip(req.body.tripId);
+    if (!toEditAddress) {
+      const exist = await Trip_StartingPt.findOne({
+        where: fullAddress,
+      });
+  
+      if (exist) {
+        await exist.addTrip(req.body.tripId);
+        if (startingPoint.trips.length > 1) {
+          await startingPoint.removeTrip(req.body.tripId);
+        } else {
+          await startingPoint.destroy();
+        }
       } else {
-        await startingPoint.destroy();
-      }
-    } else {
-      if (startingPoint.trips.length > 1) {
-        const newAddress = await Trip_StartingPt.create(fullAddress);
-        await newAddress.addTrip(req.body.tripId);
-      } else {
-        await startingPoint.update(fullAddress);
+        if (startingPoint.trips.length > 1) {
+          const newAddress = await Trip_StartingPt.create(fullAddress);
+          await newAddress.addTrip(req.body.tripId);
+        } else {
+          await startingPoint.update(fullAddress);
+        }
       }
     }
 
-    //Works but not the best
-    // const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
-    //   where: fullAddress,
-    // });
-
-    // await instance.addTrip(req.body.tripId);
-
-    // if (startingPoint.trips.length > 1) {
-    //   await startingPoint.removeTrip(req.body.tripId);
-    // } else {
-    //   await startingPoint.destroy();
-    // }
-
-    //   if (exist) {
-    //     exist.addTrip(req.body.tripId);
-    //   } else {
-    //     const [numOfAffectedRows, affectedRows] = await Trip_StartingPt.update(
-    //       req.body,
-    //       {
-    //         where: { id: req.body.startingPointID },
-    //         returning: true,
-    //       }
-    //     );
-    //     if (!numOfAffectedRows) {
-    //       return next({
-    //         status: 404,
-    //         message: `Starting point with id ${req.body.startingPointID} not found.`,
-    //       });
-    //     }
-    //   }
-    // } else {
-    //   const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
-    //     where: fullAddress,
-    //   });
-    //   instance.addTrip(req.body.tripId);
-    // }
-
     //updating name & date(s)
-    const [numOfAffectedRows, affectedRows] = await Trip.update(req.body, {
-      where: { id: req.body.tripId },
-      include: { model: Trip_StartingPt },
-      returning: true,
-    });
-    if (!numOfAffectedRows) {
+    const trip = await Trip.findByPk(req.body.tripId, { include: { model: Trip_StartingPt }})
+  
+    if (!trip) {
       return next({
         status: 404,
         message: `Trip with id ${tripId} not found.`,
       });
     }
-    res.json(affectedRows);
+    await trip.update(req.body)
+    res.json(trip);
   } catch (error) {
     next(error);
   }

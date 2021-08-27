@@ -27,6 +27,7 @@
     "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
     "compression": "^1.7.3",
+    "css-loader": "^6.2.0",
     "express": "^4.16.4",
     "history": "^4.9.0",
     "jsonwebtoken": "^8.5.1",
@@ -36,6 +37,7 @@
     "morgan": "^1.9.1",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5",
+    "style-loader": "^3.2.1",
     "styled-components": "^5.3.0",
     "webworkify": "^1.5.0"
   },
@@ -47,7 +49,6 @@
     "axios-mock-adapter": "^1.16.0",
     "babel-loader": "^8.2.2",
     "chai": "^4.2.0",
-    "css-loader": "^6.2.0",
     "dotenv": "^10.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
@@ -64,7 +65,6 @@
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
-    "style-loader": "^3.2.1",
     "supertest": "^4.0.2",
     "webpack": "^5.15.0",
     "webpack-cli": "^4.3.1"
