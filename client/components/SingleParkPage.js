@@ -31,6 +31,11 @@ const useStyles = makeStyles((theme) => ({
   gridRight: {
     padding: 10,
   },
+  mapContainer: {
+    height: 500,
+    width: 700,
+    padding: 5,
+  },
 }));
 
 function SingleParkPage(props) {
@@ -73,7 +78,7 @@ function SingleParkPage(props) {
           </CardContent>
         </Card>
         {/* </Grid> */}
-        <Grid item xs={6} style={{ padding: 5 }}>
+        <Grid item xs={6} className={classes.mapContainer}>
           <Paper elevation={3}>
             <SingleParkMap park={park} />
           </Paper>

@@ -1,18 +1,19 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
-//import 'mapbox-gl/dist/mapbox-gl.css';
+import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 // import { MB_PUBKEY } from '../secrets';
 
 if (process.env.NODE_ENV === 'production') {
   mapboxgl.accessToken = process.env.MB_PUBKEY;
 } else {
-mapboxgl.accessToken = MB_PUBKEY;
-
+  mapboxgl.accessToken = MB_PUBKEY;
 }
 
 export default function SingleParkMap(props) {
   const mapContainer = useRef(null);
-  const map = useRef(null);
+  let map = useRef(null);
   const numLat = Number(props.park.latitude);
   const numLong = Number(props.park.longitude);
 
@@ -24,7 +25,7 @@ export default function SingleParkMap(props) {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/streets-v10',
       center: [lng, lat],
       zoom: zoom,
     });
@@ -32,7 +33,7 @@ export default function SingleParkMap(props) {
       .setLngLat([Number(numLong.toFixed(4)), Number(numLat.toFixed(4))])
       .addTo(map.current);
 
-    return () => map.current.remove();
+    // return () => map.current.remove();
   });
 
   useEffect(() => {
