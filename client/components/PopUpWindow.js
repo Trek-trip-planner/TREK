@@ -1,19 +1,27 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { connect } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
 import CreateTrip from './CreateTrip';
 import history from '../history';
 import { useLocation } from 'react-router-dom';
 import EditTrip from './EditTrip';
 import EditIcon from '@material-ui/icons/Edit';
 
+const useStyles = makeStyles((theme) => ({
+  addButton: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+}));
+
 function PopUpWindow(props) {
+  const classes = useStyles();
   let location = useLocation();
 
   const { park, trip } = props;
@@ -59,7 +67,7 @@ function PopUpWindow(props) {
   );
 
   return (
-    <div>
+    <div className={classes.addButton}>
       {location.pathname === '/mytrips' ? (
         <Button color='secondary' onClick={handleClickOpen}>
           <EditIcon color='primary' />
@@ -69,6 +77,8 @@ function PopUpWindow(props) {
           onClick={handleClickOpen}
           variant='contained'
           style={{ margin: 10 }}
+          color='primary'
+          className={classes.addButton}
         >
           add park to trip
         </Button>

@@ -59,7 +59,7 @@ function Login(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          Sign in
+          Login
         </Typography>
         <form
           className={classes.form}
@@ -100,7 +100,7 @@ function Login(props) {
             color='primary'
             className={classes.submit}
           >
-            Sign In
+            Login
           </Button>
           <Grid container justifyContent='flex-end'>
             <Grid item>
