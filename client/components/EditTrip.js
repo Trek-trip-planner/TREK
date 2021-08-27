@@ -69,6 +69,8 @@ function EditTrip(props) {
       startDate,
       endDate,
     });
+
+    (() => props.handleClose())();
   };
 
   return (

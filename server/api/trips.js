@@ -95,11 +95,13 @@ router.put('/editTrip', async (req, res, next) => {
       address: req.body.address,
       city: req.body.city,
       state: req.body.state,
-      zip: req.body.zip,
+      zip: Number(req.body.zip),
       country: req.body.country,
     };
 
-    if (startingPoint.address === fullAddress.address || startingPoint.city === fullAddress.city || startingPoint.state === fullAddress.state || startingPoint.zip === fullAddress.zip || startingPoint.country === fullAddress.counry) {
+    const toEditAddress = startingPoint.address === fullAddress.address && startingPoint.city === fullAddress.city && startingPoint.state === fullAddress.state && startingPoint.zip === fullAddress.zip && startingPoint.country === fullAddress.country
+
+    if (!toEditAddress) {
       const exist = await Trip_StartingPt.findOne({
         where: fullAddress,
       });
