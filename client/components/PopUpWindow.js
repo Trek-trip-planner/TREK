@@ -91,7 +91,7 @@ function PopUpWindow(props) {
       >
         <div>
           {location.pathname === '/mytrips' ? (
-            <EditTrip trip={trip} />
+            <EditTrip trip={trip} handleClose={handleClose}/>
           ) : (
             checkLogIn
           )}
