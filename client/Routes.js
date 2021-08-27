@@ -9,6 +9,7 @@ import AllParks from './components/AllParks';
 import Login from './components/Login';
 import SingleTrip from './components/SingleTrip';
 import Trips from './components/Trips';
+import Account from './components/Account';
 
 class Routes extends Component {
   async componentDidMount() {
@@ -28,6 +29,7 @@ class Routes extends Component {
             <Route exact path='/signup' component={SignUp} />
             <Route exact path='/mytrips/:tripId' component={SingleTrip} />
             <Route exact path='/mytrips' component={Trips} />
+            <Route path='/account' component={Account} />
             <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
         ) : (
