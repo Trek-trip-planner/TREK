@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import CreateTrip from './CreateTrip';
 import { fetchTrips, deleteTripThunk } from '../store/trips';
 import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Edit';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import EditIcon from '@material-ui/icons/Edit'
 import {
   Button,
   Paper,
-  TextField,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
+  Link,
+  Typography
 } from '@material-ui/core';
 import PopUpWindow from "./PopUpWindow"
 

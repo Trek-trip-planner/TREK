@@ -2,12 +2,11 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 
 module.exports = () => {
-  let envKeys ={};
+  let envKeys = {};
   if (process.env.NODE_ENV === 'production') {
     process.env.MB_PUBKEY;
   } else {
     const env = dotenv.config().parsed;
-
     envKeys = Object.keys(env).reduce((prev, next) => {
       prev[next] = JSON.stringify(env[next]);
       return prev;
@@ -30,6 +29,10 @@ module.exports = () => {
           options: {
             presets: ['@babel/preset-react'],
           },
+        },
+        {
+          test: /\.css?$/,
+          use: ['style-loader', 'css-loader'],
         },
       ],
     },

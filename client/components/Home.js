@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     align: 'center',
     fontWeight: 'fontWeightBold',
-    padding: 20,
+    padding: 30,
   },
 }));
 
@@ -57,7 +57,7 @@ function Home(props) {
           component='h3'
           color='primary'
         >
-          Explore All Parks
+          Parks You Might Be Interested In
         </Typography>
       </Container>
       <Grid container spacing={3}>
