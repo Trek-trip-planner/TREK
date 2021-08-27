@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 
 module.exports = () => {
-  let envKeys ={};
+  let envKeys = {};
   if (process.env.NODE_ENV === 'production') {
     process.env.MB_PUBKEY;
   } else {
@@ -30,6 +30,10 @@ module.exports = () => {
           options: {
             presets: ['@babel/preset-react'],
           },
+        },
+        {
+          test: /\.css?$/,
+          use: ['style-loader', 'css-loader'],
         },
       ],
     },

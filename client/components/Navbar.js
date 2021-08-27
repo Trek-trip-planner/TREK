@@ -12,7 +12,6 @@ import history from '../history';
 import SearchBar from './Searchbar';
 import { logout } from '../store/auth';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'unset',
@@ -81,7 +80,10 @@ function Navbar(props) {
               </MenuItem>,
             ]}
             {props.isLoggedIn && [
-              <MenuItem key={'mytrips'} onClick={() => history.push('/mytrips')}>
+              <MenuItem
+                key={'mytrips'}
+                onClick={() => history.push('/mytrips')}
+              >
                 My Trips
               </MenuItem>,
               <MenuItem

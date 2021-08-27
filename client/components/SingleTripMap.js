@@ -1,5 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
+import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
+import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
+
 // import { MB_PUBKEY } from '../secrets';
 if (process.env.NODE_ENV === 'production') {
   mapboxgl.accessToken =process.env.MB_PUBKEY;
@@ -32,6 +35,17 @@ export default function MyTripMap() {
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
+  });
+  const directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+  });
+  map.current.addControl(directions, 'top-left');
+
+  map.current.on('load', function () {
+    // const startLng
+    directions.setOrigin('12, Elm Street, NY'); // can be address in form setOrigin("12, Elm Street, NY")
+
+    directions.setDestinaion([lng, lat]); // can be address
   });
 
   return (
