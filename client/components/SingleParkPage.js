@@ -38,11 +38,7 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     padding: 30,
   },
-  mapContainer: {
-    height: 500,
-    width: 700,
-    padding: 5,
-  },
+  
 }));
 
 function SingleParkPage(props) {
