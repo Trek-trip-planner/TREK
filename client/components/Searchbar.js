@@ -85,7 +85,6 @@ function Searchbar(props) {
   }, []);
 
   function onInputChange(event, value) {
-    console.log('value', value);
     let parkName = value.fullName.split(' ').join('_');
     history.push(`/${parkName}`);
   }

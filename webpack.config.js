@@ -7,7 +7,6 @@ module.exports = () => {
     process.env.MB_PUBKEY;
   } else {
     const env = dotenv.config().parsed;
-
     envKeys = Object.keys(env).reduce((prev, next) => {
       prev[next] = JSON.stringify(env[next]);
       return prev;

@@ -8,8 +8,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 if (process.env.NODE_ENV === 'production') {
   mapboxgl.accessToken = process.env.MB_PUBKEY;
 } else {
-mapboxgl.accessToken = MB_PUBKEY;
-
+  mapboxgl.accessToken = MB_PUBKEY;
 }
 
 export default function SingleParkMap(props) {
@@ -34,7 +33,7 @@ export default function SingleParkMap(props) {
       .setLngLat([Number(numLong.toFixed(4)), Number(numLat.toFixed(4))])
       .addTo(map.current);
 
-    return () => map.current.remove();
+    // return () => map.current.remove();
   });
 
   useEffect(() => {

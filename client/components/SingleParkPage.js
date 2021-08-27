@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     padding: 30,
   },
+  
 }));
 
 function SingleParkPage(props) {
