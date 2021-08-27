@@ -5,7 +5,8 @@ import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtcmFkZWNraTAwMyIsImEiOiJja3NnbTJjMmQxbGxnMndwYTZnOXU5c3MyIn0.7hEc6AdwRA2mHrK-lTOvIw';
+mapboxgl.accessToken =
+  'pk.eyJ1Ijoic2FtcmFkZWNraTAwMyIsImEiOiJja3NnbTJjMmQxbGxnMndwYTZnOXU5c3MyIn0.7hEc6AdwRA2mHrK-lTOvIw';
 
 export default function MyTripMap() {
   const mapContainer = useRef(null);
@@ -32,19 +33,18 @@ export default function MyTripMap() {
       setZoom(map.current.getZoom().toFixed(2));
     });
   });
-  const directions = new MapboxDirections({
-    accessToken: mapboxgl.accessToken,
-  });
+  // const directions = new MapboxDirections({
+  //   accessToken: mapboxgl.accessToken,
+  // });
 
-  map.current.addControl(directions, 'top-left');
+  // map.current.addControl(directions, 'top-left');
 
-  map.current.on('load', function () {
-    // const startLng
-    directions.setOrigin('12, Elm Street, NY'); // can be address in form setOrigin("12, Elm Street, NY")
+  // map.current.on('load', function () {
+  //   // const startLng
+  //   directions.setOrigin('12, Elm Street, NY'); // can be address in form setOrigin("12, Elm Street, NY")
 
-    directions.setDestinaion([lng, lat]); // can be address
-  });
-
+  //   directions.setDestinaion([lng, lat]); // can be address
+  // });
 
   return (
     <div>
