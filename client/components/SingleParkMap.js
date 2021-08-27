@@ -3,7 +3,8 @@ import mapboxgl from 'mapbox-gl';
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtcmFkZWNraTAwMyIsImEiOiJja3NnbTJjMmQxbGxnMndwYTZnOXU5c3MyIn0.7hEc6AdwRA2mHrK-lTOvIw';
+mapboxgl.accessToken =
+  'pk.eyJ1Ijoic2FtcmFkZWNraTAwMyIsImEiOiJja3NnbTJjMmQxbGxnMndwYTZnOXU5c3MyIn0.7hEc6AdwRA2mHrK-lTOvIw';
 
 export default function SingleParkMap(props) {
   const mapContainer = useRef(null);
@@ -13,7 +14,7 @@ export default function SingleParkMap(props) {
 
   const [lng, setLng] = useState(Number(numLong.toFixed(4)));
   const [lat, setLat] = useState(Number(numLat.toFixed(4)));
-  const [zoom, setZoom] = useState(13);
+  const [zoom, setZoom] = useState(8);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
