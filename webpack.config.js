@@ -21,6 +21,7 @@ module.exports = {
       },
     ],
   },
+  devtool: 'inline-source-map',
   performance: {
     maxEntrypointSize: 712000,
     maxAssetSize: 712000,
