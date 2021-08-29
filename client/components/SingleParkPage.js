@@ -19,12 +19,12 @@ import {
 import { fetchParkThunk, clearPark } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import PopUpWindow from './PopUpWindow';
-import SingleParkGMap from './SingleParkGMap';
+import SingleParkMap from './SingleParkMap';
 
 const useStyles = makeStyles((theme) => ({
   // mapContainer: {
-  //   height: 'fit-container',
-  //   width: 'fit-container',
+  //   height: 400,
+  //   width: 600,
   // },
   root: {
     margin: 0,
@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     paddingBottom: 30,
-    alignItems: 'flex-start',
   },
 }));
 
@@ -65,7 +64,7 @@ function SingleParkPage(props) {
   const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
 
   return (
-    <Container className={classes.root} component='main'>
+    <Container className={classes.root} component='main' maxWidth={false}>
       <Typography
         className={classes.parkTitle}
         variant='h4'
@@ -76,6 +75,9 @@ function SingleParkPage(props) {
       </Typography>
       <Container
         className={classes.topDiv}
+        container
+        justifyContent='space-around'
+        alignItems='flex-start'
         style={{ wrap: 'noWrap' }}
         display='flex'
       >
@@ -89,9 +91,9 @@ function SingleParkPage(props) {
             <PopUpWindow park={park} />
           </CardContent>
         </Card>
-        <Grid item xs={6} style={{ height: 400, width: 600 }}>
+        <Grid item xs={6} className={classes.mapContainer}>
           <Paper elevation={3}>
-            <SingleParkGMap park={park} />
+            <SingleParkMap park={park} />
           </Paper>
         </Grid>
       </Container>
