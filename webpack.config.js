@@ -5,10 +5,6 @@ module.exports = {
     filename: './public/bundle.js',
   },
   module: {
-    performance: {
-      maxEntrypointSize: 512000,
-      maxAssetSize: 512000
-    },
     rules: [
       {
         test: /\.jsx?$/,
@@ -24,6 +20,10 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
-
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
