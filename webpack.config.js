@@ -14,10 +14,15 @@ module.exports = {
           presets: ['@babel/preset-react'],
         },
       },
+
       {
         test: /\.css?$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
+    performance: {
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
+    }
   },
 };
