@@ -47,7 +47,7 @@ export const createNewTrip = (tripInfo) => {
       dispatch(getTrip(data));
       history.push(`/mytrips/${data.id}`);
     } catch (error) {
-      console.log('Error fetching single trip: ', error.message);
+      dispatch(getTrip({ error: error }));
     }
   };
 };

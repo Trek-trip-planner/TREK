@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Link, Typography } from '@material-ui/core';
-import { createNewTrip } from '../store/trip';
+import { createNewTrip, clearTrip } from '../store/trip';
 import TripFormTextField from './TripFormTextField';
 
 function Copyright() {
@@ -45,6 +45,14 @@ function CreateTrip(props) {
   const { park, userId } = props;
   const classes = useStyles();
 
+  useEffect(() => {
+    return () => {
+      if (props.trip.error) {
+        props.clearTrip();
+      }
+    };
+  });
+
   const handleSubmit = (evt, userId) => {
     evt.preventDefault();
     const parkId = park.id;
@@ -77,6 +85,9 @@ function CreateTrip(props) {
         <Typography component='h1' variant='h4' align='center'>
           {`Create your trip to ${park.fullName}!`}
         </Typography>
+        <Typography component='h3' color='error' style={{ padding: 5 }}>
+          {props.trip.error ? props.trip.error.response.data : ''}
+        </Typography>
         <TripFormTextField handleSubmit={handleSubmit} userId={userId} />
       </Paper>
       <Copyright />
@@ -87,12 +98,14 @@ function CreateTrip(props) {
 const mapState = (state) => {
   return {
     userId: state.auth.id,
+    trip: state.trip,
   };
 };
 
 const mapDispatch = (dispatch) => {
   return {
     createTrip: (tripInfo) => dispatch(createNewTrip(tripInfo)),
+    clearTrip: () => dispatch(clearTrip()),
   };
 };
 
