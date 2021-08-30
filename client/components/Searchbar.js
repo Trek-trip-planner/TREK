@@ -106,7 +106,6 @@ function Searchbar(props) {
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
-        clearOnEscape={true}
         style={{ width: 300 }}
         renderInput={(park) => (
           <CssTextField {...park} label='Search...' variant='outlined' />
