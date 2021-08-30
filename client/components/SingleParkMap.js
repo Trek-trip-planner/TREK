@@ -39,4 +39,3 @@
 //       <div ref={mapContainer} className='map-container' />
 //     </div>
 //   );
-// }
