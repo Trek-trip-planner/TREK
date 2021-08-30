@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { TextField, Grid, Typography, Button } from '@material-ui/core';
+import { TextField, Grid, Typography, Button, DialogActions } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   submit: {
@@ -156,15 +156,18 @@ export default function TripFormTextField(props) {
             </div>
           </Grid>
         </Grid>
+        <DialogActions>
         <Button
           type='submit'
           fullWidth
           variant='contained'
           color='primary'
           className={classes.submit}
+          onClick={props.handleClose}
         >
           {props.trip ? 'Edit' : 'Create'}
         </Button>
+        </DialogActions>
       </form>
     </React.Fragment>
   );

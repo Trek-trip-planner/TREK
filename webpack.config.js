@@ -1,42 +1,23 @@
-const webpack = require('webpack');
-const dotenv = require('dotenv');
-
-module.exports = () => {
-  let envKeys ={};
-  if (process.env.NODE_ENV === 'production') {
-    process.env.MB_PUBKEY;
-  } else {
-    const env = dotenv.config().parsed;
-
-    envKeys = Object.keys(env).reduce((prev, next) => {
-      prev[next] = JSON.stringify(env[next]);
-      return prev;
-    }, {});
-  }
-
-  return {
-    entry: ['./client/index.js'],
-    output: {
-      path: __dirname,
-      filename: './public/bundle.js',
-    },
-    devtool: 'source-map',
-    module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react'],
-          },
+module.exports = {
+  entry: ['./client/index.js'],
+  output: {
+    path: __dirname,
+    filename: './public/bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-react'],
         },
-      ],
-    },
-    performance: {
-      maxAssetSize: 100000,
-      maxEntrypointSize: 400000,
-    },
-    plugins: [new webpack.DefinePlugin(envKeys)],
-  };
+      },
+      {
+        test: /\.css?$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };

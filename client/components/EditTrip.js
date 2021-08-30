@@ -81,6 +81,7 @@ function EditTrip(props) {
           handleSubmit={handleSubmit}
           userId={userId}
           trip={trip}
+          handleClose={props.handleClose}
         />
       </Paper>
       <Copyright />
