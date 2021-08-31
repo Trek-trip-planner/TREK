@@ -56,7 +56,7 @@ function Navbar(props) {
           />
         </Typography>
         <Typography>
-          Welcome {firstName}  {lastName}!
+          Welcome {firstName}  {lastName} !
         </Typography>
         <div>
           <SearchBar />
