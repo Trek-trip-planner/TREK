@@ -76,6 +76,7 @@ const CssTextField = withStyles({
 
 function Searchbar(props) {
   const classes = useStyles();
+  const [search, setSearch] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -83,7 +84,7 @@ function Searchbar(props) {
     })();
   }, []);
 
-  function onInputChange(event, value) {
+  function valueChange(event, value) {
     let parkName = value.fullName.split(' ').join('_');
     history.push(`/${parkName}`);
   }
@@ -91,9 +92,9 @@ function Searchbar(props) {
   return (
     <div className={classes.search}>
       <Autocomplete
-        onChange={onInputChange}
-        inputValue=''
+        onChange={(event, value) => valueChange(event, value)}
         className={classes.inputInput}
+        value={search}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}

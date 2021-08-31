@@ -55,7 +55,7 @@ export class Trips extends Component {
             {trips.map((trip) => (
               <TableRow key={trip.id}>
                 <TableCell>
-                  <Link to={`mytrips/${trip.id}`}> {trip.name} </Link>
+                  <Link id ="myTripsLink" to={`mytrips/${trip.id}`}> {trip.name} </Link>
                 </TableCell>
                 <TableCell>{trip.startDate}</TableCell>
                 <TableCell>{trip.endDate}</TableCell>

@@ -69,3 +69,13 @@ nav a {
 .my-trip-header {
   padding: 30px;
 }
+
+#errorButton {
+  color: white;
+  text-decoration: none;
+}
+
+#myTripsLink {
+  color: black;
+  text-decoration: none;
+}
