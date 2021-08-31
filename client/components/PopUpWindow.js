@@ -24,16 +24,16 @@ function PopUpWindow(props) {
   const classes = useStyles();
   let location = useLocation();
 
-  const { park, trip } = props;
+  const { park, trip, storeTrip } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  function handleClose() {
     setOpen(false);
-  };
+  }
 
   const checkLogIn = props.isLoggedIn ? (
     <div>
@@ -91,7 +91,7 @@ function PopUpWindow(props) {
       >
         <div>
           {location.pathname === '/mytrips' ? (
-            <EditTrip trip={trip} handleClose={handleClose}/>
+            <EditTrip trip={trip} handleClose={handleClose} />
           ) : (
             checkLogIn
           )}
@@ -103,6 +103,7 @@ function PopUpWindow(props) {
 const mapState = (state) => {
   return {
     isLoggedIn: !!state.auth.id,
+    storeTrip: state.trip,
   };
 };
 export default connect(mapState)(PopUpWindow);

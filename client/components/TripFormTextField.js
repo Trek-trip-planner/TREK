@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { TextField, Grid, Typography, Button, DialogActions } from '@material-ui/core';
+import {
+  TextField,
+  Grid,
+  Typography,
+  Button,
+  DialogActions,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   submit: {
@@ -23,10 +30,12 @@ export default function TripFormTextField(props) {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
-  const { trip } = props;
+  const [submitCount, setSubmitCount] = useState(0);
+
+  const { trip, storeTrip } = props;
 
   useEffect(() => {
-    if (props.trip) {
+    if (props.trip && submitCount === 0) {
       setTripName(trip.name);
       setStartingPoint(trip.trip_StartingPt.address);
       setCity(trip.trip_StartingPt.city);
@@ -36,12 +45,23 @@ export default function TripFormTextField(props) {
       setEndDate(trip.endDate);
       setState(trip.trip_StartingPt.state);
     }
-  }, []);
+
+    if (storeTrip) {
+      if (submitCount > 0 && !storeTrip.error) {
+        props.handleClose();
+      }
+    }
+  }, [submitCount]);
 
   const classes = useStyles();
   return (
-    <React.Fragment>
-      <form onSubmit={(evt) => props.handleSubmit(evt, props.userId)}>
+    <>
+      <form
+        onSubmit={async (evt) => {
+          await props.handleSubmit(evt, props.userId);
+          setSubmitCount(submitCount + 1);
+        }}
+      >
         <Typography variant='h6' gutterBottom>
           Trip Name:
         </Typography>
@@ -156,18 +176,24 @@ export default function TripFormTextField(props) {
           </Grid>
         </Grid>
         <DialogActions>
-        <Button
-          type='submit'
-          fullWidth
-          variant='contained'
-          color='primary'
-          className={classes.submit}
-          onClick={props.handleClose}
-        >
-          {props.trip ? 'Edit' : 'Create'}
-        </Button>
+          <Button
+            type='submit'
+            fullWidth
+            variant='contained'
+            color='primary'
+            className={classes.submit}
+          >
+            {props.trip ? 'Edit' : 'Create'}
+          </Button>
         </DialogActions>
       </form>
-    </React.Fragment>
+    </>
   );
 }
+
+// const mapState = (state) => {
+//   return {
+//     storeTrip: state.trip,
+//   };
+// };
+// export default connect(mapState)(TripFormTextField);
