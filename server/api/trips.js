@@ -27,8 +27,15 @@ router.get('/googleKey', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     const user = await User.findByToken(req.headers.authorization);
     if (req.user.dataValues.id === user.id) {
-      console.log(process.env.GOOGLE_API_KEY);
-      res.send(process.env.GOOGLE_API_KEY);
+      if(process.env.NODE_ENV === 'production') {
+        res.send(process.env.GOOGLE_API_KEY);
+      } else {
+        const result = require('dotenv').config({
+          path: path.join(__dirname, '..', '..', '.env'),
+        });
+        res.send(process.env.GOOGLE_API_KEY);
+      }
+
     }
   } catch (error) {
     next(error);
