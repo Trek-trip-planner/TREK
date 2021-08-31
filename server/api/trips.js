@@ -3,6 +3,10 @@ const {
   models: { Trip, Trip_StartingPt, User, Park },
 } = require('../db');
 const { requireToken, isLoggedIn } = require('./middleware');
+const path = require('path');
+const result = require('dotenv').config({
+  path: path.join(__dirname, '..', '..', '.env'),
+});
 
 router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
   try {
@@ -13,6 +17,18 @@ router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
         include: { model: Trip_StartingPt },
       });
       res.json(trips);
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get('/googleKey', requireToken, isLoggedIn, async (req, res, next) => {
+  try {
+    const user = await User.findByToken(req.headers.authorization);
+    if (req.user.dataValues.id === user.id) {
+      console.log(process.env.GOOGLE_API_KEY);
+      res.send(process.env.GOOGLE_API_KEY);
     }
   } catch (error) {
     next(error);

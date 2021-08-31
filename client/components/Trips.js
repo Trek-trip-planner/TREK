@@ -12,7 +12,6 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  // Link,
   Typography,
 } from '@material-ui/core';
 import PopUpWindow from './PopUpWindow';
@@ -28,12 +27,9 @@ export class Trips extends Component {
 
   render() {
     const trips = this.props.trips;
-    // if(!trips) {
-    //   alert('No trips to delete')
-    // }
 
     return (
-      <Paper>
+      <Paper className='all-trips-table'>
         <div className='my-trip-header'>
           <Typography
             variant='h4'

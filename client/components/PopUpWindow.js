@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
   },
+  editButton: {
+    justifyContent: 'left',
+  },
 }));
 
 function PopUpWindow(props) {
@@ -66,8 +69,10 @@ function PopUpWindow(props) {
     </div>
   );
 
+  const rootClasses =
+    location.pathname === '/mytrips' ? classes.editButton : classes.addButton;
   return (
-    <div className={classes.addButton}>
+    <div className={rootClasses}>
       {location.pathname === '/mytrips' ? (
         <Button color='secondary' onClick={handleClickOpen}>
           <EditIcon color='primary' />
@@ -78,7 +83,6 @@ function PopUpWindow(props) {
           variant='contained'
           style={{ margin: 10 }}
           color='primary'
-          className={classes.addButton}
         >
           add park to trip
         </Button>
