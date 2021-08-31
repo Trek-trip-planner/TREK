@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Directions from './SingleTripGMap';
 import { fetchTrip } from '../store/trip';
+import Spinner from './Spinner';
 import { LoadScript } from '@react-google-maps/api';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +32,7 @@ function MyTrip(props) {
   }, []);
 
   if (!trip.id) {
-    return <Typography align='center'>Loading...</Typography>;
+    return <Spinner />;
   }
   console.log(JSON.stringify(trip));
   return (

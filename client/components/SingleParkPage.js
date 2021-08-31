@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -20,6 +20,7 @@ import { fetchParkThunk, clearPark } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import PopUpWindow from './PopUpWindow';
 import SingleParkGMap from './SingleParkGMap';
+import Spinner from './Spinner';
 
 const useStyles = makeStyles((theme) => ({
   // mapContainer: {
@@ -51,6 +52,8 @@ function SingleParkPage(props) {
   const parkName = props.match.params.parkName;
   const classes = useStyles();
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
       await getParkInfo(parkName);
@@ -59,7 +62,7 @@ function SingleParkPage(props) {
   }, [parkName]);
 
   if (!park.id) {
-    return <Typography align='center'>Loading...</Typography>;
+    return <Spinner />;
   }
 
   const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
@@ -80,11 +83,14 @@ function SingleParkPage(props) {
         display='flex'
       >
         <Card display='flex'>
+          {!loading ? <Spinner /> : ' '}
           <CardMedia
             image={parkImg}
             title={park.fullName}
             style={{ height: 400, width: 600 }}
+            onLoad={() => setLoading(false)}
           />
+
           <CardContent>
             <PopUpWindow park={park} />
           </CardContent>
