@@ -61,7 +61,6 @@ router.get('/:id', requireToken, isLoggedIn, async (req, res, next) => {
 //need error handling here for sequelize validation failure
 router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
-    console.log('INSIDE ADD TRIP EXPRESS ROUTE');
     const user = await User.findByToken(req.headers.authorization);
     if (req.user.dataValues.id === user.id) {
       const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
@@ -113,63 +112,67 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
 });
 
 //need error handling here for sequelize validation failure
-router.put('/editTrip', async (req, res, next) => {
+router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     //updating starting point (works but on larger scale might not be the best soultion)
-    const startingPoint = await Trip_StartingPt.findByPk(
-      req.body.startingPointID,
-      { include: Trip }
-    );
-    const fullAddress = {
-      address: req.body.address,
-      city: req.body.city,
-      state: req.body.state,
-      zip: Number(req.body.zip),
-      country: req.body.country,
-    };
+    const user = await User.findByToken(req.headers.authorization);
+    if (req.user.dataValues.id === user.id) {
+      const startingPoint = await Trip_StartingPt.findByPk(
+        req.body.startingPointID,
+        { include: Trip }
+      );
+      const fullAddress = {
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        zip: Number(req.body.zip),
+        country: req.body.country,
+      };
 
-    const toEditAddress =
-      startingPoint.address === fullAddress.address &&
-      startingPoint.city === fullAddress.city &&
-      startingPoint.state === fullAddress.state &&
-      startingPoint.zip === fullAddress.zip &&
-      startingPoint.country === fullAddress.country;
+      const toEditAddress =
+        startingPoint.address === fullAddress.address &&
+        startingPoint.city === fullAddress.city &&
+        startingPoint.state === fullAddress.state &&
+        startingPoint.zip === fullAddress.zip &&
+        startingPoint.country === fullAddress.country;
 
-    if (!toEditAddress) {
-      const exist = await Trip_StartingPt.findOne({
-        where: fullAddress,
-      });
+      if (!toEditAddress) {
+        const exist = await Trip_StartingPt.findOne({
+          where: fullAddress,
+        });
 
-      if (exist) {
-        await exist.addTrip(req.body.tripId);
-        if (startingPoint.trips.length > 1) {
-          await startingPoint.removeTrip(req.body.tripId);
+        if (exist) {
+          await exist.addTrip(req.body.tripId);
+          if (startingPoint.trips.length > 1) {
+            await startingPoint.removeTrip(req.body.tripId);
+          } else {
+            await startingPoint.destroy();
+          }
         } else {
-          await startingPoint.destroy();
-        }
-      } else {
-        if (startingPoint.trips.length > 1) {
-          const newAddress = await Trip_StartingPt.create(fullAddress);
-          await newAddress.addTrip(req.body.tripId);
-        } else {
-          await startingPoint.update(fullAddress);
+          if (startingPoint.trips.length > 1) {
+            const newAddress = await Trip_StartingPt.create(fullAddress);
+            await newAddress.addTrip(req.body.tripId);
+          } else {
+            await startingPoint.update(fullAddress);
+          }
         }
       }
-    }
 
-    //updating name & date(s)
-    const trip = await Trip.findByPk(req.body.tripId, {
-      include: { model: Trip_StartingPt },
-    });
-
-    if (!trip) {
-      return next({
-        status: 404,
-        message: `Trip with id ${req.body.tripId} not found.`,
+      //updating name & date(s)
+      const trip = await Trip.findByPk(req.body.tripId, {
+        include: { model: Trip_StartingPt },
       });
+
+      if (!trip) {
+        return next({
+          status: 404,
+          message: `Trip with id ${req.body.tripId} not found.`,
+        });
+      }
+      await trip.update(req.body);
+      return res.json(trip);
     }
-    await trip.update(req.body);
-    res.json(trip);
+    next({ status: 403, message: 'Forbidden' });
   } catch (error) {
     if (
       error.name === 'SequelizeValidationError' ||

@@ -65,7 +65,11 @@ export const deleteTripThunk = (id) => {
 export const editTrip = (tripInfo) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.put('/api/mytrips/editTrip', tripInfo);
+      const { data } = await axios.put(
+        '/api/mytrips/editTrip',
+        tripInfo,
+        getToken()
+      );
       dispatch(updateTrip(data));
       dispatch(clearTrip());
     } catch (error) {
