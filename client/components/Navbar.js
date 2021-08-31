@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar(props) {
   const classes = useStyles();
-  const {firstName, lastName} = props
+  const {firstName} = props
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -55,7 +55,7 @@ function Navbar(props) {
           />
         </Typography>
         <Typography>
-          Welcome {firstName}  {lastName} !
+          Welcome {firstName}!
         </Typography>
         <div>
           <SearchBar />
@@ -111,7 +111,6 @@ const mapState = (state) => {
   return {
     isLoggedIn: !!state.auth.id,
     firstName: state.auth.firstName,
-    lastName: state.auth.lastName
   };
 };
 
