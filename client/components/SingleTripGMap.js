@@ -55,6 +55,7 @@ export default function Directions(props) {
     }
   };
 
+  console.log('response', response);
   return isLoaded ? (
     <div className='map'>
       <div className='map-container'>
