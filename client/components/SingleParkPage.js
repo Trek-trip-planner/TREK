@@ -142,7 +142,7 @@ function SingleParkPage(props) {
         <Typography variant='h6' color='primary'>
           Notable Interests:
         </Typography>
-        <Grid container spacing={24}>
+        <Grid container>
           <Grid item xs={4}>
             <List>
               {thirdCol.map((topic, index) => (
