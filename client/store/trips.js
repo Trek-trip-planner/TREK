@@ -1,5 +1,6 @@
 import axios from 'axios';
 import history from '../history';
+import { getTrip, clearTrip } from './trip';
 
 const getToken = () => {
   const token = window.localStorage.getItem('token');
@@ -66,8 +67,10 @@ export const editTrip = (tripInfo) => {
     try {
       const { data } = await axios.put('/api/mytrips/editTrip', tripInfo);
       dispatch(updateTrip(data));
+      dispatch(clearTrip());
     } catch (error) {
-      console.log('Error editing the trip!', error.message);
+      //console.log('Error editing the trip!', error.message);
+      dispatch(getTrip({ error: error }));
     }
   };
 };

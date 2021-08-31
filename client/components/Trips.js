@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchTrips, deleteTripThunk } from '../store/trips';
 import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 import {
   Button,
   Paper,
@@ -10,7 +12,6 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  Link,
   Typography,
 } from '@material-ui/core';
 import PopUpWindow from './PopUpWindow';
@@ -54,7 +55,7 @@ export class Trips extends Component {
             {trips.map((trip) => (
               <TableRow key={trip.id}>
                 <TableCell>
-                  <Link href={`mytrips/${trip.id}`}> {trip.name} </Link>
+                  <Link to={`mytrips/${trip.id}`}> {trip.name} </Link>
                 </TableCell>
                 <TableCell>{trip.startDate}</TableCell>
                 <TableCell>{trip.endDate}</TableCell>

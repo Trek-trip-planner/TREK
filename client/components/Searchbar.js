@@ -23,16 +23,6 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto',
     },
   },
-  root: {
-    fontFamily: 'Roboto Mono',
-    width: '50vw',
-    color: '#ffffff',
-    borderRadius: '7px',
-    position: 'relative',
-    '& label.Mui-focused': {
-      color: 'blue',
-    },
-  },
   searchIcon: {
     padding: theme.spacing(0, 1.5),
     display: 'flex',

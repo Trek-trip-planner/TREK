@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Link, Typography } from '@material-ui/core';
 import { editTrip } from '../store/trips';
+import { clearTrip } from '../store/trip';
 import TripFormTextField from './TripFormTextField';
 
 function Copyright() {
@@ -45,7 +46,15 @@ function EditTrip(props) {
   const { trip, userId } = props;
   const classes = useStyles();
 
-  const handleSubmit = (evt) => {
+  useEffect(() => {
+    return () => {
+      if (props.storeTrip.error) {
+        props.clearTrip();
+      }
+    };
+  }, []);
+
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
     const tripId = trip.id;
     const name = evt.target.tripName?.value;
@@ -57,7 +66,7 @@ function EditTrip(props) {
     const startDate = evt.target.startDate?.value;
     const endDate = evt.target.endDate?.value;
 
-    props.editTrip({
+    await props.editTrip({
       tripId,
       startingPointID: trip.tripStartingPtId,
       name,
@@ -77,11 +86,15 @@ function EditTrip(props) {
         <Typography component='h1' variant='h4' align='center'>
           {`Edit your trip`}
         </Typography>
+        <Typography component='h3' color='error' style={{ padding: 5 }}>
+          {props.storeTrip.error ? props.storeTrip.error.response.data : ''}
+        </Typography>
         <TripFormTextField
           handleSubmit={handleSubmit}
           userId={userId}
           trip={trip}
           handleClose={props.handleClose}
+          storeTrip={props.storeTrip}
         />
       </Paper>
       <Copyright />
@@ -92,12 +105,14 @@ function EditTrip(props) {
 const mapState = (state) => {
   return {
     userId: state.auth.id,
+    storeTrip: state.trip,
   };
 };
 
 const mapDispatch = (dispatch) => {
   return {
     editTrip: (tripInfo) => dispatch(editTrip(tripInfo)),
+    clearTrip: () => dispatch(clearTrip()),
   };
 };
 

@@ -14,7 +14,7 @@ export const getToken = () => {
 const GET_TRIP = 'GET_TRIP';
 const CLEAR_TRIP = 'CLEAR_TRIP';
 
-const getTrip = (trip) => ({
+export const getTrip = (trip) => ({
   type: GET_TRIP,
   trip,
 });
@@ -47,7 +47,7 @@ export const createNewTrip = (tripInfo) => {
       dispatch(getTrip(data));
       history.push(`/mytrips/${data.id}`);
     } catch (error) {
-      console.log('Error fetching single trip: ', error.message);
+      dispatch(getTrip({ error: error }));
     }
   };
 };

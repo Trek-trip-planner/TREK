@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { fetchTrip } from '../store/trip';
 import Directions from './SingleTripGMap';
 import getKey from './googleKey';
+import Spinner from './Spinner';
+import { LoadScript } from '@react-google-maps/api';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -35,9 +37,14 @@ function MyTrip(props) {
     })();
   }, []);
 
+
   const classes = useStyles();
 
-  return trip && key ? (
+  if (!trip.id) {
+    return <Spinner />;
+  }
+  
+  return  trip && key ? (
     <Container className='trip-wrapper'>
       <Typography
         className={classes.header}

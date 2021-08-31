@@ -124,20 +124,7 @@ function SignUp(props) {
           >
             Sign Up
           </Button>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <pwa-auth
-                appearance='list'
-                googlekey='562995514162-fa154hmkk4n670oelf3mj49bqu0qomts.apps.googleusercontent.com'
-              ></pwa-auth>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <pwa-auth
-                appearance='list'
-                facebookkey='226020876114705'
-              ></pwa-auth>
-            </Grid>
-          </Grid>
+
           <Grid container justifyContent='flex-end'>
             <Grid item>
               <Link href='/login' variant='body2'>

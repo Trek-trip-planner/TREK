@@ -14,6 +14,13 @@ const Trip_StartingPt = db.define('trip_StartingPt', {
   },
   zip: {
     type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+      len: [5],
+      is: /^[0-9]{5}(?:-[0-9]{4})?$/,
+      isNumeric: true,
+    },
   },
   country: {
     type: Sequelize.STRING,

@@ -58,17 +58,12 @@ router.get('/:id', requireToken, isLoggedIn, async (req, res, next) => {
   }
 });
 
+//need error handling here for sequelize validation failure
 router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
+    console.log('INSIDE ADD TRIP EXPRESS ROUTE');
     const user = await User.findByToken(req.headers.authorization);
     if (req.user.dataValues.id === user.id) {
-      const newTripInfo = {
-        name: req.body.tripName,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
-      };
-      const newTrip = await Trip.create(newTripInfo);
-
       const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
         where: {
           address: req.body.startingPoint,
@@ -78,6 +73,14 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
           country: req.body.country,
         },
       });
+
+      const newTripInfo = {
+        name: req.body.tripName,
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
+      };
+
+      const newTrip = await Trip.create(newTripInfo);
 
       instance.addTrip(newTrip);
 
@@ -94,12 +97,22 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
 
       res.send(trip);
     }
-    next({ status: 403 });
+    next({ status: 403, message: 'Forbidden' });
   } catch (error) {
+    if (
+      error.name === 'SequelizeValidationError' ||
+      error.name === 'SequelizeDatabaseError'
+    ) {
+      next({
+        status: 401,
+        message: 'Please provide a valid zip code.',
+      });
+    }
     next(error);
   }
 });
 
+//need error handling here for sequelize validation failure
 router.put('/editTrip', async (req, res, next) => {
   try {
     //updating starting point (works but on larger scale might not be the best soultion)
@@ -152,12 +165,21 @@ router.put('/editTrip', async (req, res, next) => {
     if (!trip) {
       return next({
         status: 404,
-        message: `Trip with id ${tripId} not found.`,
+        message: `Trip with id ${req.body.tripId} not found.`,
       });
     }
     await trip.update(req.body);
     res.json(trip);
   } catch (error) {
+    if (
+      error.name === 'SequelizeValidationError' ||
+      error.name === 'SequelizeDatabaseError'
+    ) {
+      next({
+        status: 401,
+        message: 'Please provide valid zip code',
+      });
+    }
     next(error);
   }
 });
