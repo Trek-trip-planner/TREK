@@ -51,7 +51,7 @@ function CreateTrip(props) {
         props.clearTrip();
       }
     };
-  });
+  }, []);
 
   const handleSubmit = (evt, userId) => {
     evt.preventDefault();

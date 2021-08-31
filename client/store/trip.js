@@ -14,7 +14,7 @@ const getToken = () => {
 const GET_TRIP = 'GET_TRIP';
 const CLEAR_TRIP = 'CLEAR_TRIP';
 
-const getTrip = (trip) => ({
+export const getTrip = (trip) => ({
   type: GET_TRIP,
   trip,
 });

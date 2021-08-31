@@ -83,9 +83,6 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
     }
     next({ status: 403, message: 'Forbidden' });
   } catch (error) {
-    console.log('ERROR NAME: ', error.name);
-    console.log('ERROR PATH: ', error.path);
-    console.log('WHOLE ERROR: ', error);
     if (
       error.name === 'SequelizeValidationError' ||
       error.name === 'SequelizeDatabaseError'
@@ -152,12 +149,21 @@ router.put('/editTrip', async (req, res, next) => {
     if (!trip) {
       return next({
         status: 404,
-        message: `Trip with id ${tripId} not found.`,
+        message: `Trip with id ${req.body.tripId} not found.`,
       });
     }
     await trip.update(req.body);
     res.json(trip);
   } catch (error) {
+    if (
+      error.name === 'SequelizeValidationError' ||
+      error.name === 'SequelizeDatabaseError'
+    ) {
+      next({
+        status: 401,
+        message: 'Please provide valid zip code',
+      });
+    }
     next(error);
   }
 });

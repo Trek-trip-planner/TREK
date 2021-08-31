@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   TextField,
@@ -28,8 +29,10 @@ export default function TripFormTextField(props) {
   const [country, setCountry] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  // props.alex = 'x';
+  const { trip, storeTrip } = props;
 
-  const { trip } = props;
+  console.log('store trip value globally in form: ', storeTrip);
 
   useEffect(() => {
     if (props.trip) {
@@ -44,10 +47,18 @@ export default function TripFormTextField(props) {
     }
   }, []);
 
+  async function runSubmitActions(evt, props) {
+    console.log('PROPS from submit BEFORE: ', props);
+    await props.handleSubmit(evt, props.userId);
+    console.log('PROPS from submit AFTER: ', props);
+    console.log('errorInfo: ', storeTrip);
+    props.handleClose(storeTrip);
+  }
+
   const classes = useStyles();
   return (
-    <React.Fragment>
-      <form onSubmit={(evt) => props.handleSubmit(evt, props.userId)}>
+    <>
+      <form onSubmit={(evt) => runSubmitActions(evt, props)}>
         <Typography variant='h6' gutterBottom>
           Trip Name:
         </Typography>
@@ -174,6 +185,13 @@ export default function TripFormTextField(props) {
           </Button>
         </DialogActions>
       </form>
-    </React.Fragment>
+    </>
   );
 }
+
+// const mapState = (state) => {
+//   return {
+//     storeTrip: state.trip,
+//   };
+// };
+// export default connect(mapState)(TripFormTextField);
