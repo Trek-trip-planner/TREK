@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
   Grid,
-  Button,
   Typography,
   List,
   ListItem,
@@ -12,7 +11,6 @@ import {
   ListItemIcon,
   Paper,
   Card,
-  CardHeader,
   CardMedia,
   CardContent,
 } from '@material-ui/core';
@@ -20,6 +18,7 @@ import { fetchParkThunk, clearPark } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import PopUpWindow from './PopUpWindow';
 import SingleParkGMap from './SingleParkGMap';
+import getKey from './googleKey';
 
 const useStyles = makeStyles((theme) => ({
   // mapContainer: {
@@ -50,15 +49,20 @@ function SingleParkPage(props) {
   const { park, getParkInfo } = props;
   const parkName = props.match.params.parkName;
   const classes = useStyles();
+  const [key, setKey] = useState(null);
 
   useEffect(() => {
     (async () => {
       await getParkInfo(parkName);
+      if (key === null) {
+        const myKey = await getKey();
+        setKey(myKey);
+      }
     })();
     return () => props.clearPark();
   }, [parkName]);
 
-  if (!park.id) {
+  if (!park.id || !key) {
     return <Typography align='center'>Loading...</Typography>;
   }
 
@@ -91,7 +95,7 @@ function SingleParkPage(props) {
         </Card>
         <Grid item xs={6} style={{ height: 400, width: 600 }}>
           <Paper elevation={3}>
-            <SingleParkGMap park={park} />
+            <SingleParkGMap park={park} googleAPIKey={key} />
           </Paper>
         </Grid>
       </Container>

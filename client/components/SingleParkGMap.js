@@ -18,8 +18,10 @@ const divStyle = {
 };
 
 export default function SingleParkGMap(props) {
-  const numLat = Number(props.park.latitude);
-  const numLong = Number(props.park.longitude);
+  const { googleAPIKey, park } = props;
+
+  const numLat = Number(park.latitude);
+  const numLong = Number(park.longitude);
 
   const [lng, setLng] = useState(Number(numLong.toFixed(4)));
   const [lat, setLat] = useState(Number(numLat.toFixed(4)));
@@ -31,7 +33,7 @@ export default function SingleParkGMap(props) {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyB5No3DQbWF9B4_0h87oI8horwBFXKkOec',
+    googleMapsApiKey: googleAPIKey,
   });
 
   const [map, setMap] = React.useState(null);
@@ -68,7 +70,7 @@ export default function SingleParkGMap(props) {
         {showInfoWindow && (
           <InfoWindow position={center}>
             <div style={divStyle}>
-              <p>{props.park.fullName}</p>
+              <p>{park.fullName}</p>
             </div>
           </InfoWindow>
         )}

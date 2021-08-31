@@ -3,6 +3,10 @@ const {
   models: { Trip, Trip_StartingPt, User, Park },
 } = require('../db');
 const { requireToken, isLoggedIn } = require('./middleware');
+const path = require('path');
+const result = require('dotenv').config({
+  path: path.join(__dirname, '..', '..', '.env'),
+});
 
 router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
   try {
@@ -13,6 +17,18 @@ router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
         include: { model: Trip_StartingPt },
       });
       res.json(trips);
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get('/googleKey', requireToken, isLoggedIn, async (req, res, next) => {
+  try {
+    const user = await User.findByToken(req.headers.authorization);
+    if (req.user.dataValues.id === user.id) {
+      console.log(process.env.GOOGLE_API_KEY);
+      res.send(process.env.GOOGLE_API_KEY);
     }
   } catch (error) {
     next(error);
@@ -99,13 +115,18 @@ router.put('/editTrip', async (req, res, next) => {
       country: req.body.country,
     };
 
-    const toEditAddress = startingPoint.address === fullAddress.address && startingPoint.city === fullAddress.city && startingPoint.state === fullAddress.state && startingPoint.zip === fullAddress.zip && startingPoint.country === fullAddress.country
+    const toEditAddress =
+      startingPoint.address === fullAddress.address &&
+      startingPoint.city === fullAddress.city &&
+      startingPoint.state === fullAddress.state &&
+      startingPoint.zip === fullAddress.zip &&
+      startingPoint.country === fullAddress.country;
 
     if (!toEditAddress) {
       const exist = await Trip_StartingPt.findOne({
         where: fullAddress,
       });
-  
+
       if (exist) {
         await exist.addTrip(req.body.tripId);
         if (startingPoint.trips.length > 1) {
@@ -124,15 +145,17 @@ router.put('/editTrip', async (req, res, next) => {
     }
 
     //updating name & date(s)
-    const trip = await Trip.findByPk(req.body.tripId, { include: { model: Trip_StartingPt }})
-  
+    const trip = await Trip.findByPk(req.body.tripId, {
+      include: { model: Trip_StartingPt },
+    });
+
     if (!trip) {
       return next({
         status: 404,
         message: `Trip with id ${tripId} not found.`,
       });
     }
-    await trip.update(req.body)
+    await trip.update(req.body);
     res.json(trip);
   } catch (error) {
     next(error);

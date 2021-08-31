@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Container } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Directions from './SingleTripGMap';
 import { fetchTrip } from '../store/trip';
-import { LoadScript } from '@react-google-maps/api';
+import Directions from './SingleTripGMap';
+import getKey from './googleKey';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -22,19 +22,22 @@ const useStyles = makeStyles((theme) => ({
 function MyTrip(props) {
   const { trip, getTrip } = props;
   const tripId = props.match.params.tripId;
-  const classes = useStyles();
+
+  const [key, setKey] = useState(null);
 
   useEffect(() => {
     (async () => {
-      await props.getTrip(tripId);
+      await getTrip(tripId);
+      if (key === null) {
+        const myKey = await getKey();
+        setKey(myKey);
+      }
     })();
   }, []);
 
-  if (!trip.id) {
-    return <Typography align='center'>Loading...</Typography>;
-  }
-  console.log(JSON.stringify(trip));
-  return (
+  const classes = useStyles();
+
+  return trip && key ? (
     <Container className='trip-wrapper'>
       <Typography
         className={classes.header}
@@ -47,61 +50,22 @@ function MyTrip(props) {
       >
         {trip.name}
       </Typography>
-      {/* <LoadScript> */}
-      <Directions trip={trip} />
-      {/* </LoadScript> */}
-      <div className='trip-detials-container'>
-        <Typography
-          className={classes.details}
-          variant='h6'
-          component='h3'
-          color='primary'
-          align='left'
-          fontWeight='fontWeightBold'
-          m={2}
-        >
-          Trip Details:
-          <p>
-            {' '}
-            {trip.trip_StartingPt.address}, {trip.trip_StartingPt.city},{' '}
-            {trip.trip_StartingPt.state}, {trip.trip_StartingPt.zip} to insert
-            ending point{' '}
-          </p>
-          <br />
-          <p>
-            {' '}
-            Dates:
-            {/* {trip.startDate} - {trip.endDate} */}{' '}
-          </p>
-          <br />
-        </Typography>
-        <Typography
-          className={classes.route}
-          variant='h6'
-          component='h3'
-          color='primary'
-          align='left'
-          fontWeight='fontWeightBold'
-          m={2}
-        >
-          Trip Route:
-        </Typography>
-      </div>
+      <Directions trip={trip} googleAPIKey={key} />
     </Container>
+  ) : (
+    <></>
   );
 }
 
 const mapState = (state) => {
   return {
     trip: state.trip,
-    park: state.park,
   };
 };
 
 const mapDispatch = (dispatch) => {
   return {
     getTrip: (tripId) => dispatch(fetchTrip(tripId)),
-    getParkInfo: (parkName) => dispatch(fetchParkThunk(parkName)),
   };
 };
 

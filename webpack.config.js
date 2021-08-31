@@ -21,6 +21,9 @@ module.exports = {
       },
     ],
   },
+  experiments: {
+    topLevelAwait: true,
+  },
   performance: {
     maxEntrypointSize: 712000,
     maxAssetSize: 712000,

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTrips, deleteTripThunk } from '../store/trips';
 import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Edit'
 import {
   Button,
   Paper,
@@ -12,9 +11,9 @@ import {
   TableHead,
   TableRow,
   Link,
-  Typography
+  Typography,
 } from '@material-ui/core';
-import PopUpWindow from "./PopUpWindow"
+import PopUpWindow from './PopUpWindow';
 
 export class Trips extends Component {
   constructor(props) {
@@ -27,12 +26,9 @@ export class Trips extends Component {
 
   render() {
     const trips = this.props.trips;
-    // if(!trips) {
-    //   alert('No trips to delete')
-    // }
 
     return (
-      <Paper>
+      <Paper className='all-trips-table'>
         <div className='my-trip-header'>
           <Typography
             variant='h4'
@@ -63,7 +59,7 @@ export class Trips extends Component {
                 <TableCell>{trip.startDate}</TableCell>
                 <TableCell>{trip.endDate}</TableCell>
                 <TableCell>
-                  <PopUpWindow trip ={trip}/>
+                  <PopUpWindow trip={trip} />
                 </TableCell>
                 <TableCell>
                   <Button

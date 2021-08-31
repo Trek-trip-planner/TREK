@@ -1,7 +1,7 @@
 import axios from 'axios';
 import history from '../history';
 
-const getToken = () => {
+export const getToken = () => {
   const token = window.localStorage.getItem('token');
   const headers = {
     headers: {
