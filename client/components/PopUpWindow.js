@@ -31,12 +31,8 @@ function PopUpWindow(props) {
     setOpen(true);
   };
 
-  function handleClose(storeTrip) {
-    console.log('handle close is running');
-    console.log('store trip value: ', storeTrip);
-    if (!storeTrip.error) {
-      setOpen(false);
-    }
+  function handleClose() {
+    setOpen(false);
   }
 
   const checkLogIn = props.isLoggedIn ? (

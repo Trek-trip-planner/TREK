@@ -56,9 +56,6 @@ function EditTrip(props) {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-
-    console.log('handle submit from Edit Trip is running');
-
     const tripId = trip.id;
     const name = evt.target.tripName?.value;
     const startingPoint = evt.target.address1?.value;
@@ -81,10 +78,6 @@ function EditTrip(props) {
       startDate,
       endDate,
     });
-
-    // if (!props.storeTrip.error) {
-    //props.handleClose();
-    // }
   };
 
   return (

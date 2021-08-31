@@ -29,13 +29,13 @@ export default function TripFormTextField(props) {
   const [country, setCountry] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  // props.alex = 'x';
+
+  const [submitCount, setSubmitCount] = useState(0);
+
   const { trip, storeTrip } = props;
 
-  console.log('store trip value globally in form: ', storeTrip);
-
   useEffect(() => {
-    if (props.trip) {
+    if (props.trip && submitCount === 0) {
       setTripName(trip.name);
       setStartingPoint(trip.trip_StartingPt.address);
       setCity(trip.trip_StartingPt.city);
@@ -45,29 +45,21 @@ export default function TripFormTextField(props) {
       setEndDate(trip.endDate);
       setState(trip.trip_StartingPt.state);
     }
-  }, []);
 
-  async function runSubmitActions(evt, props) {
-    console.log('PROPS from submit BEFORE: ', props);
-    await props.handleSubmit(evt, props.userId);
-    console.log('PROPS from submit AFTER: ', props);
-    console.log('errorInfo: ', storeTrip);
-    props.handleClose(storeTrip);
-  }
+    if (storeTrip) {
+      if (submitCount > 0 && !storeTrip.error) {
+        props.handleClose();
+      }
+    }
+  }, [submitCount]);
 
   const classes = useStyles();
   return (
     <>
       <form
         onSubmit={async (evt) => {
-          // runSubmitActions(evt, props)
           await props.handleSubmit(evt, props.userId);
-          setTimeout(() => {
-            console.log('props: ', props);
-            console.log('handle close: ', props.handleClose);
-            console.log(storeTrip);
-            props.handleClose(storeTrip);
-          }, 3000);
+          setSubmitCount(submitCount + 1);
         }}
       >
         <Typography variant='h6' gutterBottom>
@@ -190,14 +182,6 @@ export default function TripFormTextField(props) {
             variant='contained'
             color='primary'
             className={classes.submit}
-            onClick={() => {
-              setTimeout(() => {
-                console.log('props: ', props);
-                console.log('handle close: ', props.handleClose);
-                console.log(storeTrip);
-                props.handleClose(storeTrip);
-              }, 3000);
-            }}
           >
             {props.trip ? 'Edit' : 'Create'}
           </Button>
