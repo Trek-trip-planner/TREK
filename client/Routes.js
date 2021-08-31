@@ -10,7 +10,7 @@ import Login from './components/Login';
 import SingleTrip from './components/SingleTrip';
 import Trips from './components/Trips';
 import Account from './components/Account';
-
+import ErrorPage from './components/ErrorPage';
 class Routes extends Component {
   async componentDidMount() {
     await this.props.loadInitialData();
@@ -30,6 +30,7 @@ class Routes extends Component {
             <Route exact path='/mytrips/:tripId' component={SingleTrip} />
             <Route exact path='/mytrips' component={Trips} />
             <Route path='/account' component={Account} />
+            <Route exact path='/errorpage' component={ErrorPage} />
             <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
         ) : (

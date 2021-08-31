@@ -7,6 +7,8 @@ import {
   DirectionsRenderer,
   useJsApiLoader,
 } from '@react-google-maps/api';
+import ErrorPage from './ErrorPage';
+import history from '../history';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -48,14 +50,15 @@ export default function Directions(props) {
   const directionsCallback = (response) => {
     if (response !== null) {
       if (response.status === 'OK') {
+        console.log('going into the OK statement');
         setResponse(response);
-      } else {
-        console.error('response: ', response);
+      } else if (response.status === 'ZERO_RESULTS') {
+        console.log('Entering the second if statement', response);
+        return history.push('/errorpage');
       }
     }
   };
 
-  console.log('response', response);
   return isLoaded ? (
     <div className='map'>
       <div className='map-container'>
