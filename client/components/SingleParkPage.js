@@ -10,6 +10,7 @@ import {
   ListItemText,
   ListItemIcon,
   Paper,
+  Box,
   Card,
   CardMedia,
   CardContent,
@@ -34,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 30,
     display: 'flex',
     justifyContent: 'center',
-  },
-  grid: {
-    padding: 30,
   },
   topDiv: {
     display: 'flex',
@@ -92,26 +90,21 @@ function SingleParkPage(props) {
           style={{ wrap: 'noWrap' }}
           display='flex'
         >
-          <Card display='flex'>
-            {!loading ? <Spinner /> : ' '}
-            <CardMedia
-              image={parkImg}
-              title={park.fullName}
-              style={{ height: 400, width: 600 }}
-              onLoad={() => setLoading(false)}
+          {!loading ? <Spinner /> : ' '}
+          <Box>
+            <img src={parkImg} style={{ height: 500, width: 625 }} />
+          </Box>
+          <Box>
+            <SingleParkGMap
+              park={park}
+              googleAPIKey={key}
+              style={{ height: 500, width: 625 }}
             />
-
-            <CardContent>
-              <PopUpWindow park={park} />
-            </CardContent>
-          </Card>
-          <Grid item xs={6} style={{ height: 400, width: 600 }}>
-            <Paper elevation={3}>
-              <SingleParkGMap park={park} googleAPIKey={key} />
-            </Paper>
-          </Grid>
+          </Box>
         </Container>
-
+        <Container>
+          <PopUpWindow park={park} />
+        </Container>
         <Typography variant='h6' color='primary'>
           Park Description:
         </Typography>
