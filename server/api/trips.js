@@ -4,9 +4,6 @@ const {
 } = require('../db');
 const { requireToken, isLoggedIn } = require('./middleware');
 const path = require('path');
-const result = require('dotenv').config({
-  path: path.join(__dirname, '..', '..', '.env'),
-});
 
 router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
   try {
