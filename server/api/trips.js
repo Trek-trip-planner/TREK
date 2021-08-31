@@ -5,6 +5,8 @@ const {
 const { requireToken, isLoggedIn } = require('./middleware');
 const path = require('path');
 
+const verifyAddress = require('./googleGeocode');
+
 router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     const user = await User.findByToken(req.headers.authorization);
@@ -58,19 +60,31 @@ router.get('/:id', requireToken, isLoggedIn, async (req, res, next) => {
   }
 });
 
-//need error handling here for sequelize validation failure
+//need address verification with geocoding
 router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     const user = await User.findByToken(req.headers.authorization);
     if (req.user.dataValues.id === user.id) {
+      const fullAddress = {
+        address: req.body.startingPoint,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
+        country: req.body.country,
+      };
+
+      //MAKE ALL OF THIS A HELPER FUNCTION/CLASS METHOD?
+      //full address verification here - if not valid next an error with appropriate code and message
+      //run try catch that calls the address verification helper function - thrown errors will be caught in catch block
+      try {
+        verifyAddress(fullAddress);
+      } catch (error) {
+        next(error);
+        return;
+      }
+
       const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
-        where: {
-          address: req.body.startingPoint,
-          city: req.body.city,
-          state: req.body.state,
-          zip: req.body.zip,
-          country: req.body.country,
-        },
+        where: fullAddress,
       });
 
       const newTripInfo = {
@@ -94,7 +108,7 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
         include: [{ model: Park }, { model: Trip_StartingPt }],
       });
 
-      res.send(trip);
+      return res.send(trip);
     }
     next({ status: 403, message: 'Forbidden' });
   } catch (error) {
@@ -111,7 +125,7 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
   }
 });
 
-//need error handling here for sequelize validation failure
+//need address verification with geocoding
 router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     //updating starting point (works but on larger scale might not be the best soultion)
@@ -128,6 +142,8 @@ router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
         zip: Number(req.body.zip),
         country: req.body.country,
       };
+
+      //check full address here to make sure that it is valid - if not return next error with appropriate code and a message
 
       const toEditAddress =
         startingPoint.address === fullAddress.address &&
