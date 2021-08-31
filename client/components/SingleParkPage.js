@@ -22,10 +22,10 @@ import getKey from './googleKey';
 import Spinner from './Spinner';
 
 const useStyles = makeStyles((theme) => ({
-  // mapContainer: {
-  //   height: 'fit-container',
-  //   width: 'fit-container',
-  // },
+  mapContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
   root: {
     margin: 0,
     padding: 0,
@@ -65,97 +65,130 @@ function SingleParkPage(props) {
     return () => props.clearPark();
   }, [parkName]);
 
-
-
-  if (!park.id || !key ) {
+  if (!park.id || !key) {
     return <Spinner />;
   }
 
   const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
 
-  return (
-    <Container className={classes.root} component='main'>
-      <Typography
-        className={classes.parkTitle}
-        variant='h4'
-        component='h3'
-        color='primary'
-      >
-        {park.fullName}
-      </Typography>
-      <Container
-        className={classes.topDiv}
-        style={{ wrap: 'noWrap' }}
-        display='flex'
-      >
-        <Card display='flex'>
-          {!loading ? <Spinner /> : ' '}
-          <CardMedia
-            image={parkImg}
-            title={park.fullName}
-            style={{ height: 400, width: 600 }}
-            onLoad={() => setLoading(false)}
-          />
+  const num = Math.floor(park.topics.length / 3);
+  const firstCol = park.topics.slice(0, num);
+  const secondCol = park.topics.slice(num + 1, num + num);
+  const thirdCol = park.topics.slice(num + num + 1);
 
-          <CardContent>
-            <PopUpWindow park={park} />
-          </CardContent>
-        </Card>
-        <Grid item xs={6} style={{ height: 400, width: 600 }}>
-          <Paper elevation={3}>
-            <SingleParkGMap park={park} googleAPIKey={key} />
-          </Paper>
+  return (
+    <div className={classes.mapContainer}>
+      <Container className={classes.root} component='main'>
+        <Typography
+          className={classes.parkTitle}
+          variant='h4'
+          component='h3'
+          color='primary'
+        >
+          {park.fullName}
+        </Typography>
+        <Container
+          className={classes.topDiv}
+          style={{ wrap: 'noWrap' }}
+          display='flex'
+        >
+          <Card display='flex'>
+            {!loading ? <Spinner /> : ' '}
+            <CardMedia
+              image={parkImg}
+              title={park.fullName}
+              style={{ height: 400, width: 600 }}
+              onLoad={() => setLoading(false)}
+            />
+
+            <CardContent>
+              <PopUpWindow park={park} />
+            </CardContent>
+          </Card>
+          <Grid item xs={6} style={{ height: 400, width: 600 }}>
+            <Paper elevation={3}>
+              <SingleParkGMap park={park} googleAPIKey={key} />
+            </Paper>
+          </Grid>
+        </Container>
+
+        <Typography variant='h6' color='primary'>
+          Park Description:
+        </Typography>
+        <Typography className={classes.info}>{park.description}</Typography>
+        <br />
+        <Typography variant='h6' color='primary'>
+          Weather Details:
+        </Typography>
+        <Typography className={classes.info}>{park.weatherInfo}</Typography>
+        <br />
+        <Typography variant='h6' color='primary'>
+          States:
+        </Typography>
+        <Typography className={classes.info}>{park.states}</Typography>
+        <br />
+        <Typography variant='h6' color='primary'>
+          Email Contact:
+        </Typography>
+        <Typography className={classes.info}>{park.emailAddress}</Typography>
+        <br />
+        <Typography variant='h6' color='primary'>
+          Entrance Fees:
+        </Typography>
+        <List>
+          {park.entranceFees.map((fee, index) => (
+            <ListItem key={index}>
+              <ListItemIcon>
+                <FilterHdrIcon color='secondary' />
+              </ListItemIcon>
+              <ListItemText primary={`$${fee.cost} - ${fee.description}`} />
+            </ListItem>
+          ))}
+        </List>
+        <br />
+        <Typography variant='h6' color='primary'>
+          Notable Interests:
+        </Typography>
+        <Grid container spacing={24}>
+          <Grid item xs={4}>
+            <List>
+              {thirdCol.map((topic, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <FilterHdrIcon color='secondary' />
+                  </ListItemIcon>
+                  <ListItemText primary={topic} />
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+          <Grid item xs={4}>
+            <List>
+              {secondCol.map((topic, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <FilterHdrIcon color='secondary' />
+                  </ListItemIcon>
+                  <ListItemText primary={topic} />
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+          <Grid item xs={4}>
+            <List>
+              {firstCol.map((topic, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <FilterHdrIcon color='secondary' />
+                  </ListItemIcon>
+                  <ListItemText primary={topic} />
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
         </Grid>
       </Container>
-      <Grid container justifyContent='flex-start' className={classes.grid}>
-        <Grid item xs={6}>
-          <Typography variant='h6' color='primary'>
-            Park Description:
-          </Typography>
-          <Typography className={classes.info}>{park.description}</Typography>
-          <Typography variant='h6' color='primary'>
-            Weather Details:
-          </Typography>
-          <Typography className={classes.info}>{park.weatherInfo}</Typography>
-          <Typography variant='h6' color='primary'>
-            Notable Interests:
-          </Typography>
-          <List>
-            {park.topics.map((topic, index) => (
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <FilterHdrIcon color='secondary' />
-                </ListItemIcon>
-                <ListItemText primary={topic} />
-              </ListItem>
-            ))}
-          </List>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography variant='h6' color='primary'>
-            States:
-          </Typography>
-          <Typography className={classes.info}>{park.states}</Typography>
-          <Typography variant='h6' color='primary'>
-            Email Contact:
-          </Typography>
-          <Typography className={classes.info}>{park.emailAddress}</Typography>
-          <Typography variant='h6' color='primary'>
-            Entrance Fees:
-          </Typography>
-          <List>
-            {park.entranceFees.map((fee, index) => (
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <FilterHdrIcon color='secondary' />
-                </ListItemIcon>
-                <ListItemText primary={`$${fee.cost} - ${fee.description}`} />
-              </ListItem>
-            ))}
-          </List>
-        </Grid>
-      </Grid>
-    </Container>
+    </div>
   );
 }
 

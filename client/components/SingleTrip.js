@@ -37,14 +37,13 @@ function MyTrip(props) {
     })();
   }, []);
 
-
   const classes = useStyles();
 
   if (!trip.id) {
     return <Spinner />;
   }
-  
-  return  trip && key ? (
+
+  return trip && key ? (
     <Container className='trip-wrapper'>
       <Typography
         className={classes.header}
