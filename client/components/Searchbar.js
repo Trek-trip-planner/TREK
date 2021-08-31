@@ -23,6 +23,16 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto',
     },
   },
+  root: {
+    fontFamily: 'Roboto Mono',
+    width: '50vw',
+    color: '#ffffff',
+    borderRadius: '7px',
+    position: 'relative',
+    '& label.Mui-focused': {
+      color: 'blue',
+    },
+  },
   searchIcon: {
     padding: theme.spacing(0, 1.5),
     display: 'flex',
@@ -36,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     borderRadius: theme.shape.borderRadius,
-    color: 'inherit',
+    color: '#ffffff',
     display: 'flex',
     justifyContent: 'center',
     padding: theme.spacing(1, 1, 1, 0),
@@ -76,7 +86,6 @@ const CssTextField = withStyles({
 
 function Searchbar(props) {
   const classes = useStyles();
-  const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
     (async () => {
@@ -85,7 +94,6 @@ function Searchbar(props) {
   }, []);
 
   function onInputChange(event, value) {
-    console.log('value', value);
     let parkName = value.fullName.split(' ').join('_');
     history.push(`/${parkName}`);
   }
@@ -94,11 +102,14 @@ function Searchbar(props) {
     <div className={classes.search}>
       <Autocomplete
         onChange={onInputChange}
+        inputValue=''
         className={classes.inputInput}
         options={props.parks}
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
-        renderInput={(park) => <CssTextField {...park} variant='outlined' />}
+        renderInput={(park) => (
+          <CssTextField {...park} label='Search...' variant='outlined' />
+        )}
       />
       <Button>
         <div className={classes.searchIcon}>

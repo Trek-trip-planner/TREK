@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { Container } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import SingleTripMap from './SingleTripMap';
+import Directions from './SingleTripGMap';
 import { fetchTrip } from '../store/trip';
+import { LoadScript } from '@react-google-maps/api';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -46,7 +47,9 @@ function MyTrip(props) {
       >
         {trip.name}
       </Typography>
-      <SingleTripMap trip={trip} />
+      {/* <LoadScript> */}
+      <Directions trip={trip} />
+      {/* </LoadScript> */}
       <div className='trip-detials-container'>
         <Typography
           className={classes.details}

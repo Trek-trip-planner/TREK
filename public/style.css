@@ -65,3 +65,7 @@ nav a {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.my-trip-header {
+  padding: 30px;
+}

@@ -1,25 +1,23 @@
 import axios from 'axios';
+import history from '../history';
 
+const getToken = () => {
+  const token = window.localStorage.getItem('token');
+  const headers = {
+    headers: {
+      authorization: token,
+    },
+  };
+  return headers;
+};
 
 const GET_TRIP = 'GET_TRIP';
+const CLEAR_TRIP = 'CLEAR_TRIP';
 
 const getTrip = (trip) => ({
   type: GET_TRIP,
   trip,
 });
-
-export const fetchTrip = (id) => {
-  return async (dispatch) => {
-    try {
-      const { data } = await axios.get(`/api/mytrips/${id}`);
-      dispatch(getTrip(data));
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
-
-const CLEAR_TRIP = 'CLEAR_TRIP';
 
 export const clearTrip = () => {
   return {
@@ -27,11 +25,27 @@ export const clearTrip = () => {
   };
 };
 
+export const fetchTrip = (id) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.get(`/api/mytrips/${id}`, getToken());
+      dispatch(getTrip(data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
 export const createNewTrip = (tripInfo) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post('/api/mytrips/addTrip', tripInfo);
+      const { data } = await axios.post(
+        '/api/mytrips/addTrip',
+        tripInfo,
+        getToken()
+      );
       dispatch(getTrip(data));
+      history.push(`/mytrips/${data.id}`);
     } catch (error) {
       console.log('Error fetching single trip: ', error.message);
     }
