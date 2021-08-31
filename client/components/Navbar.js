@@ -47,7 +47,6 @@ function Navbar(props) {
     <AppBar className={classes.root}>
       <Toolbar>
         <Typography edge='start'>
-          Home
           <img
             src={'/favicon-02.png'}
             alt='logo'
