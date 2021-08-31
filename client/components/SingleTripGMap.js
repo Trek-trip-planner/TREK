@@ -60,7 +60,6 @@ export default function Directions(props) {
                 callback={directionsCallback}
               />
             )}
-
             {response !== null && (
               <DirectionsRenderer
                 options={{
