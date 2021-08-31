@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
 import {
   GoogleMap,
   DirectionsService,
@@ -9,6 +10,7 @@ import {
 } from '@react-google-maps/api';
 import ErrorPage from './ErrorPage';
 import history from '../history';
+import { deleteTripThunk } from '../store/trips';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Directions(props) {
+function Directions(props) {
   const { googleAPIKey, trip } = props;
 
   const numLat = Number(trip.parks[0].latitude);
@@ -54,6 +56,8 @@ export default function Directions(props) {
         setResponse(response);
       } else if (response.status === 'ZERO_RESULTS') {
         console.log('Entering the second if statement', response);
+        console.log(trip.id);
+        props.deleteTripThunk(trip.id);
         return history.push('/errorpage');
       }
     }
@@ -142,3 +146,9 @@ export default function Directions(props) {
     <></>
   );
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteTripThunk: (id) => dispatch(deleteTripThunk(id)),
+  };
+};
+export default connect(null, mapDispatchToProps)(Directions);

@@ -50,6 +50,7 @@ export const fetchTrips = (userId) => {
 
 export const deleteTripThunk = (id) => {
   return async (dispatch) => {
+    console.log('in the thunk');
     try {
       const { data: trip } = await axios.delete(
         `/api/mytrips/${id}`,
