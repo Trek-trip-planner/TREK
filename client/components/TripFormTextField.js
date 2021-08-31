@@ -58,7 +58,18 @@ export default function TripFormTextField(props) {
   const classes = useStyles();
   return (
     <>
-      <form onSubmit={(evt) => runSubmitActions(evt, props)}>
+      <form
+        onSubmit={async (evt) => {
+          // runSubmitActions(evt, props)
+          await props.handleSubmit(evt, props.userId);
+          setTimeout(() => {
+            console.log('props: ', props);
+            console.log('handle close: ', props.handleClose);
+            console.log(storeTrip);
+            props.handleClose(storeTrip);
+          }, 3000);
+        }}
+      >
         <Typography variant='h6' gutterBottom>
           Trip Name:
         </Typography>
@@ -179,7 +190,14 @@ export default function TripFormTextField(props) {
             variant='contained'
             color='primary'
             className={classes.submit}
-            //onClick={props.handleClose}
+            onClick={() => {
+              setTimeout(() => {
+                console.log('props: ', props);
+                console.log('handle close: ', props.handleClose);
+                console.log(storeTrip);
+                props.handleClose(storeTrip);
+              }, 3000);
+            }}
           >
             {props.trip ? 'Edit' : 'Create'}
           </Button>
