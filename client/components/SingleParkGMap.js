@@ -18,6 +18,7 @@ const divStyle = {
 };
 
 export default function SingleParkGMap(props) {
+  console.log('Rendering');
   const { googleAPIKey, park } = props;
 
   const numLat = Number(park.latitude);
@@ -37,7 +38,9 @@ export default function SingleParkGMap(props) {
   });
 
   const [map, setMap] = React.useState(null);
-  const [showInfoWindow, setShowInfoWindow] = React.useState(false);
+  const [showInfoWindows, setShowInfoWindows] = React.useState({});
+  const [nearbyPlaces, setNearbyPlaces] = React.useState(null);
+  const [reload, setReload] = React.useState(false);
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
@@ -55,26 +58,78 @@ export default function SingleParkGMap(props) {
     }
   });
 
-  return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={8}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
+  // function resultsCallback(results, status) {
+  //   console.log(JSON.stringify(results), JSON.stringify(status));
+  //   const places = [];
+  //   if (status == google.maps.places.PlacesServiceStatus.OK) {
+  //     for (var i = 0; i < results.length; i++) {
+  //       places.push({
+  //         center: results[i].geometry.location,
+  //         name: results[i].name,
+  //       });
+  //     }
+  //   }
+  //   setNearbyPlaces(places);
+  // }
+
+  // if (map && nearbyPlaces === null) {
+  //   const service = new google.maps.places.PlacesService(map);
+  //   service.nearbySearch(
+  //     {
+  //       location: { lat: lat, lng: lng },
+  //       radius: '20000',
+  //       type: ['park'],
+  //     },
+  //     resultsCallback
+  //   );
+  // }
+
+  const createMarker = (center, name, mainPark) => {
+    let showInfoWindow = name in showInfoWindows && showInfoWindows[name];
+    const isIcon = mainPark ? '/Trek-Marker-03.png' : '';
+    return (
       <Marker
+        key={name}
         position={center}
-        onClick={() => setShowInfoWindow(!showInfoWindow)}
+        icon={isIcon}
+        onClick={() => {
+          if (!(name in showInfoWindows)) {
+            showInfoWindows[name] = true;
+          } else {
+            showInfoWindows[name] = !showInfoWindows[name];
+          }
+          setShowInfoWindows(showInfoWindows);
+          setReload(!reload);
+        }}
       >
         {showInfoWindow && (
           <InfoWindow position={center}>
             <div style={divStyle}>
-              <p>{park.fullName}</p>
+              <p>{name}</p>
             </div>
           </InfoWindow>
         )}
       </Marker>
+    );
+  };
+
+  const markers = [];
+  const mainPark = markers.push(createMarker(center, park.fullName, true));
+  if (nearbyPlaces) {
+    for (let i = 0; i < nearbyPlaces.length; i++) {
+      markers.push(createMarker(nearbyPlaces[i].center, nearbyPlaces[i].name));
+    }
+  }
+
+  return isLoaded ? (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={2}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+    >
+      {markers}
     </GoogleMap>
   ) : (
     <></>

@@ -11,6 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import history from '../history';
 import SearchBar from './Searchbar';
 import { logout } from '../store/auth';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,11 +28,16 @@ const useStyles = makeStyles((theme) => ({
     padding: 7,
     display: 'flex',
   },
+  welcome: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
 }));
 
 function Navbar(props) {
   const classes = useStyles();
-  const {firstName} = props
+  const { firstName } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -54,16 +60,13 @@ function Navbar(props) {
             onClick={() => history.push('/')}
           />
         </Typography>
-
         <div>
           <SearchBar />
         </div>
-
-        <div>
-        {props.firstName &&
-        <div justify="flex-end">
-            Welcome {firstName}!
-        </div>}
+        <div className={classes.welcome}>
+          <Box>
+            {props.isLoggedIn && <Typography>Welcome {firstName}!</Typography>}
+          </Box>
 
           <Button
             aria-controls='simple-menu'

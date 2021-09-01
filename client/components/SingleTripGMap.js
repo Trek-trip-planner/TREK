@@ -8,7 +8,6 @@ import {
   DirectionsRenderer,
   useJsApiLoader,
 } from '@react-google-maps/api';
-import ErrorPage from './ErrorPage';
 import history from '../history';
 import { deleteTripThunk } from '../store/trips';
 
