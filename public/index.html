@@ -20,17 +20,19 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5No3DQbWF9B4_0h87oI8horwBFXKkOec&libraries=places&callback=initMap"
     ></script>
 
-    <link rel="manifest" href="/manifest.json ">
-    <meta name="theme-color" content="#124116"/>
-    <link rel="apple-touch-icon" href="/favicon-02.png">
-
+    <link rel="manifest" href="/manifest.json " />
+    <meta name="theme-color" content="#124116" />
+    <link rel="apple-touch-icon" href="/favicon-02.png" />
   </head>
   <body>
     <div id="app"></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./serviceworker.js').then((reg)=> console.log('Success: ', reg.scope)).catch((err)=> console.log('Failure: ', err));
+          navigator.serviceWorker
+            .register('./serviceworker.js')
+            .then((reg) => console.log('Success: ', reg.scope))
+            .catch((err) => console.log('Failure: ', err));
         });
       }
     </script>

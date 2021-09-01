@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
 import {
   GoogleMap,
   Marker,
@@ -17,8 +21,17 @@ const divStyle = {
   padding: 15,
 };
 
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
+
 export default function SingleParkGMap(props) {
-  console.log('Rendering');
   const { googleAPIKey, park } = props;
 
   const numLat = Number(park.latitude);
@@ -41,6 +54,7 @@ export default function SingleParkGMap(props) {
   const [showInfoWindows, setShowInfoWindows] = React.useState({});
   const [nearbyPlaces, setNearbyPlaces] = React.useState(null);
   const [reload, setReload] = React.useState(false);
+  const [dropdownValue, setDropdownValue] = React.useState(null);
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
@@ -58,38 +72,43 @@ export default function SingleParkGMap(props) {
     }
   });
 
-  // function resultsCallback(results, status) {
-  //   console.log(JSON.stringify(results), JSON.stringify(status));
-  //   const places = [];
-  //   if (status == google.maps.places.PlacesServiceStatus.OK) {
-  //     for (var i = 0; i < results.length; i++) {
-  //       places.push({
-  //         center: results[i].geometry.location,
-  //         name: results[i].name,
-  //       });
-  //     }
-  //   }
-  //   setNearbyPlaces(places);
-  // }
+  const handleChange = (event) => {
+    let searchValue = event.target.value;
+    setDropdownValue(searchValue);
+  };
 
-  // if (map && nearbyPlaces === null) {
-  //   const service = new google.maps.places.PlacesService(map);
-  //   service.nearbySearch(
-  //     {
-  //       location: { lat: lat, lng: lng },
-  //       radius: '20000',
-  //       type: ['park'],
-  //     },
-  //     resultsCallback
-  //   );
-  // }
+  function resultsCallback(results, status) {
+    const places = [];
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        places.push({
+          center: results[i].geometry.location,
+          name: results[i].name,
+        });
+      }
+    }
+    setNearbyPlaces(places);
+  }
 
-  const createMarker = (center, name, mainPark) => {
+  useEffect(() => {
+    const service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(
+      {
+        location: { lat: lat, lng: lng },
+        radius: '20000',
+        type: [dropdownValue],
+      },
+      resultsCallback
+    );
+  }, [dropdownValue]);
+
+  const classes = useStyles();
+  const createMarker = (center, name, i, mainPark) => {
     let showInfoWindow = name in showInfoWindows && showInfoWindows[name];
     const isIcon = mainPark ? '/Trek-Marker-03.png' : '';
     return (
       <Marker
-        key={name}
+        key={i}
         position={center}
         icon={isIcon}
         onClick={() => {
@@ -114,12 +133,21 @@ export default function SingleParkGMap(props) {
   };
 
   const markers = [];
-  const mainPark = markers.push(createMarker(center, park.fullName, true));
+  const mainPark = markers.push(
+    createMarker(center, park.fullName, null, true)
+  );
   if (nearbyPlaces) {
     for (let i = 0; i < nearbyPlaces.length; i++) {
-      markers.push(createMarker(nearbyPlaces[i].center, nearbyPlaces[i].name));
+      markers.push(
+        createMarker(nearbyPlaces[i].center, nearbyPlaces[i].name, i)
+      );
     }
   }
+  const options = {
+    mapTypeControlOptions: {
+      position: google.maps.ControlPosition.LEFT_BOTTOM,
+    },
+  };
 
   return isLoaded ? (
     <GoogleMap
@@ -128,7 +156,39 @@ export default function SingleParkGMap(props) {
       zoom={2}
       onLoad={onLoad}
       onUnmount={onUnmount}
+      options={options}
     >
+      <FormControl variant='outlined' className={classes.formControl}>
+        <InputLabel htmlFor='outlined-age-native-simple'>
+          Nearby Places
+        </InputLabel>
+        <Select
+          native
+          value={''}
+          onChange={handleChange}
+          label='Nearby Places'
+          inputProps={{
+            name: 'Nearby Places',
+            id: 'outlined-nearby-places-search',
+          }}
+        >
+          <option aria-label='Nearby Places' value='' />
+          <option value={'amusement_park'}>Amusement Park</option>
+          <option value={'aquarium'}>Aquarium</option>
+          <option value={'art_gallery'}>Art Gallery</option>
+          <option value={'campground'}>Campground</option>
+          <option value={'gas_station'}>Gas Station</option>
+          <option value={'hospital'}>Hospital</option>
+          <option value={'laundry'}>Laundry</option>
+          <option value={'lodging'}>Lodging</option>
+          <option value={'museum'}>Museum</option>
+          <option value={'park'}>Park</option>
+          <option value={'rv_park'}>RV Park</option>
+          <option value={'supermarket'}>Supermarket</option>
+          <option value={'tourist_attraction'}>Tourist Attraction</option>
+          <option value={'zoo'}>Zoo</option>
+        </Select>
+      </FormControl>
       {markers}
     </GoogleMap>
   ) : (
