@@ -73,11 +73,8 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
         country: req.body.country,
       };
 
-      //MAKE ALL OF THIS A HELPER FUNCTION/CLASS METHOD?
-      //full address verification here - if not valid next an error with appropriate code and message
-      //run try catch that calls the address verification helper function - thrown errors will be caught in catch block
       try {
-        verifyAddress(fullAddress);
+        await verifyAddress(fullAddress);
       } catch (error) {
         next(error);
         return;
@@ -139,7 +136,7 @@ router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
         address: req.body.address,
         city: req.body.city,
         state: req.body.state,
-        zip: Number(req.body.zip),
+        zip: req.body.zip,
         country: req.body.country,
       };
 
@@ -149,10 +146,17 @@ router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
         startingPoint.address === fullAddress.address &&
         startingPoint.city === fullAddress.city &&
         startingPoint.state === fullAddress.state &&
-        startingPoint.zip === fullAddress.zip &&
+        startingPoint.zip === Number(fullAddress.zip) &&
         startingPoint.country === fullAddress.country;
 
       if (!toEditAddress) {
+        try {
+          await verifyAddress(fullAddress);
+        } catch (error) {
+          next(error);
+          return;
+        }
+
         const exist = await Trip_StartingPt.findOne({
           where: fullAddress,
         });

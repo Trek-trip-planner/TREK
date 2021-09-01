@@ -12,8 +12,6 @@ async function verifyAddress(addressInfo) {
     googleKey = process.env.GOOGLE_GEOCODE_KEY;
   }
 
-  console.log('GOOGLE KEY: ', googleKey);
-
   let oneLineAddress = Object.keys(addressInfo)
     .map((key) => {
       let value = addressInfo[key];
@@ -21,8 +19,6 @@ async function verifyAddress(addressInfo) {
       return value;
     })
     .join('+');
-
-  console.log('One Line Address: ', oneLineAddress);
 
   const requestConfig = {
     method: 'GET',
@@ -35,10 +31,8 @@ async function verifyAddress(addressInfo) {
   let results;
   try {
     results = await axios(requestConfig);
-    console.log('STATUS OF GEOCODE RESULT: ', results.data.status);
-    console.log('FULL DATA RECEIVED BACK: ', JSON.stringify(results.data));
   } catch (error) {
-    console.log('Error with google geocode request: ', error);
+    throw error;
   }
 
   let error;
