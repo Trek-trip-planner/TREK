@@ -54,13 +54,17 @@ function Navbar(props) {
             onClick={() => history.push('/')}
           />
         </Typography>
-        <Typography>
-          Welcome {firstName}!
-        </Typography>
+
         <div>
           <SearchBar />
         </div>
+
         <div>
+        {props.firstName &&
+        <div justify="flex-end">
+            Welcome {firstName}!
+        </div>}
+
           <Button
             aria-controls='simple-menu'
             aria-haspopup='true'
@@ -75,6 +79,7 @@ function Navbar(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
+
             {!props.isLoggedIn && [
               <MenuItem key={'login'} onClick={() => history.push('/login')}>
                 Login
