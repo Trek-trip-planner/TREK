@@ -67,6 +67,7 @@ function Navbar(props) {
           <Box>
             {props.isLoggedIn && <Typography>Welcome {firstName}!</Typography>}
           </Box>
+
           <Button
             aria-controls='simple-menu'
             aria-haspopup='true'
@@ -81,6 +82,7 @@ function Navbar(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
+
             {!props.isLoggedIn && [
               <MenuItem key={'login'} onClick={() => history.push('/login')}>
                 Login

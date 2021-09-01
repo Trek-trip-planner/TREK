@@ -5,6 +5,8 @@ const {
 const { requireToken, isLoggedIn } = require('./middleware');
 const path = require('path');
 
+const verifyAddress = require('./googleGeocode');
+
 router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     const user = await User.findByToken(req.headers.authorization);
@@ -58,20 +60,28 @@ router.get('/:id', requireToken, isLoggedIn, async (req, res, next) => {
   }
 });
 
-//need error handling here for sequelize validation failure
+//need address verification with geocoding
 router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
-    console.log('INSIDE ADD TRIP EXPRESS ROUTE');
     const user = await User.findByToken(req.headers.authorization);
     if (req.user.dataValues.id === user.id) {
+      const fullAddress = {
+        address: req.body.startingPoint,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
+        country: req.body.country,
+      };
+
+      try {
+        await verifyAddress(fullAddress);
+      } catch (error) {
+        next(error);
+        return;
+      }
+
       const [instance, wasCreated] = await Trip_StartingPt.findOrCreate({
-        where: {
-          address: req.body.startingPoint,
-          city: req.body.city,
-          state: req.body.state,
-          zip: req.body.zip,
-          country: req.body.country,
-        },
+        where: fullAddress,
       });
 
       const newTripInfo = {
@@ -95,7 +105,7 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
         include: [{ model: Park }, { model: Trip_StartingPt }],
       });
 
-      res.send(trip);
+      return res.send(trip);
     }
     next({ status: 403, message: 'Forbidden' });
   } catch (error) {
@@ -112,64 +122,77 @@ router.post('/addTrip', requireToken, isLoggedIn, async (req, res, next) => {
   }
 });
 
-//need error handling here for sequelize validation failure
-router.put('/editTrip', async (req, res, next) => {
+//need address verification with geocoding
+router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     //updating starting point (works but on larger scale might not be the best soultion)
-    const startingPoint = await Trip_StartingPt.findByPk(
-      req.body.startingPointID,
-      { include: Trip }
-    );
-    const fullAddress = {
-      address: req.body.address,
-      city: req.body.city,
-      state: req.body.state,
-      zip: Number(req.body.zip),
-      country: req.body.country,
-    };
+    const user = await User.findByToken(req.headers.authorization);
+    if (req.user.dataValues.id === user.id) {
+      const startingPoint = await Trip_StartingPt.findByPk(
+        req.body.startingPointID,
+        { include: Trip }
+      );
+      const fullAddress = {
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
+        country: req.body.country,
+      };
 
-    const toEditAddress =
-      startingPoint.address === fullAddress.address &&
-      startingPoint.city === fullAddress.city &&
-      startingPoint.state === fullAddress.state &&
-      startingPoint.zip === fullAddress.zip &&
-      startingPoint.country === fullAddress.country;
+      //check full address here to make sure that it is valid - if not return next error with appropriate code and a message
 
-    if (!toEditAddress) {
-      const exist = await Trip_StartingPt.findOne({
-        where: fullAddress,
-      });
+      const toEditAddress =
+        startingPoint.address === fullAddress.address &&
+        startingPoint.city === fullAddress.city &&
+        startingPoint.state === fullAddress.state &&
+        startingPoint.zip === Number(fullAddress.zip) &&
+        startingPoint.country === fullAddress.country;
 
-      if (exist) {
-        await exist.addTrip(req.body.tripId);
-        if (startingPoint.trips.length > 1) {
-          await startingPoint.removeTrip(req.body.tripId);
-        } else {
-          await startingPoint.destroy();
+      if (!toEditAddress) {
+        try {
+          await verifyAddress(fullAddress);
+        } catch (error) {
+          next(error);
+          return;
         }
-      } else {
-        if (startingPoint.trips.length > 1) {
-          const newAddress = await Trip_StartingPt.create(fullAddress);
-          await newAddress.addTrip(req.body.tripId);
+
+        const exist = await Trip_StartingPt.findOne({
+          where: fullAddress,
+        });
+
+        if (exist) {
+          await exist.addTrip(req.body.tripId);
+          if (startingPoint.trips.length > 1) {
+            await startingPoint.removeTrip(req.body.tripId);
+          } else {
+            await startingPoint.destroy();
+          }
         } else {
-          await startingPoint.update(fullAddress);
+          if (startingPoint.trips.length > 1) {
+            const newAddress = await Trip_StartingPt.create(fullAddress);
+            await newAddress.addTrip(req.body.tripId);
+          } else {
+            await startingPoint.update(fullAddress);
+          }
         }
       }
-    }
 
-    //updating name & date(s)
-    const trip = await Trip.findByPk(req.body.tripId, {
-      include: { model: Trip_StartingPt },
-    });
-
-    if (!trip) {
-      return next({
-        status: 404,
-        message: `Trip with id ${req.body.tripId} not found.`,
+      //updating name & date(s)
+      const trip = await Trip.findByPk(req.body.tripId, {
+        include: { model: Trip_StartingPt },
       });
+
+      if (!trip) {
+        return next({
+          status: 404,
+          message: `Trip with id ${req.body.tripId} not found.`,
+        });
+      }
+      await trip.update(req.body);
+      return res.json(trip);
     }
-    await trip.update(req.body);
-    res.json(trip);
+    next({ status: 403, message: 'Forbidden' });
   } catch (error) {
     if (
       error.name === 'SequelizeValidationError' ||
