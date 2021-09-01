@@ -9,11 +9,7 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  Paper,
   Box,
-  Card,
-  CardMedia,
-  CardContent,
 } from '@material-ui/core';
 import { fetchParkThunk, clearPark } from '../store/park';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
