@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchTrips, deleteTripThunk } from '../store/trips';
 import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Edit';
 import {
   Button,
   Paper,
@@ -55,7 +54,10 @@ export class Trips extends Component {
             {trips.map((trip) => (
               <TableRow key={trip.id}>
                 <TableCell>
-                  <Link id ="myTripsLink" to={`mytrips/${trip.id}`}> {trip.name} </Link>
+                  <Link id='myTripsLink' to={`mytrips/${trip.id}`}>
+                    {' '}
+                    {trip.name}{' '}
+                  </Link>
                 </TableCell>
                 <TableCell>{trip.startDate}</TableCell>
                 <TableCell>{trip.endDate}</TableCell>

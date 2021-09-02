@@ -74,23 +74,19 @@ export const editTrip = (tripInfo) => {
       dispatch(updateTrip(data));
       dispatch(clearTrip());
     } catch (error) {
-      //console.log('Error editing the trip!', error.message);
       dispatch(getTrip({ error: error }));
     }
   };
 };
 
 export function addTrip(trip, park) {
-  console.log('in addTrip thunk');
   return async function (dispatch) {
     try {
-      console.log('entering return statement');
       const { data } = await axios.put(
         `/api/mytrips/${trip.id}/addTrip`,
         park,
         getToken()
       );
-      console.log('data from thunk', { data });
       dispatch(updateTrip(data));
     } catch (error) {
       console.log(error);
