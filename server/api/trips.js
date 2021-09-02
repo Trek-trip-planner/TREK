@@ -13,7 +13,7 @@ router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
     if (req.user.dataValues.id === user.id) {
       const trips = await Trip.findAll({
         where: { userId: user.id },
-        include: { model: Trip_StartingPt },
+        include: [{ model: Park }, { model: Trip_StartingPt }],
       });
       res.json(trips);
     }
@@ -216,13 +216,15 @@ router.put(
       const user = await User.findByToken(req.headers.authorization);
       if (req.user.dataValues.id === user.id) {
         const tripId = req.params.tripId;
-        const theTrip = await Trip.findByPk(tripId, { include: Park });
+        const theTrip = await Trip.findByPk(tripId);
         await theTrip.addPark(req.body.id);
         const updatedTrip = await Trip.findByPk(tripId, { include: Park });
         res.status(200).json(updatedTrip);
+      } else {
+        next({ status: 403, message: 'Forbidden' });
       }
     } catch (error) {
-      next();
+      next(error);
     }
   }
 );
@@ -237,10 +239,35 @@ router.delete('/:id', requireToken, isLoggedIn, async (req, res, next) => {
       }
       await trip.destroy();
       res.json(trip);
+    } else {
+      next({ status: 403, message: 'Forbidden' });
     }
   } catch (error) {
     next(error);
   }
 });
+
+router.delete(
+  '/removePark/:tripId/:parkId',
+  requireToken,
+  isLoggedIn,
+  async (req, res, next) => {
+    try {
+      const user = await User.findByToken(req.headers.authorization);
+      if (req.user.dataValues.id === user.id) {
+        const theTrip = await Trip.findByPk(req.params.tripId);
+        await theTrip.removePark(req.params.parkId);
+        const updatedTrip = await Trip.findByPk(req.params.tripId, {
+          include: [{ model: Park }, { model: Trip_StartingPt }],
+        });
+        res.status(200).json(updatedTrip);
+      } else {
+        next({ status: 403, message: 'Forbidden' });
+      }
+    } catch (error) {
+      next(error);
+    }
+  }
+);
 
 module.exports = router;

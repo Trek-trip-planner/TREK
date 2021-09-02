@@ -11,7 +11,7 @@ import {
   InfoWindow,
 } from '@react-google-maps/api';
 import history from '../history';
-import { deleteTripThunk } from '../store/trips';
+import { deleteTripThunk, removeParkFromTrip } from '../store/trips';
 
 const divStyle = {
   background: `white`,
@@ -49,6 +49,7 @@ function Directions(props) {
   const [response, setResponse] = useState(null);
   const [showInfoWindow, setShowInfoWindow] = useState({});
   const [reload, setReload] = useState(false);
+  const [totalTime, setTotalTime] = useState(0);
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -58,17 +59,26 @@ function Directions(props) {
   const classes = useStyles();
 
   const directionsCallback = (response) => {
+    console.log('RESPONSE: ', response);
     if (response !== null) {
       if (response.status === 'OK') {
         console.log('going into the OK statement');
         console.log('RESPONSE: ', response);
         setResponse(response);
       } else if (response.status === 'ZERO_RESULTS') {
-        console.log('Entering the second if statement', response);
-        console.log(trip.id);
-        //INSTEAD OF DELETING THE TRIP - need to create a thunk/route that will just remove a park from the trip OR delete the trip if this is the only park on it
-        //definitely need to know which park was the one just added so need to pull the park ID from somewhere or pass it from the add to current trip button
-        props.deleteTripThunk(trip.id);
+        console.log('Trip', trip);
+        if (trip.parks.length > 1) {
+          let greatestDate = trip.parks[0];
+          trip.parks.forEach((park) => {
+            if (greatestDate.createdAt < park.createdAt) {
+              greatestDate = park;
+            }
+          });
+          console.log('Greatest Dates', greatestDate);
+          props.removeParkFromTrip(trip.id, greatestDate.id);
+        } else {
+          props.deleteTripThunk(trip.id);
+        }
         return history.push('/errorpage');
       }
     }
@@ -83,6 +93,22 @@ function Directions(props) {
     setShowInfoWindow(showInfoWindow);
     setReload(!reload);
   };
+
+  if (response !== null && totalTime === 0) {
+    let totalSeconds = response.routes[0].legs.reduce((accum, currVal) => {
+      console.log('Current value: ', currVal);
+      let time = currVal.duration.value;
+      return accum + time;
+    }, 0);
+
+    console.log('TOTAL SECONDS: ', totalSeconds);
+    let numdays = Math.floor(totalSeconds / 86400);
+    let numhours = Math.floor((totalSeconds % 86400) / 3600);
+    let numminutes = Math.floor(((totalSeconds % 86400) % 3600) / 60);
+    let timeString =
+      numdays + ' days ' + numhours + ' hours ' + numminutes + ' minutes ';
+    setTotalTime(timeString);
+  }
 
   return isLoaded ? (
     <div className='map'>
@@ -178,17 +204,25 @@ function Directions(props) {
         >
           Round Trip Details:
           <p>
-            {trip.trip_StartingPt.address}, {trip.trip_StartingPt.city},
-            {trip.trip_StartingPt.state}, {trip.trip_StartingPt.zip} to{' '}
-            {trip.parks.map((park) => park.fullName).join(', ')}
-            {/* {trip.parks[0].fullName} */}
+            Start Point: {trip.trip_StartingPt.address},{' '}
+            {trip.trip_StartingPt.city},{trip.trip_StartingPt.state},{' '}
+            {trip.trip_StartingPt.zip}
           </p>
-          <br />
+          {response !== null &&
+            response.routes[0].waypoint_order.map((park, index) => {
+              return (
+                <p key={index}>{`Stop ${index + 1}:  ${parks[park].name}`}</p>
+              );
+            })}
           <p>
-            {' '}
-            Dates:
-            {trip.startDate} - {trip.endDate}
+            End Point: {trip.trip_StartingPt.address},{' '}
+            {trip.trip_StartingPt.city},{trip.trip_StartingPt.state},{' '}
+            {trip.trip_StartingPt.zip}
           </p>
+          {/* {trip.parks.map((park) => park.fullName).join(', ')} */}
+          {/* {trip.parks[0].fullName} */}
+          <br />
+          <p>{`Dates:  ${trip.startDate} to ${trip.endDate}`}</p>
           <br />
         </Typography>
         {response !== null && (
@@ -203,14 +237,17 @@ function Directions(props) {
           >
             Trip Information:
             <p>
-              Duration:
-              {response.routes[0].legs[0].duration.text}
+              {`Distance:  ${response.routes[0].legs.reduce(
+                (accum, currVal) => {
+                  console.log('Current value: ', currVal);
+                  let miles = currVal.distance.text.split(' ')[0];
+                  return accum + Number(miles);
+                },
+                0
+              )} miles`}
             </p>
             <br />
-            <p>
-              Distance:
-              {response.routes[0].legs[0].distance.text}
-            </p>
+            <p>{`Duration:  ${totalTime}`}</p>
           </Typography>
         )}
       </div>
@@ -222,6 +259,8 @@ function Directions(props) {
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteTripThunk: (id) => dispatch(deleteTripThunk(id)),
+    removeParkFromTrip: (trip, park) =>
+      dispatch(removeParkFromTrip(trip, park)),
   };
 };
 export default connect(null, mapDispatchToProps)(Directions);

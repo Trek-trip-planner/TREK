@@ -87,13 +87,29 @@ export function addTrip(trip, park) {
         park,
         getToken()
       );
+      console.log('data coming from backend', data);
       dispatch(updateTrip(data));
+      console.log('DATA: ', data);
+      history.push(`/mytrips/${data.id}`);
     } catch (error) {
       console.log(error);
     }
   };
 }
 
+export function removeParkFromTrip(trip, park) {
+  return async function (dispatch) {
+    try {
+      const { data } = await axios.delete(
+        `/api/mytrips/removePark/${trip}/${park}`,
+        getToken()
+      );
+      dispatch(updateTrip(data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
 const initialState = [];
 
 export default function tripsReducer(state = initialState, action) {

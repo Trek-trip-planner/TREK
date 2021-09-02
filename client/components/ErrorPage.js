@@ -24,8 +24,9 @@ export default function ErrorPage() {
       <div className={classes.root}>
         <Alert severity='error' variant='filled'>
           <AlertTitle>Error</AlertTitle>
-          This National Park is not within driving distance of your starting
-          location.
+          We're sorry! We can't get driving directions to this park. Don't
+          worry, if you were adding to an existing trip you can still access it{' '}
+          <Link to={`/mytrips`}>here</Link>.
         </Alert>
         <div className={classes.button}>
           <Button color='primary' variant='contained'>

@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 function CreateTrip(props) {
   const { park, userId, trips } = props;
   const classes = useStyles();
-  const [addedTrip, setAddedTrip] = useState();
+  const [addedTripValue, setAddedTripValue] = useState();
 
   console.log('my trips: ', trips);
 
@@ -116,9 +116,10 @@ function CreateTrip(props) {
     });
   };
   const handleChange = (event, value) => {
-    props.addTrip(value, park);
+    setAddedTripValue(value);
+    // props.addTrip(value, park);
   };
-
+  console.log('Added Trip: ', addedTripValue);
   return (
     <main className={classes.layout}>
       <Paper className={classes.paper}>
@@ -137,10 +138,8 @@ function CreateTrip(props) {
           >
             <Autocomplete
               className={classes.inputInput}
-              onChange={(event, addedTrip, park) =>
-                handleChange(event, addedTrip, park)
-              }
-              value={addedTrip}
+              onChange={(event, value) => handleChange(event, value)}
+              // value={addedTrip}
               options={props.trips}
               getOptionLabel={(trip) => trip.name}
               style={{ width: 300 }}
@@ -154,9 +153,12 @@ function CreateTrip(props) {
             />
           </FormControl>
           <DialogActions>
-            {/* <Link id='myTripsLink' to={`mytrips/${trips.trip.id}`}> */}
             <Button
               type='submit'
+              onClick={(event) => {
+                event.preventDefault();
+                props.addTrip(addedTripValue, park);
+              }}
               fullWidth
               variant='contained'
               color='primary'
@@ -164,7 +166,6 @@ function CreateTrip(props) {
             >
               Add
             </Button>
-            {/* </Link> */}
           </DialogActions>
         </form>
         <Divider variant='fullWidth' className={classes.divider} />

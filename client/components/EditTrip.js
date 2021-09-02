@@ -1,8 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Link, Typography } from '@material-ui/core';
-import { editTrip } from '../store/trips';
+import {
+  Paper,
+  Link,
+  Typography,
+  FormControl,
+  DialogActions,
+  Button,
+  Divider,
+  TextField,
+} from '@material-ui/core';
+import { Autocomplete } from '@material-ui/lab';
+import { editTrip, removeParkFromTrip } from '../store/trips';
 import { clearTrip } from '../store/trip';
 import TripFormTextField from './TripFormTextField';
 
@@ -40,13 +50,40 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
+  divider: {
+    background: 'black',
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+  inputInput: {
+    borderRadius: theme.shape.borderRadius,
+    color: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: theme.spacing(1, 1, 1, 0),
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('xs')]: {
+      width: '20ch',
+    },
+  },
 }));
 
 function EditTrip(props) {
   const { trip, userId } = props;
   const classes = useStyles();
 
+  //state to determine if diables
+  const [toDisable, setToDisable] = useState(true);
+  const [parkSelected, setParkSelected] = useState(null);
+
   useEffect(() => {
+    //if length is greater than one enable the autocomplete - set to false
+    if (trip.parks.length > 1) {
+      setToDisable(false);
+    }
+
     return () => {
       if (props.storeTrip.error) {
         props.clearTrip();
@@ -80,12 +117,63 @@ function EditTrip(props) {
     });
   };
 
+  const handleChange = (event, value) => {
+    setParkSelected(value);
+  };
+
   return (
     <main className={classes.layout}>
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
           {`Edit your trip`}
         </Typography>
+        <form>
+          <Typography component='h4' variant='h6'>
+            Remove a parks from your trip:
+          </Typography>
+          <FormControl
+            align='center'
+            variant='outlined'
+            className={classes.formControl}
+          >
+            <Autocomplete
+              className={classes.inputInput}
+              onChange={(event, value) => handleChange(event, value)}
+              disabled={toDisable}
+              options={trip.parks}
+              getOptionLabel={(park) => park.fullName}
+              style={{ width: 300 }}
+              renderInput={(parks) => (
+                <TextField
+                  {...parks}
+                  label='Delete a Park'
+                  variant='outlined'
+                />
+              )}
+            />
+          </FormControl>
+          <DialogActions>
+            <Button
+              type='submit'
+              onClick={(event) => {
+                event.preventDefault();
+                console.log('button clicked!');
+                console.log('Park selected: ', parkSelected);
+                props.removeParkFromTrip(trip.id, parkSelected.id);
+                props.handleClose();
+                //props.addTrip(addedTripValue, park);
+              }}
+              fullWidth
+              variant='contained'
+              color='primary'
+              disabled={toDisable}
+              className={classes.submit}
+            >
+              Delete
+            </Button>
+          </DialogActions>
+        </form>
+        <Divider variant='fullWidth' className={classes.divider} />
         <Typography component='h3' color='error' style={{ padding: 5 }}>
           {props.storeTrip.error ? props.storeTrip.error.response.data : ''}
         </Typography>
@@ -113,6 +201,8 @@ const mapDispatch = (dispatch) => {
   return {
     editTrip: (tripInfo) => dispatch(editTrip(tripInfo)),
     clearTrip: () => dispatch(clearTrip()),
+    removeParkFromTrip: (tripId, parkId) =>
+      dispatch(removeParkFromTrip(tripId, parkId)),
   };
 };
 

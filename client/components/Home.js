@@ -71,7 +71,7 @@ function Home(props) {
           </Grid>
         ))}
       </Grid>
-      <dev className={classes.button}>
+      <div className={classes.button}>
         <Button
           onClick={() => history.push('/all-parks')}
           variant='contained'
@@ -84,7 +84,7 @@ function Home(props) {
         >
           View All Parks
         </Button>
-      </dev>
+      </div>
     </div>
   );
 }
