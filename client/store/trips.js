@@ -83,6 +83,7 @@ export const editTrip = (tripInfo) => {
 export const addTrip = (trip, park) => {
   console.log('in addTrip thunk');
   return async (dispatch) => {
+    console.log('entering return statement');
     const { data } = await axios.put(
       `/api/mytrips/${trip.id}/addTrip`,
       park,

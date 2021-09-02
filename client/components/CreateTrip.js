@@ -119,7 +119,7 @@ function CreateTrip(props) {
     console.log('park Slected:', park);
     console.log('value id:', value.id);
     console.log('park id', park.id);
-    addTrip(value.id, park.id);
+    addTrip(value, park);
   };
 
   return (
