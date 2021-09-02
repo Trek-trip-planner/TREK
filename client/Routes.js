@@ -11,6 +11,8 @@ import SingleTrip from './components/SingleTrip';
 import Trips from './components/Trips';
 import Account from './components/Account';
 import ErrorPage from './components/ErrorPage';
+import AboutPage from './components/AboutPage';
+
 class Routes extends Component {
   async componentDidMount() {
     await this.props.loadInitialData();
@@ -30,6 +32,7 @@ class Routes extends Component {
             <Route exact path='/mytrips/:tripId' component={SingleTrip} />
             <Route exact path='/mytrips' component={Trips} />
             <Route path='/account' component={Account} />
+            <Route path='/about' component={AboutPage} />
             <Route exact path='/errorpage' component={ErrorPage} />
             <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
@@ -39,6 +42,7 @@ class Routes extends Component {
             <Route exact path='/all-parks' component={AllParks} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
+            <Route path='/about' component={AboutPage} />
             <Route path='/:parkName' component={SingleParkPage} />
           </Switch>
         )}

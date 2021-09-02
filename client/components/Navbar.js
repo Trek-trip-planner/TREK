@@ -60,7 +60,7 @@ function Navbar(props) {
             onClick={() => history.push('/')}
           />
         </Typography>
-        <div>
+        <div className='search-bar-container'>
           <SearchBar />
         </div>
         <div className={classes.welcome}>
@@ -82,8 +82,10 @@ function Navbar(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-
             {!props.isLoggedIn && [
+              <MenuItem key={'about'} onClick={() => history.push('/about')}>
+                About Trek
+              </MenuItem>,
               <MenuItem key={'login'} onClick={() => history.push('/login')}>
                 Login
               </MenuItem>,
@@ -92,18 +94,21 @@ function Navbar(props) {
               </MenuItem>,
             ]}
             {props.isLoggedIn && [
+              <MenuItem key={'about'} onClick={() => history.push('/about')}>
+                About Trek
+              </MenuItem>,
               <MenuItem
                 key={'mytrips'}
                 onClick={() => history.push('/mytrips')}
               >
                 My Trips
               </MenuItem>,
-              <MenuItem
-                key={'account'}
-                onClick={() => history.push('/account')}
-              >
-                Account
-              </MenuItem>,
+              // <MenuItem
+              //   key={'account'}
+              //   onClick={() => history.push('/account')}
+              // >
+              //   Account
+              // </MenuItem>,
               <MenuItem key={'logout'} onClick={props.handleClick}>
                 Logout
               </MenuItem>,

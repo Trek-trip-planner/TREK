@@ -216,11 +216,12 @@ router.put(
       const user = await User.findByToken(req.headers.authorization);
       if (req.user.dataValues.id === user.id) {
         const tripId = req.params.tripId;
-        const theTrip = await Trip.findByPk(tripId, { include: Park });
+        const theTrip = await Trip.findByPk(tripId);
         await theTrip.addPark(req.body.id);
         const updatedTrip = await Trip.findByPk(tripId, { include: Park });
         res.status(200).json(updatedTrip);
       }
+      next({ status: 403, message: 'Forbidden' });
     } catch (error) {
       next();
     }
@@ -238,9 +239,32 @@ router.delete('/:id', requireToken, isLoggedIn, async (req, res, next) => {
       await trip.destroy();
       res.json(trip);
     }
+    next({ status: 403, message: 'Forbidden' });
   } catch (error) {
     next(error);
   }
 });
+
+router.delete(
+  '/removePark/:tripId/:parkId',
+  requireToken,
+  isLoggedIn,
+  async (req, res, next) => {
+    try {
+      const user = await User.findByToken(req.headers.authorization);
+      if (req.user.dataValues.id === user.id) {
+        const theTrip = await Trip.findByPk(req.params.tripId);
+        await theTrip.removePark(req.params.parkId);
+        const updatedTrip = await Trip.findByPk(req.params.tripId, {
+          include: Park,
+        });
+        res.status(200).json(updatedTrip);
+      }
+      next({ status: 403, message: 'Forbidden' });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
 
 module.exports = router;

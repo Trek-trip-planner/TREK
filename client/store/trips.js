@@ -95,6 +95,19 @@ export function addTrip(trip, park) {
   };
 }
 
+export function removeParkFromTrip(trip, park) {
+  return async function (dispatch) {
+    try {
+      const { data } = await axios.delete(
+        `/api/mytrips/removePark/${trip}/${park}`,
+        getToken()
+      );
+      dispatch(updateTrip(data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
 const initialState = [];
 
 export default function tripsReducer(state = initialState, action) {
