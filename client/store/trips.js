@@ -79,6 +79,20 @@ export const editTrip = (tripInfo) => {
     }
   };
 };
+
+export const addTrip = (trip, park) => {
+  console.log('in addTrip thunk');
+  return async (dispatch) => {
+    const { data } = await axios.put(
+      `/api/mytrips/${trip.id}/addTrip`,
+      park,
+      getToken()
+    );
+    console.log('data from thunk', data);
+    //dispatch(updateTrip(data));
+  };
+};
+
 const initialState = [];
 
 export default function tripsReducer(state = initialState, action) {
