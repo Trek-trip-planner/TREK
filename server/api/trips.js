@@ -258,7 +258,7 @@ router.delete(
         const theTrip = await Trip.findByPk(req.params.tripId);
         await theTrip.removePark(req.params.parkId);
         const updatedTrip = await Trip.findByPk(req.params.tripId, {
-          include: Park,
+          include: [{ model: Park }, { model: Trip_StartingPt }],
         });
         res.status(200).json(updatedTrip);
       } else {
