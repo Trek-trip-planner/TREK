@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { fetchTrips, addTrip } from '../store/trips';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {
   Paper,
   Typography,
@@ -11,6 +11,7 @@ import {
   DialogActions,
   FormControl,
   InputLabel,
+  Link,
   TextField,
 } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -21,9 +22,9 @@ function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
-      <Typography color='inherit' href='https://material-ui.com/'>
+      <Link color='inherit' href='https://material-ui.com/'>
         Trek
-      </Typography>
+      </Link>
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -153,17 +154,17 @@ function CreateTrip(props) {
             />
           </FormControl>
           <DialogActions>
-            <Link id='myTripsLink' to={`mytrips/${trips.trip.id}`}>
-              <Button
-                type='submit'
-                fullWidth
-                variant='contained'
-                color='primary'
-                className={classes.submit}
-              >
-                Add
-              </Button>
-            </Link>
+            {/* <Link id='myTripsLink' to={`mytrips/${trips.trip.id}`}> */}
+            <Button
+              type='submit'
+              fullWidth
+              variant='contained'
+              color='primary'
+              className={classes.submit}
+            >
+              Add
+            </Button>
+            {/* </Link> */}
           </DialogActions>
         </form>
         <Divider variant='fullWidth' className={classes.divider} />
