@@ -64,7 +64,8 @@ function Directions(props) {
         console.log('RESPONSE: ', response);
         setResponse(response);
       } else if (response.status === 'ZERO_RESULTS') {
-        if (trip.parks.length > 0) {
+        console.log('Trip', trip);
+        if (trip.parks.length > 1) {
           let greatestDate = trip.parks[0];
           trip.parks.forEach((park) => {
             if (greatestDate.createdAt < park.createdAt) {

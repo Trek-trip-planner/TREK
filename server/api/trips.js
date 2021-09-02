@@ -220,10 +220,11 @@ router.put(
         await theTrip.addPark(req.body.id);
         const updatedTrip = await Trip.findByPk(tripId, { include: Park });
         res.status(200).json(updatedTrip);
+      } else {
+        next({ status: 403, message: 'Forbidden' });
       }
-      next({ status: 403, message: 'Forbidden' });
     } catch (error) {
-      next();
+      next(error);
     }
   }
 );
@@ -238,8 +239,9 @@ router.delete('/:id', requireToken, isLoggedIn, async (req, res, next) => {
       }
       await trip.destroy();
       res.json(trip);
+    } else {
+      next({ status: 403, message: 'Forbidden' });
     }
-    next({ status: 403, message: 'Forbidden' });
   } catch (error) {
     next(error);
   }
@@ -259,8 +261,9 @@ router.delete(
           include: Park,
         });
         res.status(200).json(updatedTrip);
+      } else {
+        next({ status: 403, message: 'Forbidden' });
       }
-      next({ status: 403, message: 'Forbidden' });
     } catch (error) {
       next(error);
     }
