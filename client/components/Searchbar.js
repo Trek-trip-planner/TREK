@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   search: {
     display: 'flex',
     position: 'relative',
+    color: 'white',
     borderRadius: theme.shape.borderRadius,
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -99,7 +100,12 @@ function Searchbar(props) {
         getOptionLabel={(park) => park.fullName}
         style={{ width: 300 }}
         renderInput={(park) => (
-          <CssTextField {...park} label='Search...' variant='outlined' />
+          <CssTextField
+            {...park}
+            label='Search...'
+            variant='outlined'
+            styles={{ color: 'white' }}
+          />
         )}
       />
       <Button>

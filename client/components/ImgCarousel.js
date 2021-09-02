@@ -41,6 +41,19 @@ const carouselData = [
 
 function HomeCarousel() {
   const [currImg, setCurrImg] = useState(0);
+  const [firstRender, setFirstRender] = useState(true);
+
+  if (firstRender) {
+    let i = currImg;
+    const imgTransition = setInterval(() => {
+      i++;
+      if (carouselData.length === i) {
+        i = 0;
+      }
+      setCurrImg(i);
+    }, 5000);
+    setFirstRender(false);
+  }
 
   return (
     <div className='carousel'>
