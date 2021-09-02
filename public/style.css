@@ -88,3 +88,9 @@ nav a {
 .search-bar-container label {
   color: white;
 }
+
+@media (max-width: 640px) {
+  .search-bar-container {
+    display: none;
+  }
+}
