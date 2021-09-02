@@ -41,13 +41,13 @@ function Account(props) {
       </Typography>
       <div className='account-detials-container'>
         <Typography
-          variant='h6'
+          variant='h3'
           component='h3'
           color='primary'
           align='center'
           fontWeight='fontWeightBold'
         >
-          User Info
+          {userId.firstName}
         </Typography>
         <br />
         <Typography>

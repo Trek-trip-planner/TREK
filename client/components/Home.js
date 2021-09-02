@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 import HomeCarousel from './ImgCarousel';
 import IndividualPark from './IndividualPark';
 import history from '../history';
@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     align: 'center',
     fontWeight: 'fontWeightBold',
     padding: 30,
+  },
+  button: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 }));
 
@@ -57,7 +61,7 @@ function Home(props) {
           component='h3'
           color='primary'
         >
-          Parks You Might Be Interested In
+          Plan Your Next Adventure Today!
         </Typography>
       </Container>
       <Grid container spacing={3}>
@@ -67,6 +71,20 @@ function Home(props) {
           </Grid>
         ))}
       </Grid>
+      <dev className={classes.button}>
+        <Button
+          onClick={() => history.push('/all-parks')}
+          variant='contained'
+          color='primary'
+          style={{
+            margin: '25px',
+            padding: '10px',
+            fontSize: 15,
+          }}
+        >
+          View All Parks
+        </Button>
+      </dev>
     </div>
   );
 }
