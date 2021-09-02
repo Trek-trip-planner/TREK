@@ -13,7 +13,7 @@ router.get('/', requireToken, isLoggedIn, async (req, res, next) => {
     if (req.user.dataValues.id === user.id) {
       const trips = await Trip.findAll({
         where: { userId: user.id },
-        include: { model: Trip_StartingPt },
+        include: [{ model: Park }, { model: Trip_StartingPt }],
       });
       res.json(trips);
     }

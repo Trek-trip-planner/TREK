@@ -89,6 +89,8 @@ export function addTrip(trip, park) {
       );
       console.log('data coming from backend', data);
       dispatch(updateTrip(data));
+      console.log('DATA: ', data);
+      history.push(`/mytrips/${data.id}`);
     } catch (error) {
       console.log(error);
     }

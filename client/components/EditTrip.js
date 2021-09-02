@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Link, Typography } from '@material-ui/core';
@@ -46,7 +46,14 @@ function EditTrip(props) {
   const { trip, userId } = props;
   const classes = useStyles();
 
+  //state to determine if diables
+  const [disabled, setDisabled] = useState(true);
+
   useEffect(() => {
+    //if length is greater than one enable the autocomplete - set to false
+    if (trip.parks.length > 1) {
+    }
+
     return () => {
       if (props.storeTrip.error) {
         props.clearTrip();

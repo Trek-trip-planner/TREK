@@ -49,6 +49,7 @@ function Directions(props) {
   const [response, setResponse] = useState(null);
   const [showInfoWindow, setShowInfoWindow] = useState({});
   const [reload, setReload] = useState(false);
+  const [totalTime, setTotalTime] = useState(0);
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -58,6 +59,7 @@ function Directions(props) {
   const classes = useStyles();
 
   const directionsCallback = (response) => {
+    console.log('RESPONSE: ', response);
     if (response !== null) {
       if (response.status === 'OK') {
         console.log('going into the OK statement');
@@ -91,6 +93,22 @@ function Directions(props) {
     setShowInfoWindow(showInfoWindow);
     setReload(!reload);
   };
+
+  if (response !== null && totalTime === 0) {
+    let totalSeconds = response.routes[0].legs.reduce((accum, currVal) => {
+      console.log('Current value: ', currVal);
+      let time = currVal.duration.value;
+      return accum + time;
+    }, 0);
+
+    console.log('TOTAL SECONDS: ', totalSeconds);
+    let numdays = Math.floor(totalSeconds / 86400);
+    let numhours = Math.floor((totalSeconds % 86400) / 3600);
+    let numminutes = Math.floor(((totalSeconds % 86400) % 3600) / 60);
+    let timeString =
+      numdays + ' days ' + numhours + ' hours ' + numminutes + ' minutes ';
+    setTotalTime(timeString);
+  }
 
   return isLoaded ? (
     <div className='map'>
@@ -186,17 +204,25 @@ function Directions(props) {
         >
           Round Trip Details:
           <p>
-            {trip.trip_StartingPt.address}, {trip.trip_StartingPt.city},
-            {trip.trip_StartingPt.state}, {trip.trip_StartingPt.zip} to{' '}
-            {trip.parks.map((park) => park.fullName).join(', ')}
-            {/* {trip.parks[0].fullName} */}
+            Start Point: {trip.trip_StartingPt.address},{' '}
+            {trip.trip_StartingPt.city},{trip.trip_StartingPt.state},{' '}
+            {trip.trip_StartingPt.zip}
           </p>
-          <br />
+          {response !== null &&
+            response.routes[0].waypoint_order.map((park, index) => {
+              return (
+                <p key={index}>{`Stop ${index + 1}:  ${parks[park].name}`}</p>
+              );
+            })}
           <p>
-            {' '}
-            Dates:
-            {trip.startDate} - {trip.endDate}
+            End Point: {trip.trip_StartingPt.address},{' '}
+            {trip.trip_StartingPt.city},{trip.trip_StartingPt.state},{' '}
+            {trip.trip_StartingPt.zip}
           </p>
+          {/* {trip.parks.map((park) => park.fullName).join(', ')} */}
+          {/* {trip.parks[0].fullName} */}
+          <br />
+          <p>{`Dates:  ${trip.startDate} to ${trip.endDate}`}</p>
           <br />
         </Typography>
         {response !== null && (
@@ -211,14 +237,17 @@ function Directions(props) {
           >
             Trip Information:
             <p>
-              Duration:
-              {response.routes[0].legs[0].duration.text}
+              {`Distance:  ${response.routes[0].legs.reduce(
+                (accum, currVal) => {
+                  console.log('Current value: ', currVal);
+                  let miles = currVal.distance.text.split(' ')[0];
+                  return accum + Number(miles);
+                },
+                0
+              )} miles`}
             </p>
             <br />
-            <p>
-              Distance:
-              {response.routes[0].legs[0].distance.text}
-            </p>
+            <p>{`Duration:  ${totalTime}`}</p>
           </Typography>
         )}
       </div>
