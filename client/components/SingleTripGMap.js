@@ -44,13 +44,6 @@ function Directions(props) {
     return { location: `${lat}, ${lng}`, name: park.fullName };
   });
 
-  console.log('PARK LOCATIONS ARRAY: ', parks);
-
-  // const center = {
-  //   lat: lat,
-  //   lng: lng,
-  // };
-
   const fullAddress = `${props.trip.trip_StartingPt.address} ${props.trip.trip_StartingPt.city}, ${props.trip.trip_StartingPt.state}`;
 
   const [response, setResponse] = useState(null);
@@ -68,6 +61,7 @@ function Directions(props) {
     if (response !== null) {
       if (response.status === 'OK') {
         console.log('going into the OK statement');
+        console.log('RESPONSE: ', response);
         setResponse(response);
       } else if (response.status === 'ZERO_RESULTS') {
         console.log('Entering the second if statement', response);
@@ -80,7 +74,15 @@ function Directions(props) {
     }
   };
 
-  const handleClick = (name) => {};
+  const handleClick = (name) => {
+    if (!showInfoWindow[name]) {
+      showInfoWindow[name] = true;
+    } else {
+      showInfoWindow[name] = !showInfoWindow[name];
+    }
+    setShowInfoWindow(showInfoWindow);
+    setReload(!reload);
+  };
 
   return isLoaded ? (
     <div className='map'>
@@ -119,15 +121,7 @@ function Directions(props) {
               />
               <Marker
                 position={response.routes[0].legs[0].steps[0].start_location}
-                onClick={() => {
-                  if (!showInfoWindow['start']) {
-                    showInfoWindow['start'] = true;
-                  } else {
-                    showInfoWindow['start'] = !showInfoWindow['start'];
-                  }
-                  setShowInfoWindow(showInfoWindow);
-                  setReload(!reload);
-                }}
+                onClick={() => handleClick('start')}
               >
                 {showInfoWindow['start'] ? (
                   <InfoWindow
@@ -147,23 +141,12 @@ function Directions(props) {
                 let latLng = park.location.split(' ');
                 let lat = latLng[0].slice(0, latLng[0].length - 1);
                 let lng = latLng[1];
-                console.log('Lat: ', lat);
-                console.log('Long: ', lng);
                 return (
                   <Marker
                     position={{ lat: Number(lat), lng: Number(lng) }}
                     icon={'/Trek-Marker-03.png'}
-                    //label={park.name}
                     key={index}
-                    onClick={() => {
-                      if (!showInfoWindow[park.name]) {
-                        showInfoWindow[park.name] = true;
-                      } else {
-                        showInfoWindow[park.name] = !showInfoWindow[park.name];
-                      }
-                      setShowInfoWindow(showInfoWindow);
-                      setReload(!reload);
-                    }}
+                    onClick={() => handleClick(park.name)}
                   >
                     {showInfoWindow[park.name] ? (
                       <InfoWindow
