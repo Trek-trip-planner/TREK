@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-start',
     flexWrap: 'wrap',
   },
+
 }));
 
 function SingleParkPage(props) {

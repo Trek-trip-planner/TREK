@@ -14,6 +14,53 @@
     "type":"image/png",
     "sizes":"512x512",
     "purpose": "any maskable"
+  },
+  {
+    "src":"/home-imgs/AcadiaNationalParkME.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
+  },
+  {
+    "src":"/home-imgs/ArchesNationalParkUtah.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
+  },
+  {
+    "src":"/home-imgs/GrandCanyonNP.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
+  },
+
+  {
+    "src":"/home-imgs/OlympicNationalParkWA.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
+  },
+  {
+    "src":"/home-imgs/YellowstoneNationalParkWY.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
+  },
+  {
+    "src":"/home-imgs/ZionNationalPark.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
+  },
+
+  {
+    "src":"/home-imgs/ZionNP.jpg",
+    "type":"image/jpg",
+    "sizes":"512x512",
+    "purpose": "any maskable"
   }
+
+
+
 ]
 }

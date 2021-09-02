@@ -4,7 +4,6 @@ const self = this;
 console.log('this', self)
 //Install ServiceWorker
 self.addEventListener('install', async (event)=> {
-  console.log('Opened cache');
   const cache = await caches.open(cacheName);
   console.log('cache',cache)
   await cache.addAll(urlsToCache);
@@ -15,7 +14,6 @@ self.addEventListener('install', async (event)=> {
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   const url = new URL(req.url);
-  // console.log('url',url)
   if (url.origin === location.origin) {
     event.respondWith(cacheFirst(req));
   } else {
