@@ -54,10 +54,17 @@ function Directions(props) {
         console.log('going into the OK statement');
         setResponse(response);
       } else if (response.status === 'ZERO_RESULTS') {
-        console.log('Entering the second if statement', response);
-        console.log(trip.id);
-        props.deleteTripThunk(trip.id);
-        return history.push('/errorpage');
+        let greatestDate = trip.parks[0];
+        trip.parks.forEach((park) => {
+          if (greatestDate.createdAt < park.createdAt) {
+            greatestDate = park;
+          }
+        });
+        console.log('Created Dates', greatestDate);
+        // console.log('Entering the second if statement', response);
+        // console.log(trip.id);
+        // props.deleteTripThunk(trip.id);
+        // return history.push('/errorpage');
       }
     }
   };

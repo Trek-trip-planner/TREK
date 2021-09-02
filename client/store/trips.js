@@ -87,6 +87,7 @@ export function addTrip(trip, park) {
         park,
         getToken()
       );
+      console.log('data coming from backend', data);
       dispatch(updateTrip(data));
     } catch (error) {
       console.log(error);
