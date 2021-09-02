@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 30,
     alignItems: 'flex-start',
   },
+
 }));
 
 function SingleParkPage(props) {
