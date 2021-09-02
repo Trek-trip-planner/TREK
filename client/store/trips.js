@@ -74,11 +74,26 @@ export const editTrip = (tripInfo) => {
       dispatch(updateTrip(data));
       dispatch(clearTrip());
     } catch (error) {
-      //console.log('Error editing the trip!', error.message);
       dispatch(getTrip({ error: error }));
     }
   };
 };
+
+export function addTrip(trip, park) {
+  return async function (dispatch) {
+    try {
+      const { data } = await axios.put(
+        `/api/mytrips/${trip.id}/addTrip`,
+        park,
+        getToken()
+      );
+      dispatch(updateTrip(data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
 const initialState = [];
 
 export default function tripsReducer(state = initialState, action) {

@@ -1,7 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Link, Typography } from '@material-ui/core';
+import { fetchTrips, addTrip } from '../store/trips';
+// import { Link } from 'react-router-dom';
+import {
+  Paper,
+  Typography,
+  Divider,
+  Button,
+  DialogActions,
+  FormControl,
+  InputLabel,
+  Link,
+  TextField,
+} from '@material-ui/core';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import { createNewTrip, clearTrip } from '../store/trip';
 import TripFormTextField from './TripFormTextField';
 
@@ -11,7 +24,7 @@ function Copyright() {
       {'Copyright © '}
       <Link color='inherit' href='https://material-ui.com/'>
         Trek
-      </Link>{' '}
+      </Link>
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -39,13 +52,37 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
+  divider: {
+    background: 'black',
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+  inputInput: {
+    borderRadius: theme.shape.borderRadius,
+    color: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: theme.spacing(1, 1, 1, 0),
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('xs')]: {
+      width: '20ch',
+    },
+  },
 }));
 
 function CreateTrip(props) {
-  const { park, userId } = props;
+  const { park, userId, trips } = props;
   const classes = useStyles();
+  const [addedTrip, setAddedTrip] = useState();
+
+  console.log('my trips: ', trips);
 
   useEffect(() => {
+    (async () => {
+      await props.fetchTrips();
+    })();
     return () => {
       if (props.trip.error) {
         props.clearTrip();
@@ -78,12 +115,65 @@ function CreateTrip(props) {
       endDate,
     });
   };
+  const handleChange = (event, value) => {
+    props.addTrip(value, park);
+  };
 
   return (
     <main className={classes.layout}>
       <Paper className={classes.paper}>
         <Typography component='h1' variant='h4' align='center'>
-          {`Create your trip to ${park.fullName}!`}
+          Add to a trip!
+        </Typography>
+
+        <form>
+          <Typography component='h4' variant='h6'>
+            Your trips:
+          </Typography>
+          <FormControl
+            align='center'
+            variant='outlined'
+            className={classes.formControl}
+          >
+            <Autocomplete
+              className={classes.inputInput}
+              onChange={(event, addedTrip, park) =>
+                handleChange(event, addedTrip, park)
+              }
+              value={addedTrip}
+              options={props.trips}
+              getOptionLabel={(trip) => trip.name}
+              style={{ width: 300 }}
+              renderInput={(trips) => (
+                <TextField
+                  {...trips}
+                  label='Search your trips'
+                  variant='outlined'
+                />
+              )}
+            />
+          </FormControl>
+          <DialogActions>
+            {/* <Link id='myTripsLink' to={`mytrips/${trips.trip.id}`}> */}
+            <Button
+              type='submit'
+              fullWidth
+              variant='contained'
+              color='primary'
+              className={classes.submit}
+            >
+              Add
+            </Button>
+            {/* </Link> */}
+          </DialogActions>
+        </form>
+        <Divider variant='fullWidth' className={classes.divider} />
+        <Typography component='h4' variant='h4' align='center'>
+          OR
+        </Typography>
+        <Divider variant='fullWidth' className={classes.divider} />
+        <Typography component='h2' variant='h4' align='center'>
+          Create your trip!
         </Typography>
         <Typography component='h3' color='error' style={{ padding: 5 }}>
           {props.trip.error ? props.trip.error.response.data : ''}
@@ -99,6 +189,7 @@ const mapState = (state) => {
   return {
     userId: state.auth.id,
     trip: state.trip,
+    trips: state.trips,
   };
 };
 
@@ -106,6 +197,8 @@ const mapDispatch = (dispatch) => {
   return {
     createTrip: (tripInfo) => dispatch(createNewTrip(tripInfo)),
     clearTrip: () => dispatch(clearTrip()),
+    fetchTrips: (userId) => dispatch(fetchTrips(userId)),
+    addTrip: (trip, park) => dispatch(addTrip(trip, park)),
   };
 };
 

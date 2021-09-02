@@ -207,6 +207,26 @@ router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
   }
 });
 
+router.put(
+  '/:tripId/addTrip',
+  requireToken,
+  isLoggedIn,
+  async (req, res, next) => {
+    try {
+      const user = await User.findByToken(req.headers.authorization);
+      if (req.user.dataValues.id === user.id) {
+        const tripId = req.params.tripId;
+        const theTrip = await Trip.findByPk(tripId, { include: Park });
+        await theTrip.addPark(req.body.id);
+        const updatedTrip = await Trip.findByPk(tripId, { include: Park });
+        res.status(200).json(updatedTrip);
+      }
+    } catch (error) {
+      next();
+    }
+  }
+);
+
 router.delete('/:id', requireToken, isLoggedIn, async (req, res, next) => {
   try {
     const user = await User.findByToken(req.headers.authorization);
