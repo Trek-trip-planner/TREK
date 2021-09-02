@@ -80,19 +80,23 @@ export const editTrip = (tripInfo) => {
   };
 };
 
-export const addTrip = (trip, park) => {
+export function addTrip(trip, park) {
   console.log('in addTrip thunk');
-  return async (dispatch) => {
-    console.log('entering return statement');
-    const { data } = await axios.put(
-      `/api/mytrips/${trip.id}/addTrip`,
-      park,
-      getToken()
-    );
-    console.log('data from thunk', data);
-    //dispatch(updateTrip(data));
+  return async function (dispatch) {
+    try {
+      console.log('entering return statement');
+      const { data } = await axios.put(
+        `/api/mytrips/${trip.id}/addTrip`,
+        park,
+        getToken()
+      );
+      console.log('data from thunk', { data });
+      dispatch(updateTrip(data));
+    } catch (error) {
+      console.log(error);
+    }
   };
-};
+}
 
 const initialState = [];
 

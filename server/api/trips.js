@@ -219,8 +219,11 @@ router.put(
         const tripId = req.params.tripId;
         console.log('trip id: ', tripId);
         const theTrip = await Trip.findByPk(tripId, { include: Park });
-        await theTrip.addPark(req.body);
-        res.status(200).json(theTrip);
+        console.log('the Trip: ', theTrip);
+        await theTrip.addPark(req.body.id);
+        const updatedTrip = await Trip.findByPk(tripId, { include: Park });
+        console.log('updatedTrip:', updatedTrip);
+        res.status(200).json(updatedTrip);
       }
     } catch (error) {
       next();
