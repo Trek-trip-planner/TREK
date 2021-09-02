@@ -33,10 +33,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   topDiv: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: 'inline-flex',
+    justifyContent: 'space-evenly',
     paddingBottom: 30,
+    margin: 0,
     alignItems: 'flex-start',
+    flexWrap: 'wrap',
   },
 
 }));
@@ -89,13 +91,13 @@ function SingleParkPage(props) {
         >
           {!loading ? <Spinner /> : ' '}
           <Box>
-            <img src={parkImg} style={{ height: 500, width: 625 }} />
+            <img src={parkImg} style={{ height: 400, width: 525 }} />
           </Box>
           <Box>
             <SingleParkGMap
               park={park}
               googleAPIKey={key}
-              style={{ height: 500, width: 625 }}
+              style={{ height: 400, width: 525 }}
             />
           </Box>
         </Container>
