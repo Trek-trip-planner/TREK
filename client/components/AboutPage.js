@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Container } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     padding: 30,
+    display: 'flex',
+    textAlign: 'center',
   },
   paper: {
     padding: theme.spacing(1),
@@ -33,20 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AboutPage(props) {
-  const { userId } = props;
-
   const classes = useStyles();
-
-  useEffect(() => {
-    (async () => {
-      props.fetchTrips(userId);
-    })();
-  }, []);
-
-  if (!props.trips) {
-    return <Typography align='center'>Loading...</Typography>;
-  }
-
   return (
     <Container className='account-wrapper'>
       <Typography
@@ -81,6 +70,40 @@ function AboutPage(props) {
               Have fun and get exploring!
             </p>
           </Paper>
+        </Grid>
+      </div>
+      <Typography
+        className={classes.header}
+        variant='h4'
+        component='h3'
+        color='primary'
+      >
+        The Trek Development Team:
+      </Typography>
+      <div>
+        <Grid>
+          {/* <img /> */}
+          <h6>Alex Fox</h6>
+          <br />
+          <p>LinkedIn</p>
+        </Grid>
+        <Grid>
+          {/* <img /> */}
+          <h6>Allison Collier</h6>
+          <br />
+          <p>LinkedIn</p>
+        </Grid>
+        <Grid>
+          {/* <img /> */}
+          <h6>Sam Radecki</h6>
+          <br />
+          <p>LinkedIn</p>
+        </Grid>
+        <Grid>
+          {/* <img /> */}
+          <h6>Sunitha Nela</h6>
+          <br />
+          <p>LinkedIn</p>
         </Grid>
       </div>
     </Container>
