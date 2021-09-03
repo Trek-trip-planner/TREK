@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 30,
   },
   paper: {
-    padding: theme.spacing(1), //grid padding
+    padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
@@ -22,10 +22,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     display: 'flex',
     alignItems: 'center',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   aboutImg: {
     maxWidth: '100%',
     maxHeight: '100%',
+    minWidth: '325px',
   },
 }));
 
@@ -65,14 +68,14 @@ function AboutPage(props) {
         </Grid>
         <Grid item style={{ flexBasis: '50%' }}>
           <Paper className={classes.paper} elevation={0}>
-            <p style={{ color: 'black', fontSize: '18' }}>
+            <p style={{ color: 'black', fontSize: '18', minWidth: '350px' }}>
               Trek is an app that helps you plan your next trip to visit the
               National Parks. Here at Trek, we hope to be your one stop shop for
               all this related to National Parks. You can explore the list of
               over 400 National Parks to find the perfect place for your next
               adventure. You can view specific landmarks nearby a specific park
               to make sure that you can get the fullest out of your vacation.
-              You can also create a trip and all parks to it, showing you your
+              You can also create a trip and add parks to it, showing you your
               specific trip details, including the route, how long it will take,
               your starting location and all stops along the route, and more!
               Have fun and get exploring!

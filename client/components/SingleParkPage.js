@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 30,
     display: 'flex',
     justifyContent: 'center',
+    textAlign: 'center',
   },
   topDiv: {
     display: 'inline-flex',
@@ -40,8 +41,26 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-start',
     flexWrap: 'wrap',
   },
-
+  box: {
+    flexBasis: '50%',
+    width: '100%',
+  },
 }));
+
+function makeAllCols(topics, numCols) {
+  let allCols = [];
+
+  for (let i = 0; i < numCols; i++) {
+    allCols.push([]);
+  }
+
+  for (let i = 0; i < topics.length; i++) {
+    let colIndex = i % numCols;
+    allCols[colIndex].push(topics[i]);
+  }
+
+  return allCols;
+}
 
 function SingleParkPage(props) {
   const { park, getParkInfo } = props;
@@ -68,10 +87,10 @@ function SingleParkPage(props) {
 
   const parkImg = park.images.length ? park.images[0].url : '/Trek-logo-01.png';
 
-  const num = Math.floor(park.topics.length / 3);
-  const firstCol = park.topics.slice(0, num);
-  const secondCol = park.topics.slice(num + 1, num + num);
-  const thirdCol = park.topics.slice(num + num + 1);
+  const numCols = window.outerWidth > 640 ? 3 : 2;
+  const allCols = makeAllCols(park.topics, numCols);
+
+  const boxMinWidth = window.outerWidth > 640 ? '600px' : '350px';
 
   return (
     <div className={classes.mapContainer}>
@@ -90,10 +109,13 @@ function SingleParkPage(props) {
           display='flex'
         >
           {!loading ? <Spinner /> : ' '}
-          <Box>
-            <img src={parkImg} style={{ height: 400, width: 525 }} />
+          <Box
+            className={classes.box}
+            style={{ overflow: 'hidden', minWidth: boxMinWidth }}
+          >
+            <img src={parkImg} style={{ height: 400, width: '100%' }} />
           </Box>
-          <Box>
+          <Box className={classes.box} style={{ minWidth: boxMinWidth }}>
             <SingleParkGMap
               park={park}
               googleAPIKey={key}
@@ -142,42 +164,20 @@ function SingleParkPage(props) {
           Notable Interests:
         </Typography>
         <Grid container>
-          <Grid item xs={4}>
-            <List>
-              {thirdCol.map((topic, index) => (
-                <ListItem key={index}>
-                  <ListItemIcon>
-                    <FilterHdrIcon color='secondary' />
-                  </ListItemIcon>
-                  <ListItemText primary={topic} />
-                </ListItem>
-              ))}
-            </List>
-          </Grid>
-          <Grid item xs={4}>
-            <List>
-              {secondCol.map((topic, index) => (
-                <ListItem key={index}>
-                  <ListItemIcon>
-                    <FilterHdrIcon color='secondary' />
-                  </ListItemIcon>
-                  <ListItemText primary={topic} />
-                </ListItem>
-              ))}
-            </List>
-          </Grid>
-          <Grid item xs={4}>
-            <List>
-              {firstCol.map((topic, index) => (
-                <ListItem key={index}>
-                  <ListItemIcon>
-                    <FilterHdrIcon color='secondary' />
-                  </ListItemIcon>
-                  <ListItemText primary={topic} />
-                </ListItem>
-              ))}
-            </List>
-          </Grid>
+          {allCols.map((col) => (
+            <Grid item>
+              <List>
+                {col.map((topic, index) => (
+                  <ListItem key={index}>
+                    <ListItemIcon>
+                      <FilterHdrIcon color='secondary' />
+                    </ListItemIcon>
+                    <ListItemText primary={topic} />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </div>

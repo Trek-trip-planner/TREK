@@ -94,3 +94,11 @@ nav a {
     display: none;
   }
 }
+
+.my-trips-table .MuiButton-root {
+  min-width: 40px;
+}
+
+.my-trips-table .MuiTableCell-sizeSmall {
+  padding-right: 16px;
+}
