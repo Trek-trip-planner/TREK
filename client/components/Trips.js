@@ -40,7 +40,7 @@ export class Trips extends Component {
             My Trips
           </Typography>
         </div>
-        <Table size='small'>
+        <Table size='small' className='my-trips-table'>
           <TableHead>
             <TableRow>
               <TableCell>Name</TableCell>

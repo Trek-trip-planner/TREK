@@ -17,17 +17,8 @@ import Box from '@material-ui/core/Box';
 import { useMediaQuery, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-  desktop: {
-    padding: theme.spacing(1),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-  },
-  mobile: {
-    padding: theme.spacing(1),
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
-    },
+  root: {
+    position: 'unset',
   },
   contain: {
     padding: 0,
@@ -52,10 +43,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar(props) {
   const classes = useStyles();
-  const themes = useTheme();
-  const matches = useMediaQuery(themes.breakpoints.down('sm'));
-  console.log('match', matches);
-
   const { firstName } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -68,167 +55,73 @@ function Navbar(props) {
     setAnchorEl(null);
   };
 
+  const windowWidth = window.outerWidth;
+
   return (
-    <div>
-      <div>
-        <AppBar className={classes.desktop}>
-          <Toolbar>
-            <Typography edge='start' variant='h6'>
-              <img
-                src={'/favicon-02.png'}
-                alt='logo'
-                className={classes.logo + ' logo'}
-                onClick={() => history.push('/')}
-              />
-            </Typography>
-            <div className='search-bar-container' sm={3}>
-              <SearchBar />
-            </div>
-            <div className={classes.welcome} variant='h6'>
-              <Box>
-                {props.isLoggedIn && (
-                  <Typography>Welcome {firstName}! </Typography>
-                )}
-              </Box>
+    <AppBar className={classes.root}>
+      <Toolbar>
+        <Typography edge='start' variant='h6'>
+          <img
+            src={'/favicon-02.png'}
+            alt='logo'
+            className={classes.logo + ' logo'}
+            onClick={() => history.push('/')}
+          />
+        </Typography>
+        {windowWidth > 760 && (
+          <div className='search-bar-container'>
+            <SearchBar />
+          </div>
+        )}
+        <div className={classes.welcome} variant='h6'>
+          <Box>
+            {props.isLoggedIn && <Typography>Welcome {firstName}! </Typography>}
+          </Box>
 
-              <Button
-                aria-controls='simple-menu'
-                aria-haspopup='true'
-                onClick={handleClick}
+          <Button
+            aria-controls='simple-menu'
+            aria-haspopup='true'
+            onClick={handleClick}
+          >
+            <MenuIcon className={classes.menuButton} />
+          </Button>
+          <Menu
+            id='simple-menu'
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            {!props.isLoggedIn && [
+              <MenuItem key={'about'} onClick={() => history.push('/about')}>
+                About Trek
+              </MenuItem>,
+              <MenuItem key={'login'} onClick={() => history.push('/login')}>
+                Login
+              </MenuItem>,
+              <MenuItem key={'signup'} onClick={() => history.push('/signup')}>
+                Sign Up
+              </MenuItem>,
+            ]}
+            {props.isLoggedIn && [
+              <MenuItem key={'about'} onClick={() => history.push('/about')}>
+                About Trek
+              </MenuItem>,
+              <MenuItem
+                key={'mytrips'}
+                onClick={() => history.push('/mytrips')}
               >
-                <MenuIcon className={classes.menuButton} />
-              </Button>
-              <Menu
-                id='simple-menu'
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                {!props.isLoggedIn && [
-                  <MenuItem
-                    key={'about'}
-                    onClick={() => history.push('/about')}
-                  >
-                    About Trek
-                  </MenuItem>,
-                  <MenuItem
-                    key={'login'}
-                    onClick={() => history.push('/login')}
-                  >
-                    Login
-                  </MenuItem>,
-                  <MenuItem
-                    key={'signup'}
-                    onClick={() => history.push('/signup')}
-                  >
-                    Sign Up
-                  </MenuItem>,
-                ]}
-                {props.isLoggedIn && [
-                  <MenuItem
-                    key={'about'}
-                    onClick={() => history.push('/about')}
-                  >
-                    About Trek
-                  </MenuItem>,
-                  <MenuItem
-                    key={'mytrips'}
-                    onClick={() => history.push('/mytrips')}
-                  >
-                    My Trips
-                  </MenuItem>,
+                My Trips
+              </MenuItem>,
 
-                  <MenuItem key={'logout'} onClick={props.handleClick}>
-                    Logout
-                  </MenuItem>,
-                ]}
-              </Menu>
-            </div>
-          </Toolbar>
-        </AppBar>
-     </div>
-
-
-      <div>
-        <AppBar className={classes.mobile}>
-          <Toolbar>
-            <Typography edge='start' variant='h6'>
-              <img
-                src={'/favicon-02.png'}
-                alt='logo'
-                className={classes.logo + ' logo'}
-                onClick={() => history.push('/')}
-              />
-            </Typography>
-            {/* <div className='search-bar-container'sm = {3}>
-        <SearchBar />
-      </div> */}
-            <div className={classes.welcome} variant='h6'>
-              <Box>
-                {props.isLoggedIn && (
-                  <Typography>Welcome {firstName}!</Typography>
-                )}
-              </Box>
-
-              <Button
-                aria-controls='simple-menu'
-                aria-haspopup='true'
-                onClick={handleClick}
-              >
-                <MenuIcon className={classes.menuButton} />
-              </Button>
-              <Menu
-                id='simple-menu'
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                {!props.isLoggedIn && [
-                  <MenuItem
-                    key={'about'}
-                    onClick={() => history.push('/about')}
-                  >
-                    About Trek
-                  </MenuItem>,
-                  <MenuItem
-                    key={'login'}
-                    onClick={() => history.push('/login')}
-                  >
-                    Login
-                  </MenuItem>,
-                  <MenuItem
-                    key={'signup'}
-                    onClick={() => history.push('/signup')}
-                  >
-                    Sign Up
-                  </MenuItem>,
-                ]}
-                {props.isLoggedIn && [
-                  <MenuItem
-                    key={'about'}
-                    onClick={() => history.push('/about')}
-                  >
-                    About Trek
-                  </MenuItem>,
-                  <MenuItem
-                    key={'mytrips'}
-                    onClick={() => history.push('/mytrips')}
-                  >
-                    My Trips
-                  </MenuItem>,
-
-                  <MenuItem key={'logout'} onClick={props.handleClick}>
-                    Logout
-                  </MenuItem>,
-                ]}
-              </Menu>
-            </div>
-          </Toolbar>
-        </AppBar>
-      </div>
-    </div>
+              <MenuItem key={'logout'} onClick={props.handleClick}>
+                Logout
+              </MenuItem>,
+            ]}
+          </Menu>
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 }
 

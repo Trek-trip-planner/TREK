@@ -17,6 +17,11 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
     },
   },
+  header: {
+    padding: 30,
+    display: 'flex',
+    textAlign: 'center',
+  },
 }));
 
 function AllParks(props) {
@@ -39,16 +44,12 @@ function AllParks(props) {
   return (
     <Container className='account-wrapper'>
       <Typography
+        className={classes.header}
         variant='h4'
         component='h3'
         color='secondary'
-        align='center'
-        fontWeight='fontWeightBold'
-        m={2}
       >
-        <Box fontWeight='fontWeightBold' m={1}>
-          Discover the National Parks:
-        </Box>
+        Discover the National Parks:
       </Typography>
       <Grid container spacing={3}>
         {props.parks.length !== 0 ? (

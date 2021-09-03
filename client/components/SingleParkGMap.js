@@ -11,7 +11,7 @@ import {
 } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '525px',
+  width: '100%',
   height: '400px',
 };
 

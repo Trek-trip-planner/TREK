@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import history from '../history';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -41,7 +41,6 @@ function IndividualPark({ park }) {
           onLoad={() => setLoading(false)}
         />
       </Link>
-
       <CardContent className='museum-info-wrapper'>
         <Typography variant='body2' color='textSecondary' component='p'>
           {park.fullName}
