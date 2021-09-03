@@ -180,7 +180,7 @@ router.put('/editTrip', requireToken, isLoggedIn, async (req, res, next) => {
 
       //updating name & date(s)
       const trip = await Trip.findByPk(req.body.tripId, {
-        include: { model: Trip_StartingPt },
+        include: [{ model: Park }, { model: Trip_StartingPt }],
       });
 
       if (!trip) {
