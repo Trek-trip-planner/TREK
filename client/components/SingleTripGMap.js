@@ -59,14 +59,10 @@ function Directions(props) {
   const classes = useStyles();
 
   const directionsCallback = (response) => {
-    console.log('RESPONSE: ', response);
     if (response !== null) {
       if (response.status === 'OK') {
-        console.log('going into the OK statement');
-        console.log('RESPONSE: ', response);
         setResponse(response);
       } else if (response.status === 'ZERO_RESULTS') {
-        console.log('Trip', trip);
         if (trip.parks.length > 1) {
           let greatestDate = trip.parks[0];
           trip.parks.forEach((park) => {
@@ -74,7 +70,6 @@ function Directions(props) {
               greatestDate = park;
             }
           });
-          console.log('Greatest Dates', greatestDate);
           props.removeParkFromTrip(trip.id, greatestDate.id);
         } else {
           props.deleteTripThunk(trip.id);
@@ -96,12 +91,10 @@ function Directions(props) {
 
   if (response !== null && totalTime === 0) {
     let totalSeconds = response.routes[0].legs.reduce((accum, currVal) => {
-      console.log('Current value: ', currVal);
       let time = currVal.duration.value;
       return accum + time;
     }, 0);
 
-    console.log('TOTAL SECONDS: ', totalSeconds);
     let numdays = Math.floor(totalSeconds / 86400);
     let numhours = Math.floor((totalSeconds % 86400) / 3600);
     let numminutes = Math.floor(((totalSeconds % 86400) % 3600) / 60);
@@ -239,9 +232,8 @@ function Directions(props) {
             <p>
               {`Distance:  ${response.routes[0].legs.reduce(
                 (accum, currVal) => {
-                  console.log('Current value: ', currVal);
                   let miles = currVal.distance.text.split(' ')[0];
-                  return accum + Number(miles);
+                  return accum + parseInt(miles);
                 },
                 0
               )} miles`}

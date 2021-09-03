@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { fetchTrips, addTrip } from '../store/trips';
-// import { Link } from 'react-router-dom';
+
 import {
   Paper,
   Typography,
@@ -10,7 +10,6 @@ import {
   Button,
   DialogActions,
   FormControl,
-  InputLabel,
   Link,
   TextField,
 } from '@material-ui/core';
@@ -77,8 +76,6 @@ function CreateTrip(props) {
   const classes = useStyles();
   const [addedTripValue, setAddedTripValue] = useState();
 
-  console.log('my trips: ', trips);
-
   useEffect(() => {
     (async () => {
       await props.fetchTrips();
@@ -119,7 +116,6 @@ function CreateTrip(props) {
     setAddedTripValue(value);
     // props.addTrip(value, park);
   };
-  console.log('Added Trip: ', addedTripValue);
   return (
     <main className={classes.layout}>
       <Paper className={classes.paper}>

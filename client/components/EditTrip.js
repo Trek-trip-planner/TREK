@@ -157,11 +157,8 @@ function EditTrip(props) {
               type='submit'
               onClick={(event) => {
                 event.preventDefault();
-                console.log('button clicked!');
-                console.log('Park selected: ', parkSelected);
                 props.removeParkFromTrip(trip.id, parkSelected.id);
                 props.handleClose();
-                //props.addTrip(addedTripValue, park);
               }}
               fullWidth
               variant='contained'
