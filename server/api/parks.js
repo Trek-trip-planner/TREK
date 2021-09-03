@@ -15,9 +15,6 @@ router.get('/', async (req, res, next) => {
 router.get('/:parkName', async (req, res, next) => {
   try {
     let parkName = req.params.parkName.split('_').join(' ');
-    console.log('PARK NAME: ', parkName);
-
-    //const park = await Park.findByPk(req.params.id);
 
     const park = await Park.findOne({
       where: {

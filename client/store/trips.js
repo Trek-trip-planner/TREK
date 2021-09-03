@@ -50,7 +50,6 @@ export const fetchTrips = (userId) => {
 
 export const deleteTripThunk = (id) => {
   return async (dispatch) => {
-    console.log('in the thunk');
     try {
       const { data: trip } = await axios.delete(
         `/api/mytrips/${id}`,
@@ -87,9 +86,7 @@ export function addTrip(trip, park) {
         park,
         getToken()
       );
-      console.log('data coming from backend', data);
       dispatch(updateTrip(data));
-      console.log('DATA: ', data);
       history.push(`/mytrips/${data.id}`);
     } catch (error) {
       console.log(error);
