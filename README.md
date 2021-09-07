@@ -6,17 +6,13 @@ At Trek we are your one stop shop for planning your next adventure to any of the
 
 ## User Stories 
 - A user is able to look at a specific National Park’s details and information. 
-![Single Park Page]()
-
-- A user is able to view all National Parks.
-![All Parks Page]()
- 
+![Single Park Page](https://github.com/Trek-trip-planner/TREK/blob/main/GIFs/SingleParkInfoGif.gif)
+- A user is able to view all National Parks.                                  
+![All Parks Page](https://github.com/Trek-trip-planner/TREK/blob/main/GIFs/PaginationGif.gif)
 - A logged in user is able to create a trip with at least one National Park as a destination.  
-![Create a Trip]()
-
+![Create a Trip](https://github.com/Trek-trip-planner/TREK/blob/main/GIFs/CreateTripGif.gif)
 - A logged in user is able to add multiple National Parks to a single trip. 
-![Adding to a Trip]()
-
+![Adding to a Trip](https://github.com/Trek-trip-planner/TREK/blob/main/GIFs/AddToTripGif.gif)
 - A logged in user is able to view all planned trips and make edits as needed. 
 ![Edit a trip]()
 
